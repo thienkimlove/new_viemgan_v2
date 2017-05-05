@@ -87,19 +87,6 @@
 <script src="{{url('viemgan/js/jquery.easing.min.js')}}" type="text/javascript"></script>
 <script src="{{url('viemgan/js/common.js')}}" type="text/javascript"></script>
 
-
-<{{--script type='text/javascript'>window._sbzq || function (e) {
-        e._sbzq = [];
-        var t = e._sbzq;
-        t.push(["_setAccount", 13099]);
-        var n = e.location.protocol == "https:" ? "https:" : "http:";
-        var r = document.createElement("script");
-        r.type = "text/javascript";
-        r.async = true;
-        r.src = n + "//static.subiz.com/public/js/loader.js";
-        var i = document.getElementsByTagName("script")[0];
-        i.parentNode.insertBefore(r, i)
-    }(window);</script>--}}
 <script type="text/javascript" src="//admicro1.vcmedia.vn/cpa/admicro.js"></script>
 <script type="text/javascript">window.admicro_cpa_q = window.admicro_cpa_q || [];
     window.admicro_cpa_q.push({event: "retargeting", id: 1633});
@@ -160,7 +147,7 @@
     ants_analytic.push({conversionId : "cd56d85f"});
 </script>
 
-!-- Google Code dành cho Thẻ tiếp thị lại -->
+<!-- Google Code dành cho Thẻ tiếp thị lại -->
 <script type="text/javascript">
     /* <![CDATA[ */
     var google_conversion_id = 954780037;
@@ -175,5 +162,5 @@
         <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/954780037/?guid=ON&amp;script=0"/>
     </div>
 </noscript>
-
+@yield('frontend_script')
 </html>

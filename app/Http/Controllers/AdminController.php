@@ -30,7 +30,12 @@ class AdminController extends Controller
      */
     public function saveImage($file, $old = null)
     {
-        $filename = md5(time()) . '.' . $file->getClientOriginalExtension();
+        $filename = $file->getClientOriginalName();
+
+        if (file_exists(public_path('files/images/'. $filename))) {
+            $filename = substr(uniqid(), 0, 4).'_'.$filename;
+        }
+
         Image::make($file->getRealPath())->save(public_path('files/images/'. $filename));
 
         if ($old) {

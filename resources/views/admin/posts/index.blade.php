@@ -16,6 +16,8 @@
                         <span class="input-group-btn">
                             <input type="text" value="{{$searchContent}}" name="q" class="form-control" placeholder="Search ..">
 
+                            <input type="hidden" name="cate_id" value="{{$searchCate}}" />
+
                             <button class="btn btn-default" type="submit">
                                 <i class="fa fa-search"></i>
                             </button>

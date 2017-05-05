@@ -2,12 +2,14 @@
 
 use Carbon\Carbon;
 use Cviebrock\EloquentSluggable\Sluggable;
+use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 use Illuminate\Database\Eloquent\Model;
 
 
 class Post extends Model {
 
     use Sluggable;
+    use SluggableScopeHelpers;
 
     /**
      * Return the sluggable configuration array for this model.
@@ -38,7 +40,9 @@ class Post extends Model {
         'slug',
         'right_block',
         'tieude',
-        'related'
+        'related',
+        'content_1',
+        'content_2'
     ];
 
 
@@ -48,7 +52,7 @@ class Post extends Model {
      */
     public function category()
     {
-       return $this->belongsTo('App\Category');
+       return $this->belongsTo(Category::class);
     }
 
     /**
@@ -101,6 +105,43 @@ class Post extends Model {
      */
     public function getUpdatedAtAttribute($date){
         return Carbon::parse($date)->format('d-m-Y');
+    }
+
+    public function getRelatedPostsAttribute()
+    {
+        $limit = 5;
+
+        $post_tag = $this->tags->pluck('id')->all();
+
+        $relatedPosts = Post::where('status', true)
+            ->whereHas('tags', function($q) use ($post_tag){
+                $q->whereIn('id', $post_tag);
+            })
+            ->where('id', '!=', $this->id)
+            ->orderBy('created_at', 'desc')
+            ->limit($limit)
+            ->get();
+
+        $additionPosts = null;
+
+        if ($relatedPosts->count() < $limit) {
+            $categoryLimit = $limit - $relatedPosts->count();
+            $additionPosts = Post::where('status', true)
+                ->where('category_id', $this->category_id)
+                ->where('id', '!=', $this->id)
+                ->orderBy('created_at', 'desc')
+                ->limit($categoryLimit)
+                ->get();
+        }
+        if ($additionPosts) {
+            foreach ($additionPosts as $post) {
+                if (!in_array($post->id, $relatedPosts->pluck('id')->all())) {
+                    $relatedPosts->push($post);
+                }
+            }
+        }
+
+        return $relatedPosts;
     }
 
 }

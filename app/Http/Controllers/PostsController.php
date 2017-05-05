@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Tag;
 use Hash;
 use Illuminate\Http\Request;
@@ -13,7 +14,7 @@ class PostsController extends AdminController
     public $model = 'posts';
 
     public $validator = [
-        'name' => 'required',
+        'title' => 'required',
     ];
     private function init()
     {
@@ -22,18 +23,32 @@ class PostsController extends AdminController
     public function index(Request $request)
     {
 
-        $searchContent = '';
+        $searchContent = null;
+        $searchCate = null;
         $modelClass = $this->init();
+
+        $customUrl = '/admin/posts';
 
         $contents = $modelClass::latest('created_at');
         if ($request->input('q')) {
             $searchContent = urldecode($request->input('q'));
-            $contents = $contents->where('name', 'LIKE', '%'. $searchContent. '%');
+            $contents = $contents->where('title', 'LIKE', '%'. $searchContent. '%');
+            $customUrl .= '&q='.$request->input('q');
         }
 
-        $contents = $contents->paginate(10);
+        if ($request->input('cate_id')) {
+            $searchCate = urldecode($request->input('cate_id'));
+            $subCategoryIds = Category::where('parent_id', $searchCate)->pluck('id')->all();
+            $categoryIds = ($subCategoryIds) ? $subCategoryIds : [$searchCate];
+            $contents = $contents->whereIn('category_id', $categoryIds);
+            $customUrl .= '&cate_id='.$request->input('cate_id');
+        }
 
-        return view('admin.'.$this->model.'.index', compact('contents', 'searchContent'))->with('model', $this->model);
+
+        $contents = $contents->paginate(10);
+        $contents->setPath($customUrl);
+
+        return view('admin.'.$this->model.'.index', compact('contents', 'searchContent', 'searchCate'))->with('model', $this->model);
     }
 
     public function create()

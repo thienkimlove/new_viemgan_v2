@@ -17,5 +17,17 @@ Route::resource('admin/modules', 'ModulesController');
 Route::resource('admin/users', 'UsersController');
 Route::resource('admin/tags', 'TagsController');
 Route::resource('admin/comments', 'CommentsController');
+Route::resource('admin/deliveries', 'DeliveriesController');
+Route::resource('admin/orders', 'OrdersController');
 
 Route::get('/', 'FrontendController@index');
+Route::get('/chuyen-muc/{slug}', 'FrontendController@category');
+Route::get('/lien-he', 'FrontendController@contact');
+Route::get('/video/{slug?}', 'FrontendController@video');
+Route::get('/hoi-dap/{slug?}', 'FrontendController@question');
+Route::get('/phan-phoi/{slug?}', 'FrontendController@delivery');
+Route::get('/tu-khoa/{slug}', 'FrontendController@tag');
+Route::get('/tim-kiem', 'FrontendController@search');
+Route::post('/saveContact', 'FrontendController@saveContact');
+Route::post('/saveOrder', 'FrontendController@saveOrder');
+Route::get('/{slug}', 'FrontendController@post');

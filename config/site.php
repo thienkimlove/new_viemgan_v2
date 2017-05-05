@@ -8,7 +8,8 @@ return [
             'modules' => [
                 'display_in_index_category' => 'Show On Index Category',
                 'display_in_index_top' => 'Show On Index Top',
-                'index_right' => 'Right Index'
+                'index_right' => 'Right Index',
+                'index_right_share' => 'Share Right Index',
             ]
         ],
 
@@ -23,6 +24,19 @@ return [
         ],
         'videos' => [
             'name' => 'Video',
+            'modules' => [
+                'index_right' => 'Right Index',
+            ]
+        ],
+        'questions' => [
+            'name' => 'Question',
+            'modules' => [
+                'index_right' => 'Right Index',
+            ]
+        ],
+
+        'contacts' => [
+            'name' => 'Contacts',
             'modules' => [
                 'index_right' => 'Right Index',
             ]

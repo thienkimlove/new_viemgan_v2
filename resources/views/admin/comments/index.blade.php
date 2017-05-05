@@ -23,12 +23,7 @@
                                 <th>Address</th>
                                 <th>Comment</th>
                                 <th>Status</th>
-
                                 <th>Action</th>
-
-                                @foreach (config("site.content.$model.modules") as $k => $module)
-                                    <th>{{$module}}</th>
-                                @endforeach
                             </tr>
                             </thead>
                             <tbody>
@@ -39,7 +34,7 @@
                                     <td>{{$content->name}}</td>
                                     <td><img src="{{url('img/cache/small/' .$content->image)}}" /></td>
                                     <td>{{$content->address}}</td>
-                                    <td>{{$content->comment}}</td>
+                                    <td>{!! $content->comment !!}</td>
                                     <td>{{($content->status)? 'Active' : 'Inactive'}}</td>
 
 
@@ -54,26 +49,6 @@
                                         <button type="submit" class="btn btn-danger btn-mini">Delete</button>
                                         {!! Form::close() !!}
                                     </td>
-
-                                    @foreach (config("site.content.$model.modules") as $k => $module)
-                                        <td>
-                                            @if ($enabled = \App\Site::moduleEnable($k, $model, $content->id))
-                                                {!! Form::open(['method' => 'DELETE', 'url' => url('admin/modules/'.$enabled->id)]) !!}
-                                                <button type="submit" class="btn btn-danger btn-mini">Bật</button>
-                                                <input type="hidden" name="redirect_back" value="{{Request::url()}}" />
-                                                {!! Form::close() !!}
-                                            @else
-                                                {!! Form::open(['method' => 'POST', 'url' => url('admin/modules')]) !!}
-                                                <input type="hidden" name="key_name" value="{{$module}}" />
-                                                <input type="hidden" name="key_type" value="{{$k}}" />
-                                                <input type="hidden" name="key_content" value="{{$model}}" />
-                                                <input type="hidden" name="key_value" value="{{$content->id}}" />
-                                                <input type="hidden" name="redirect_back" value="{{Request::fullUrl()}}" />
-                                                <button type="submit" class="btn btn-danger btn-mini">Tắt</button>
-                                                {!! Form::close() !!}
-                                            @endif
-                                        </td>
-                                    @endforeach
                                 </tr>
                             @endforeach
                             </tbody>

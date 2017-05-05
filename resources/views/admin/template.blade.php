@@ -182,6 +182,31 @@
                         </ul>
                     </li>
 
+                    <li>
+                        <a><i class="fa fa-folder-o fa-fw"></i>Phân Phối<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+
+                            <li>
+                                <a href="{{url('admin', 'deliveries')}}">List</a>
+                            </li>
+
+                            <li>
+                                <a href="{{url('admin/deliveries/create')}}">Create</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a><i class="fa fa-folder-o fa-fw"></i>Orders<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+
+                            <li>
+                                <a href="{{url('admin', 'orders')}}">List</a>
+                            </li>
+
+                        </ul>
+                    </li>
+
                 </ul>
             </div>
             <!-- /.sidebar-collapse -->

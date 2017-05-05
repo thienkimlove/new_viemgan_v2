@@ -48,9 +48,22 @@
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('content', 'Content') !!}
+                    {!! Form::label('content', 'Content (Thông tin sản phẩm)') !!}
                     {!! Form::textarea('content', null, ['class' => 'form-control ckeditor']) !!}
                 </div>
+
+
+                <div class="form-group">
+                    {!! Form::label('content_1', 'Bằng chứng khoa học (Chỉ dùng cho bài Sản phẩm)') !!}
+                    {!! Form::textarea('content_1', null, ['class' => 'form-control ckeditor']) !!}
+                </div>
+
+
+                <div class="form-group">
+                    {!! Form::label('content_2', 'Cảm nhận khách hàng (Chỉ dùng cho bài Sản phẩm)') !!}
+                    {!! Form::textarea('content_2', null, ['class' => 'form-control ckeditor']) !!}
+                </div>
+
 
                 <div class="form-group">
                     {!! Form::label('tag_list', 'Tags') !!}

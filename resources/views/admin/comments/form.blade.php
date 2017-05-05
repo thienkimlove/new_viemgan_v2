@@ -42,7 +42,7 @@
 
                 <div class="form-group">
                     {!! Form::label('comment', 'Trích Dẫn') !!}
-                    {!! Form::textarea('comment', null, ['class' => 'form-control']) !!}
+                    {!! Form::textarea('comment', null, ['class' => 'form-control ckeditor']) !!}
                 </div>
 
                 <div class="form-group">

@@ -7,7 +7,7 @@
         <div class="box-bd">
             @if ($firstRightVideo = $rightVideos->shift())
                 <div class="data">
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/{{$firstRightVideo->code}}" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="100%" height="250" src="{{\App\Site::getYoutubeEmbedUrl($firstRightVideo->code)}}" frameborder="0" allowfullscreen></iframe>
                     <h3>
                         {{$firstRightVideo->title}}
                     </h3>

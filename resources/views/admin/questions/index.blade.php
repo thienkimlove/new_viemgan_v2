@@ -17,12 +17,12 @@
                             <thead>
                             <tr>
                                 <th>#</th>
+                                <th>Title</th>
+                                <th>Ask Person</th>
                                 <th>Question</th>
-                                <th>Answer</th>
-
+                                <th>Short Answer</th>
+                                <th>Status</th>
                                 <th>Action</th>
-
-
                                 @foreach (config("site.content.$model.modules") as $k => $module)
                                     <th>{{$module}}</th>
                                 @endforeach
@@ -33,9 +33,11 @@
                             @foreach($contents as $content)
                                 <tr>
                                     <td>{{$content->id}}</td>
+                                    <td>{{$content->title}}</td>
+                                    <td>{{$content->person}}</td>
                                     <td>{{$content->question}}</td>
-                                    <td>{{$content->answer}}</td>
-
+                                    <td>{{$content->short_answer}}</td>
+                                    <td>{{$content->status ? 'Active' : 'Inactive'}}</td>
                                     <td>
                                         <button id-attr="{{$content->id}}"
                                                 content-attr="{{$model}}"

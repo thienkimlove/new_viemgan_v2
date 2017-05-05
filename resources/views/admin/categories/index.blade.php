@@ -41,7 +41,7 @@
                             @foreach($contents as $content)
                                 <tr>
                                     <td>{{$content->id}}</td>
-                                    <td>{{$content->name}}</td>
+                                    <td><a href="{{url('admin/posts?cate_id='.$content->id)}}">{{$content->name}}</a></td>
                                     <td>{{$content->parent ? $content->parent->name : ''}}</td>
 
                                     <td>

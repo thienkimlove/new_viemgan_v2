@@ -31,7 +31,9 @@ class Site
             2 => 'Banner cuối trang chủ',
             3 => 'Banner giữa cột phải',
             4 => 'Banner giữa trang trong',
-            5 => 'Banner cuối trang trong'
+            5 => 'Banner cuối trang trong',
+            6 => 'Banner V2 trượt bên trái',
+            7 => 'Banner V2 cột phải trang trong'
         ];
     }
 
@@ -46,15 +48,44 @@ class Site
             ->all();
     }
 
+    public static function getAllParentCategories()
+    {
+        return Category::where('parent_id', null)
+            ->get();
+    }
+
+
     public static function getTags()
     {
         return Tag::all()->pluck('name', 'name')->all();
     }
 
+    public static function getYoutubeEmbedUrl($code)
+    {
+        $youtube_id = null;
+        $shortUrlRegex = '/youtu.be\/([a-zA-Z0-9_]+)\??/i';
+        $longUrlRegex = '/youtube.com\/((?:embed)|(?:watch))((?:\?v\=)|(?:\/))(\w+)/i';
+
+        if (preg_match($longUrlRegex, $code, $matches)) {
+            $youtube_id = $matches[count($matches) - 1];
+        }
+
+        if (preg_match($shortUrlRegex, $code, $matches)) {
+            $youtube_id = $matches[count($matches) - 1];
+        }
+        return 'https://www.youtube.com/embed/' . $youtube_id ;
+    }
+
+
 
     public static function getStatus()
     {
         return array(1 => 'Active', 0 => 'Inactive');
+    }
+
+    public static function getOrderStatus()
+    {
+        return array(1 => 'Đang xử lý', 0 => 'Vừa nhận đặt hàng', 2 => 'Đã xử lý xong');
     }
 
     #Frontend
@@ -84,6 +115,12 @@ class Site
         return Video::latest('created_at')->whereIn('id', $rightIndexModules)->limit(3)->get();
     }
 
+    public static function getRightIndexQuestions()
+    {
+        $rightIndexModules = Module::where('key_type', 'index_right')->where('key_content', 'questions')->pluck('key_value')->all();
+        return Question::latest('created_at')->whereIn('id', $rightIndexModules)->limit(3)->get();
+    }
+
     public static function getRightIndexPosts()
     {
         $rightIndexModules = Module::where('key_type', 'index_right')->where('key_content', 'posts')->pluck('key_value')->all();
@@ -95,14 +132,30 @@ class Site
         return Category::where('parent_id', $category->id)->limit($limit)->get();
     }
 
+    public static function getCommentIndex()
+    {
+        return Comment::where('status', true)->latest('created_at')->limit(4)->get();
+    }
 
+    public static function getRightIndexSharePosts()
+    {
+        $rightIndexModules = Module::where('key_type', 'index_right_share')->where('key_content', 'posts')->pluck('key_value')->all();
+        return Post::where('status', true)->latest('created_at')->whereIn('id', $rightIndexModules)->limit(4)->get();
+    }
 
+    public static function getLatestNormalPosts()
+    {
+        return Post::where('status', true)->latest('created_at')->limit(5)->get();
+    }
 
-
-
-
-
-
+    public static function getListOfProducts()
+    {
+        return Post::where('status', true)
+            ->whereNotNull('content_1')
+            ->whereNotNull('content_2')
+            ->pluck('title', 'id')
+            ->all();
+    }
 
 
 
@@ -118,43 +171,7 @@ class Site
     }
 
 
-    public static function getRightQuanTam()
-    {
-        $rightFeatureModules = Module::where('key_type', 'right_quantam')->where('key_content', 'posts')->pluck('key_value')->all();
 
-        return Post::where('status', true)
-            ->whereIn('id', $rightFeatureModules)
-            ->latest('created_at')
-            ->limit(4)
-            ->get();
-    }
-
-    public static function getRightFeaturePosts($page)
-    {
-        if (in_array($page, ['index', 'lien-he', 'video', 'hoi-dap', 'phan-phoi','san-pham', 'tu-khoa'])) {
-            $category = Category::findBySlug('tin-tuc');
-        } else {
-            $category = Category::findBySlug($page);
-        }
-
-        $rightFeatureModules = Module::where('key_type', 'right_feature')->where('key_content', 'posts')->pluck('key_value')->all();
-
-        if ($category->subCategories->count() == 0) {
-            return Post::where('status', true)
-                ->where('category_id', $category->id)
-                ->whereIn('id', $rightFeatureModules)
-                ->latest('created_at')
-                ->limit(4)
-                ->get();
-        } else {
-            return Post::where('status', true)
-                ->whereIn('category_id', $category->subCategories->pluck('id')->all())
-                ->whereIn('id', $rightFeatureModules)
-                ->latest('created_at')
-                ->limit(4)
-                ->get();
-        }
-    }
     public static function getLatestNews($post_id = null)
     {
         if ($post_id) {

@@ -19,7 +19,7 @@ $(document).ready(function () {
         itemsMobile: [479, 1]
     });
 
-    var e = $("#sidebar").offset().top + $("#sidebar").height()+100;
+   /* var e = $("#sidebar").offset().top + $("#sidebar").height()+100;
     $(window).scroll(function () {
         var o = $(window).scrollTop();
         e <= o ? $("#sidebar").addClass("fixed") : $("#sidebar").removeClass("fixed");
@@ -28,7 +28,7 @@ $(document).ready(function () {
         n.preventDefault(), $(".show-form-phone").show();
     }), $(".show-form-phone h4").on("click", function (n) {
         n.preventDefault(), $(".show-form-phone").hide();
-    });
+    });*/
 });
 $(".parentMenu>a").on('click', function () {
     var parentMenu = $(this).parent();

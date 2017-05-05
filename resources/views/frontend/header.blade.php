@@ -16,9 +16,11 @@
     </div>
 </div>
 <div class="banner-ads left">
-    <a href="javascript:void(0)" title="" target="_blank">
-        <img src="{{url('viemgan/images/ads.jpg')}}" alt="" width="171" height="454">
+    @foreach (\App\Site::getFrontendBanners()->where('position',6) as $banner)
+    <a href="{{$banner->link}}" title="" target="_blank">
+        <img src="{{url('files/images', $banner->image)}}" alt="" width="171" height="454">
     </a>
+    @endforeach
 </div>
 <div class="btn-group-fix banner-ads">
     <a href="javascript:void(0)" title="Fanpage"><img src="{{url('viemgan/images/fb-icon.png')}}" alt="Fanpage" width="63" height="63"></a>
@@ -45,42 +47,35 @@
                     <a href="tel:19006639">
                         <img src="{{url('viemgan/images/hotline.png')}}" alt="" width="166" height="56" class="imgFull">
                     </a>
-                    <form action="" class="search-on-top">
-                        <input type="text" placeholder="Tìm kiếm">
+                    <form action="{{url('tim-kiem')}}" method="GET" class="search-on-top">
+                        <input type="text" name="q" placeholder="Tìm kiếm">
                     </form>
                 </span>
     </div>
     <nav id="main-nav" class="menu-mb">
         <ul class="fixCen pr rs">
-            <li><a href="{{url('/')}}" title="Trang chủ">
+            <li><a class="{{(isset($page) && $page == 'index')? 'active' : ''}}" href="{{url('/')}}" title="Trang chủ">
                     Home
                 </a></li>
-            <li class="parentMenu"><a href="chuyenmuc.html" title="Các bệnh về gan" class="active">Các bệnh về gan</a>
-                <ul class="submenu">
-                    <li><a href="chitietchuyenmuc.html" title="Tin tức">Viêm gan virus</a></li>
-                    <li><a href="chitietchuyenmuc.html" title="Viêm gan virus">Ung thư gan</a></li>
-                    <li><a href="chitietchuyenmuc.html" title="Xơ gan">Xơ gan</a></li>
-                    <li><a href="chitietchuyenmuc.html" target="Bệnh gan do rượu">Bệnh gan do rượu</a></li>
-                    <li><a href="chitietchuyenmuc.html" title="Gan nhiễm mỡ">Gan nhiễm mỡ</a></li>
-                    <li><a href="chitietchuyenmuc.html" title="Giải độc gan">Giả độc gan</a></li>
-                    <li><a href="chitietchuyenmuc.html" title="Men gan cao"></a></li>
-                </ul>
-            </li>
-            <li class="parentMenu"><a href="javascript:void(0)" title="Dược liệu với bệnh gan">Dược liệu với bệnh gan</a></li>
-            <li class="parentMenu"><a href="javascript:void(0)" title="Thông tin khoa học">Thông tin khoa học</a>
-                <ul class="submenu">
-                    <li><a href="javascript:void(0)" title="Ý kiến chuyên gia">Ý kiến chuyên gia</a></li>
-                    <li><a href="javascript:void(0)" title="Cẩm nang bệnh gan">Cẩm nang bệnh gan</a></li>
-                    <li><a href="javascript:void(0)" title="Nghiên cứu lâm sàng">Nghiên cứu lâm sàng</a></li>
-                </ul>
-            </li>
-            <li><a href="sanpham.html" title="Sản phẩm">Sản phẩm</a></li>
-            <li><a href="javascript:void(0)" title="Kinh nghiệm">Kinh nghiệm</a></li>
-            <li><a href="hoidap.html" title="Hỏi đáp">Hỏi đáp</a></li>
-            <li><a href="tintuc.html" title="Tin tức">Tin tức</a></li>
-            <li><a href="video.html" title="Video">Video</a></li>
-            <li><a href="hethongphanphoi.html" title="Phân phối">Phân phối</a></li>
-            <li><a href="lienhe.html" title="Liên hệ">Liên hệ</a></li>
+            @foreach (\App\Site::getAllParentCategories() as $parentCategory)
+                @if ($parentCategory->subCategories->count() > 0)
+                <li class="parentMenu">
+                    <a href="{{url('chuyen-muc', $parentCategory->slug)}}" title="{{$parentCategory->name}}" class="{{(isset($page) && $page == $parentCategory->slug) ? 'active' : ''}}">{{$parentCategory->name}}</a>
+                    <ul class="submenu">
+                        @foreach ($parentCategory->subCategories as $subCategory)
+                        <li><a href="{{url('chuyen-muc', $subCategory->slug)}}" title="{{$subCategory->name}}">{{$subCategory->name}}</a></li>
+                        @endforeach
+                    </ul>
+                </li>
+                @else
+                    <li><a href="{{url('chuyen-muc', $parentCategory->slug)}}" title="{{$parentCategory->name}}" class="{{(isset($page) && $page == $parentCategory->slug) ? 'active' : ''}}">{{$parentCategory->name}}</a></li>
+                @endif
+            @endforeach
+
+            <li><a class="{{(isset($page) && $page == 'hoi-dap') ? 'active' : ''}}" href="{{url('hoi-dap')}}" title="Hỏi đáp">Hỏi đáp</a></li>
+            <li><a class="{{(isset($page) && $page == 'video')? 'active' : ''}}" href="{{url('video')}}" title="Video">Video</a></li>
+            <li><a class="{{(isset($page) && $page == 'phan-phoi')? 'active' : ''}}" href="{{url('phan-phoi')}}" title="Phân phối">Phân phối</a></li>
+            <li><a class="{{(isset($page) && $page == 'lien-he')? 'active' : ''}}" href="{{url('lien-he')}}" title="Liên hệ">Liên hệ</a></li>
         </ul>
     </nav>
 </header>

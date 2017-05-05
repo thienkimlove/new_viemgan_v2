@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Tag;
 use Hash;
 use Illuminate\Http\Request;
 use Validator;
@@ -12,7 +13,7 @@ class QuestionsController extends AdminController
     public $model = 'questions';
 
     public $validator = [
-        'name' => 'required',
+        'title' => 'required',
     ];
     private function init()
     {
@@ -58,7 +59,14 @@ class QuestionsController extends AdminController
             unset($data['image']);
         }
         $modelClass = $this->init();
-        $modelClass::create($data);
+        $content = $modelClass::create($data);
+
+        $tagIds = [];
+        foreach ($request->input('tag_list') as $tag) {
+            $tagIds[] = Tag::firstOrCreate(['name' => $tag])->id;
+        }
+        $content->tags()->sync($tagIds);
+
         flash()->success('Success created!');
         return redirect('admin/'.$this->model);
     }
@@ -86,6 +94,15 @@ class QuestionsController extends AdminController
             unset($data['image']);
         }
         $content->update($data);
+
+
+
+        $tagIds = [];
+        foreach ($request->input('tag_list') as $tag) {
+            $tagIds[] = Tag::firstOrCreate(['name' => $tag])->id;
+        }
+        $content->tags()->sync($tagIds);
+
         flash()->success('Success edited!');
         return redirect('admin/'.$this->model);
     }
