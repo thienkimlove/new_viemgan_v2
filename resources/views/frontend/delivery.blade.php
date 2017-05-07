@@ -55,13 +55,13 @@
                             </div>
                         </div>
                         <div class="places">
-                            @foreach ($totalDeliveries as $area => $cities)
+                            @foreach ($provinces->groupBy('domain') as $key => $values)
                                 <div class="places1">
-                                    <span class="captain">{{$area}}</span>
+                                    <span class="captain">{{$key}}</span>
                                     <div class="provines">
-                                        @foreach ($cities->chunk(6) as $partCities)
-                                            @foreach ($partCities as $city)
-                                                <a href="{{url('phan-phoi/'. $city->id)}}" title="">{{config('delivery')['city'][$city->city]}}</a>
+                                        @foreach ($values->chunk(6) as $partProvinces)
+                                            @foreach ($partProvinces as $partProvince)
+                                                <a href="{{url('phan-phoi', $partProvince->slug)}}" title="">{{$partProvince->name}}</a>
                                             @endforeach
                                         @endforeach
                                     </div>

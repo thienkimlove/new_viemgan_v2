@@ -6,14 +6,15 @@ use Hash;
 use Illuminate\Http\Request;
 use Validator;
 
-class DeliveriesController extends AdminController
+class StoresController extends AdminController
 {
 
-    public $model = 'deliveries';
+    public $model = 'stores';
 
     public $validator = [
-        'city' => 'required',
-        'content' => 'required',
+        'name' => 'required',
+        'address' => 'required',
+        'district_id' => 'required',
     ];
     private function init()
     {
@@ -25,7 +26,7 @@ class DeliveriesController extends AdminController
         $searchContent = '';
         $modelClass = $this->init();
 
-        $contents = $modelClass::latest('id');
+        $contents = $modelClass::latest('created_at');
         if ($request->input('q')) {
             $searchContent = urldecode($request->input('q'));
             $contents = $contents->where('name', 'LIKE', '%'. $searchContent. '%');

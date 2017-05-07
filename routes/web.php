@@ -17,10 +17,11 @@ Route::resource('admin/modules', 'ModulesController');
 Route::resource('admin/users', 'UsersController');
 Route::resource('admin/tags', 'TagsController');
 Route::resource('admin/comments', 'CommentsController');
-Route::resource('admin/deliveries', 'DeliveriesController');
+Route::resource('admin/stores', 'StoresController');
 Route::resource('admin/orders', 'OrdersController');
 
 Route::get('/', 'FrontendController@index');
+Route::get('/ajax_store', 'FrontendController@ajax_store');
 Route::get('/chuyen-muc/{slug}', 'FrontendController@category');
 Route::get('/lien-he', 'FrontendController@contact');
 Route::get('/video/{slug?}', 'FrontendController@video');

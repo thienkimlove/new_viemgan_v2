@@ -29,58 +29,35 @@
                             <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Miền</th>
-                                <th>Tỉnh/Thành phố</th>
-                                <th>Quận/Huyện</th>
-                                <th>Action</th>
-
-                                @if (isset(config('site.content')[$model]['modules']) && config('site.content')[$model]['modules'])
-                                    @foreach (config('site.content')[$model]['modules'] as $k => $module)
-                                        <th>{{$module}}</th>
-                                    @endforeach
-                                @endif
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>Phone</th>
+                                <th>District</th>
+                                <th>Province</th>
+                                <th>Domain</th>
                             </tr>
                             </thead>
                             <tbody>
                             @foreach($contents as $content)
                                 <tr>
                                     <td>{{$content->id}}</td>
-                                    <td>{{config('delivery.area.'.$content->area)}}</td>
-                                    <td>{{config('delivery.city.'.$content->city)}}</td>
-                                    <td>{{$content->district}}</td>
+                                    <td>{{$content->name}}</td>
+                                    <td>{{$content->address}}</td>
+                                    <td>{{$content->phone}}</td>
+                                    <td>{{$content->district->name}}</td>
+                                    <td>{{$content->district->province->name}}</td>
+                                    <td>{{$content->district->province->domain}}</td>
                                     <td>
                                         <button id-attr="{{$content->id}}"
                                                 content-attr="{{$model}}"
                                                 class="btn btn-primary btn-sm edit-content"
                                                 type="button">
-                                            Sửa
+                                            Edit
                                         </button>&nbsp;
                                         {!! Form::open(['method' => 'DELETE', 'route' => [$model.'.destroy', $content->id]]) !!}
-                                        <button type="submit" class="btn btn-danger btn-mini">Xóa</button>
+                                        <button type="submit" class="btn btn-danger btn-mini">Delete</button>
                                         {!! Form::close() !!}
                                     </td>
-
-                                    @if (isset(config('site.content')[$model]['modules']) && config('site.content')[$model]['modules'])
-                                        @foreach (config('site.content')[$model]['modules'] as $k => $module)
-                                            <td>
-                                                @if ($enabled = \App\Site::moduleEnable($k, $model, $content->id))
-                                                    {!! Form::open(['method' => 'DELETE', 'url' => url('admin/modules/'.$enabled->id)]) !!}
-                                                    <button type="submit" class="btn btn-danger btn-mini">Bật</button>
-                                                    <input type="hidden" name="redirect_back" value="{{Request::url()}}" />
-                                                    {!! Form::close() !!}
-                                                @else
-                                                    {!! Form::open(['method' => 'POST', 'url' => url('admin/modules')]) !!}
-                                                    <input type="hidden" name="key_name" value="{{$module}}" />
-                                                    <input type="hidden" name="key_type" value="{{$k}}" />
-                                                    <input type="hidden" name="key_content" value="{{$model}}" />
-                                                    <input type="hidden" name="key_value" value="{{$content->id}}" />
-                                                    <input type="hidden" name="redirect_back" value="{{Request::url()}}" />
-                                                    <button type="submit" class="btn btn-danger btn-mini">Tắt</button>
-                                                    {!! Form::close() !!}
-                                                @endif
-                                            </td>
-                                        @endforeach
-                                    @endif
                                 </tr>
                             @endforeach
                             </tbody>

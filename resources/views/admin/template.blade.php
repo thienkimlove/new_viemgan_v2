@@ -187,11 +187,11 @@
                         <ul class="nav nav-second-level">
 
                             <li>
-                                <a href="{{url('admin', 'deliveries')}}">List</a>
+                                <a href="{{url('admin', 'stores')}}">List</a>
                             </li>
 
                             <li>
-                                <a href="{{url('admin/deliveries/create')}}">Create</a>
+                                <a href="{{url('admin/stores/create')}}">Create</a>
                             </li>
                         </ul>
                     </li>

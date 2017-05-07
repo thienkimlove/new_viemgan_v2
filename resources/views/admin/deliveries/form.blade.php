@@ -19,12 +19,17 @@
 
                 <div class="form-group">
                     {!! Form::label('area', 'Miền') !!}
-                    {!! Form::select('area', config('delivery')['area'], null, ['class' => 'form-control']) !!}
+                    {!! Form::select('area', config('delivery.area'), null, ['class' => 'form-control']) !!}
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('city', 'Thanh Pho') !!}
-                    {!! Form::select('city', config('delivery')['city'], null, ['class' => 'form-control']) !!}
+                    {!! Form::label('city', 'Thành Phố') !!}
+                    {!! Form::select('city', config('delivery.city'), null, ['class' => 'form-control']) !!}
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label('district', 'Quận Huyện') !!}
+                    {!! Form::text('district', null, ['class' => 'form-control']) !!}
                 </div>
 
                 <div class="form-group">
@@ -36,6 +41,8 @@
                     {!! Form::label('seo_title', 'SEO title') !!}
                     {!! Form::text('seo_title', null, ['class' => 'form-control']) !!}
                 </div>
+
+
 
                 <div class="form-group">
                     {!! Form::label('desc', 'SEO Description') !!}

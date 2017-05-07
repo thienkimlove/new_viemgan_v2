@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Contact;
-use App\Delivery;
+use App\District;
 use App\Module;
 use App\Order;
 use App\Post;
+use App\Province;
 use App\Question;
+use App\Store;
 use App\Video;
 use Illuminate\Http\Request;
 
@@ -131,15 +133,21 @@ class FrontendController extends Controller
         $page = 'phan-phoi';
 
         if ($slug) {
-            $delivery = Delivery::find($slug);
-            return view('frontend.delivery_detail', compact('delivery', 'page'));
+            $province = Province::findBySlug($slug);
+            return view('frontend.delivery_detail', compact('province', 'page'));
         } else {
-            $totalDeliveries = [];
-            foreach (config('delivery')['area'] as $key => $area) {
-                $totalDeliveries[$area] = Delivery::where('area', $key)->get();
-            }
-            return view('frontend.delivery', compact('totalDeliveries', 'page'));
+            $provinces = Province::orderBy('id')->get();
+            return view('frontend.delivery', compact('provinces', 'page'));
         }
+    }
+
+    public function ajax_store(Request $request)
+    {
+        $districtId = $request->input('district_id');
+        $stores = Store::where('district_id', $districtId)->get();
+        $html = view('frontend.store_list', compact('stores'))->render();
+
+        return response()->json(['html' => $html]);
     }
         
     public function saveOrder(Request $request)

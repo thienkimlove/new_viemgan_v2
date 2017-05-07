@@ -88,6 +88,20 @@ class Site
         return array(1 => 'Đang xử lý', 0 => 'Vừa nhận đặt hàng', 2 => 'Đã xử lý xong');
     }
 
+
+    public static function getDistricts()
+    {
+        $districts = District::orderBy('province_id')->get();
+
+        $response = [];
+
+        foreach ($districts as $district) {
+            $response[$district->id] = '=='.$district->province->name.'=='.$district->name;
+        }
+
+        return $response;
+    }
+
     #Frontend
 
     public static function getSubCategories($cateSlug)
