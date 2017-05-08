@@ -22,6 +22,15 @@
                         </span>
                         {!! Form::close() !!}
                     </div>
+
+                    <hr />
+                    <hr />
+
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                             <button id="export_to_excel" content-attr="{{$model}}" class="btn btn-default">Export Excel</button>
+                        </span>
+                    </div>
                 </div>
                 <div class="panel-body">
                     <div class="table-responsive">
@@ -114,6 +123,9 @@
             });
             $('.edit-content').click(function(){
                 window.location.href = window.baseUrl + '/admin/'+$(this).attr('content-attr')+'/' + $(this).attr('id-attr') + '/edit';
+            });
+            $('#export_to_excel').click(function(){
+                window.location.href = window.baseUrl + '/admin/export/'+$(this).attr('content-attr');
             });
         });
     </script>

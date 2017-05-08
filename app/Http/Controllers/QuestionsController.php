@@ -28,7 +28,7 @@ class QuestionsController extends AdminController
         $contents = $modelClass::latest('created_at');
         if ($request->input('q')) {
             $searchContent = urldecode($request->input('q'));
-            $contents = $contents->where('name', 'LIKE', '%'. $searchContent. '%');
+            $contents = $contents->where('title', 'LIKE', '%'. $searchContent. '%');
         }
 
         $contents = $contents->paginate(10);

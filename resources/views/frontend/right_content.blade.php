@@ -42,7 +42,7 @@
             @foreach (\App\Site::getRightIndexPosts() as $rightIndexPost)
             <div class="item cf">
                 <a href="#" class="thumb">
-                    <img src="{{url('img/cache/120x84', $rightIndexPost->image)}}" alt="hot" width="120" height="84">
+                    <img src="{{url('files/images', $rightIndexPost->image)}}" alt="hot" width="120" height="84">
                 </a>
                 <h4>
                     <a href="{{url($rightIndexPost->slug.'.html')}}">{{$rightIndexPost->title}}</a>

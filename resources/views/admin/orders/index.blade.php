@@ -22,6 +22,15 @@
                         </span>
                         {!! Form::close() !!}
                     </div>
+
+                    <hr />
+                    <hr />
+
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                             <button id="export_to_excel" content-attr="{{$model}}" class="btn btn-default">Export Excel</button>
+                        </span>
+                    </div>
                 </div>
                 <div class="panel-body">
                     <div class="table-responsive">
@@ -35,6 +44,7 @@
                                 <th>Product</th>
                                 <th>Quantity</th>
                                 <th>Note</th>
+                                <th>Time</th>
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>
@@ -49,6 +59,7 @@
                                     <td>{{$content->product->title}}</td>
                                     <td>{{$content->quantity}}</td>
                                     <td>{{$content->note}}</td>
+                                    <td>{{$content->created_at->format('Y/m/d H:i:s')}}</td>
                                     <td>{{ \App\Site::getOrderStatus()[$content->status]  }}</td>
 
                                     <td>
@@ -95,6 +106,10 @@
             });
             $('.edit-content').click(function(){
                 window.location.href = window.baseUrl + '/admin/'+$(this).attr('content-attr')+'/' + $(this).attr('id-attr') + '/edit';
+            });
+
+            $('#export_to_excel').click(function(){
+                window.location.href = window.baseUrl + '/admin/export/'+$(this).attr('content-attr');
             });
         });
     </script>

@@ -20,7 +20,7 @@
                         <div class="thumb-video">
                             @foreach ($videos as $video)
                             <a href="{{url('video', $video->slug)}}" title="{{$video->title}}">
-                                <img src="{{url('img/cache/190x129', $video->image)}}" alt="" width="190" height="129" class="imgFull">
+                                <img src="{{url('files/images', $video->image)}}" alt="" width="190" height="129" class="imgFull">
                                 <span class="title">{{$video->title}}</span>
                                 <span class="view-count">
                                     Lượt xem {{$video->views}}

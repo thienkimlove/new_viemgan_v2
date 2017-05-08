@@ -207,6 +207,17 @@
                         </ul>
                     </li>
 
+                    <li>
+                        <a><i class="fa fa-folder-o fa-fw"></i>Landing Forms<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+
+                            <li>
+                                <a href="{{url('admin', 'lands')}}">List</a>
+                            </li>
+
+                        </ul>
+                    </li>
+
                 </ul>
             </div>
             <!-- /.sidebar-collapse -->

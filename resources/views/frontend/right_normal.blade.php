@@ -7,7 +7,7 @@
             @foreach (\App\Site::getRightIndexPosts() as $rightIndexPost)
                 <div class="item cf">
                 <a href="{{url($rightIndexPost->slug.'.html')}}" class="thumb">
-                    <img src="{{url('img/cache/120x84', $rightIndexPost->image)}}" alt="hot" width="120" height="84">
+                    <img src="{{url('files/images', $rightIndexPost->image)}}" alt="hot" width="120" height="84">
                 </a>
                 <h4>
                     <a href="{{url($rightIndexPost->slug.'.html')}}">{{$rightIndexPost->title}}</a>
@@ -103,7 +103,7 @@
             @foreach (\App\Site::getRightIndexSharePosts() as $rightIndexSharePost)
             <div class="item cf">
                 <a href="{{url($rightIndexSharePost->slug.'.html')}}" class="thumb">
-                    <img src="{{url('img/cache/120x84', $rightIndexSharePost->image)}}" alt="hot" width="120" height="84">
+                    <img src="{{url('files/images', $rightIndexSharePost->image)}}" alt="hot" width="120" height="84">
                 </a>
                 <h4>
                     <a href="{{url($rightIndexSharePost->slug.'.html')}}">{{$rightIndexSharePost->title}}</a>

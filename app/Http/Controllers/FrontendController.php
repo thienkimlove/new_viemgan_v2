@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Contact;
 use App\District;
+use App\Land;
 use App\Module;
 use App\Order;
 use App\Post;
@@ -13,6 +14,7 @@ use App\Question;
 use App\Store;
 use App\Video;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class FrontendController extends Controller
 {
@@ -20,59 +22,28 @@ class FrontendController extends Controller
     {
         $page = 'index';
 
-        //show on index top.
-        $indexTopModules = Module::where('key_type', 'display_in_index_top')
-            ->where('key_content', 'posts')
-            ->pluck('key_value')
-            ->all();
-
-        $indexTopPosts = Post::where('status', true)
-            ->latest('created_at')
-            ->whereIn('id', $indexTopModules)
+        $indexTopPosts = DB::table('posts')
+            ->select('posts.image', 'posts.slug', 'posts.title')
+            ->latest('posts.created_at')
+            ->join('modules', 'modules.key_value', '=', 'posts.id')
+            ->where('modules.key_type', 'display_in_index_top')
+            ->where('modules.key_content', 'posts')
             ->limit(5)
             ->get();
 
-        //parent on index.
-        $indexParentModules1 = Module::where('key_type', 'index_block_1')
-            ->where('key_content', 'categories')
-            ->pluck('key_value')
-            ->all();
+        $indexCategories = DB::table('categories')
+            ->join('modules', 'modules.key_value', '=', 'categories.id')
+            ->where('modules.key_content', 'categories')
+            ->whereIn('key_type',  [
+                'index_block_1',
+                'index_block_2',
+                'index_block_3',
+                'index_block_4',
+            ])
+            ->select('modules.key_type', 'categories.id', 'categories.name')
+            ->get();
 
-        $indexParentModules2 = Module::where('key_type', 'index_block_2')
-            ->where('key_content', 'categories')
-            ->pluck('key_value')
-            ->all();
-
-        $indexParentModules3 = Module::where('key_type', 'index_block_3')
-            ->where('key_content', 'categories')
-            ->pluck('key_value')
-            ->all();
-
-        $indexParentModules4 = Module::where('key_type', 'index_block_4')
-            ->where('key_content', 'categories')
-            ->pluck('key_value')
-            ->all();
-
-        $indexParentCategory1 = Category::whereIn('id', $indexParentModules1)
-            ->limit(1)
-            ->first();
-
-        $indexParentCategory2 = Category::whereIn('id', $indexParentModules2)
-            ->limit(1)
-            ->first();
-
-        $indexParentCategory3 = Category::whereIn('id', $indexParentModules3)
-            ->limit(1)
-            ->first();
-
-        $indexParentCategory4 = Category::whereIn('id', $indexParentModules4)
-            ->limit(1)
-            ->first();
-
-
-
-
-        return view('frontend.index', compact('page', 'indexTopPosts', 'indexParentCategory1', 'indexParentCategory2', 'indexParentCategory3', 'indexParentCategory4'));
+        return view('frontend.index', compact('page', 'indexTopPosts', 'indexCategories'));
     }
 
     public function category($slug)
@@ -169,6 +140,31 @@ class FrontendController extends Controller
 
         return redirect('/');
         
+    }
+
+    public function landing()
+    {
+        return view('frontend.landing');
+    }
+
+    public function saveLand(Request $request)
+    {
+        $data = $request->all();
+
+        if (!empty($data['name']) && !empty($data['address']) && !empty($data['phone']) && !empty($data['subject']) && !empty($data['email']) && !empty($data['content'])) {
+
+            Land::create([
+                'name' => $data['name'],
+                'address' => $data['address'],
+                'phone' => $data['phone'],
+                'email' => $data['email'],
+                'subject' => $data['subject'],
+                'content' => $data['content'],
+            ]);
+        }
+
+        return redirect('/landingpage');
+
     }
 
     public function video($slug = null)

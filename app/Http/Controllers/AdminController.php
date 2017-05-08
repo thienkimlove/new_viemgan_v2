@@ -6,6 +6,7 @@ use Exception;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 use Laravel\Socialite\Facades\Socialite;
+use Maatwebsite\Excel\Facades\Excel;
 
 class AdminController extends Controller
 {
@@ -92,5 +93,22 @@ class AdminController extends Controller
     public function notice()
     {
         return view('admin.notice');
+    }
+
+    public function export($content)
+    {
+
+        $modelClass = '\\App\\' . ucfirst(str_singular($content));
+        $contents = $modelClass::latest('created_at')->get();
+        $filename = storage_path('logs/'. $content.'_'.uniqid(time()).'xls');
+
+        Excel::create($filename, function($excel) use($contents) {
+
+            $excel->sheet('Export', function($sheet) use($contents) {
+                $sheet->fromArray($contents);
+
+            });
+
+        })->download('xls');
     }
 }

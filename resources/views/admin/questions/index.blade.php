@@ -11,6 +11,20 @@
             <div class="panel panel-default">
                 <!-- /.panel-heading -->
 
+                <div class="panel-heading">
+                    <div class="input-group custom-search-form">
+                        {!! Form::open(['method' => 'GET', 'route' =>  [$model.'.index'] ]) !!}
+                        <span class="input-group-btn">
+                            <input type="text" value="{{$searchContent}}" name="q" class="form-control" placeholder="Search ..">
+
+                            <button class="btn btn-default" type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                        {!! Form::close() !!}
+                    </div>
+                </div>
+
                 <div class="panel-body">
                     <div class="table-responsive">
                         <table class="table table-striped table-bordered table-hover">

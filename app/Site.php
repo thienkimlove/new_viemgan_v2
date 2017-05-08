@@ -179,9 +179,9 @@ class Site
         return Post::where('status', true)->latest('created_at')->limit(3)->get();
     }
 
-    public static function getLatestQuestions()
+    public static function getLatestQuestions($limit = 3)
     {
-        return Question::where('status', true)->latest('created_at')->limit(3)->get();
+        return Question::where('status', true)->latest('created_at')->limit($limit)->get();
     }
 
 

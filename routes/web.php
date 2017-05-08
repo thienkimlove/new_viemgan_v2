@@ -7,6 +7,8 @@ Route::get('admin/callback', 'AdminController@handleGoogleCallback');
 Route::get('admin/notice', 'AdminController@notice');
 Route::get('admin', 'AdminController@index');
 #Content Routes
+Route::get('admin/export/{content}', 'AdminController@export');
+
 Route::resource('admin/banners', 'BannersController');
 Route::resource('admin/videos', 'VideosController');
 Route::resource('admin/categories', 'CategoriesController');
@@ -19,8 +21,12 @@ Route::resource('admin/tags', 'TagsController');
 Route::resource('admin/comments', 'CommentsController');
 Route::resource('admin/stores', 'StoresController');
 Route::resource('admin/orders', 'OrdersController');
+Route::resource('admin/lands', 'LandsController');
+
+
 
 Route::get('/', 'FrontendController@index');
+Route::get('/landingpage', 'FrontendController@landing');
 Route::get('/ajax_store', 'FrontendController@ajax_store');
 Route::get('/chuyen-muc/{slug}', 'FrontendController@category');
 Route::get('/lien-he', 'FrontendController@contact');
@@ -31,4 +37,5 @@ Route::get('/tu-khoa/{slug}', 'FrontendController@tag');
 Route::get('/tim-kiem', 'FrontendController@search');
 Route::post('/saveContact', 'FrontendController@saveContact');
 Route::post('/saveOrder', 'FrontendController@saveOrder');
+Route::post('/saveLand', 'FrontendController@saveLand');
 Route::get('/{slug}', 'FrontendController@post');

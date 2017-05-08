@@ -18,7 +18,7 @@
                             @foreach ($questions as $question)
                                 <article class="item">
                                 <h3 class="title-faq">
-                                    <img src="{{url('img/cache/58x58', $question->image)}}" alt="" width="58" height="58" class="faq-icon">
+                                    <img src="{{url('files/images', $question->image)}}" alt="" width="58" height="58" class="faq-icon">
                                     <div class="title-ques">
                                         <strong class="text">{{$question->title}}</strong> <br>
                                         <i class="normal">Hỏi bởi: {{$question->person}}</i>
@@ -41,7 +41,7 @@
                                         </div>
                                         <span class="answer">Trả lời</span>
                                         <div class="answer-faq">
-                                            <img src="{{url('img/cache/58x58', $question->image)}}" alt="" width="58" height="58" class="faq-icon">
+                                            <img src="{{url('viemgan/images/bs-img.jpg')}}" alt="" width="58" height="58" class="faq-icon">
                                             <div class="text">
                                                 {{$question->short_answer}}
                                             </div>

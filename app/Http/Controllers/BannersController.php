@@ -12,7 +12,8 @@ class BannersController extends AdminController
     public $model = 'banners';
 
     public $validator = [
-        'name' => 'required',
+        'link' => 'required',
+        'position' => 'required',
     ];
     private function init()
     {
