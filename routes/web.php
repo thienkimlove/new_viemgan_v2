@@ -26,6 +26,15 @@ Route::resource('admin/lands', 'LandsController');
 
 
 Route::get('/', 'FrontendController@index');
+
+Route::get('sitemap_index.xml', 'SitemapsController@index');
+
+foreach (config('site.sitemap') as $content) {
+    Route::get('sitemap_'.$content.'.xml', 'SitemapsController@'.$content);
+}
+
+
+
 Route::get('/landingpage', 'FrontendController@landing');
 Route::get('/ajax_store', 'FrontendController@ajax_store');
 Route::get('/chuyen-muc/{slug}', 'FrontendController@category');

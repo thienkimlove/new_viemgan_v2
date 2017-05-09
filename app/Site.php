@@ -27,13 +27,10 @@ class Site
     public static function getBannerLists()
     {
         return  [
-            1 => 'Banner giữa trang chủ',
-            2 => 'Banner cuối trang chủ',
-            3 => 'Banner giữa cột phải',
-            4 => 'Banner giữa trang trong',
-            5 => 'Banner cuối trang trong',
-            6 => 'Banner V2 trượt bên trái',
-            7 => 'Banner V2 cột phải trang trong'
+            1 => 'Banner V2 giữa trang chủ',
+            2 => 'Banner V2 giữa trang trong',
+            3 => 'Banner V2 trượt bên trái',
+            4 => 'Banner V2 cột phải trang trong'
         ];
     }
 
@@ -148,7 +145,7 @@ class Site
 
     public static function getCommentIndex()
     {
-        return Comment::where('status', true)->latest('created_at')->limit(4)->get();
+        return Comment::where('status', true)->latest('created_at')->limit(15)->get();
     }
 
     public static function getRightIndexSharePosts()

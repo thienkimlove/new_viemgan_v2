@@ -27,7 +27,7 @@
                         </article>
                         @include('frontend.list_button')
                         <div class="ads">
-                            @foreach (\App\Site::getFrontendBanners()->where('position', 4) as $banner)
+                            @foreach (\App\Site::getFrontendBanners()->where('position', 2) as $banner)
                                 <a href="{{$banner->link}}" title="Banner" target="_blank">
                                     <img src="{{url('files/images', $banner->image)}}" alt="" class="imgFull" width="658" height="136">
                                 </a>

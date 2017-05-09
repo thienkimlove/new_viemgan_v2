@@ -20,7 +20,8 @@
                         <div class="thumb-video">
                             @foreach ($videos as $video)
                             <a href="{{url('video', $video->slug)}}" title="{{$video->title}}">
-                                <img src="{{url('files/images', $video->image)}}" alt="" width="190" height="129" class="imgFull">
+                                {{--<img src="{{url('files/images', $video->image)}}" alt="" width="190" height="129" class="imgFull">--}}
+                                <iframe src="{{\App\Site::getYoutubeEmbedUrl($video->code)}}" frameborder="0" allowfullscreen width="329" height="224"></iframe>
                                 <span class="title">{{$video->title}}</span>
                                 <span class="view-count">
                                     Lượt xem {{$video->views}}

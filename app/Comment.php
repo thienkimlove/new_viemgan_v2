@@ -12,6 +12,7 @@ class Comment extends Model
         'address',
         'comment',
         'image',
-        'status'
+        'status',
+        'link'
     ];
 }

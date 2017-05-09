@@ -68,7 +68,7 @@
     </div>
     @endif
     <div class="box-adv">
-        @foreach (\App\Site::getFrontendBanners()->where('position', 7) as $banner)
+        @foreach (\App\Site::getFrontendBanners()->where('position', 4) as $banner)
         <a href="{{$banner->link}}" title="Banner" target="_blank">
             <img src="{{url('files/images', $banner->image)}}" alt="" class="imgFull" width="315" height="202">
         </a>

@@ -19,6 +19,7 @@
                                 <th>#</th>
                                 <th>Title</th>
                                 <th>Name</th>
+                                <th>Link</th>
                                 <th>Avatar</th>
                                 <th>Address</th>
                                 <th>Comment</th>
@@ -32,6 +33,7 @@
                                     <td>{{$content->id}}</td>
                                     <td>{{$content->title}}</td>
                                     <td>{{$content->name}}</td>
+                                    <td>{{$content->link}}</td>
                                     <td><img src="{{url('img/cache/small/' .$content->image)}}" /></td>
                                     <td>{{$content->address}}</td>
                                     <td>{!! $content->comment !!}</td>

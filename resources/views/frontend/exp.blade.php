@@ -9,7 +9,7 @@
                     <img src="{{url('files/images', $comment->image)}}" class="avatar" alt="Tên người" width="114" height="114">
                 </div>
                 <div class="right">
-                    <div class="title">{{$comment->title}}</div>
+                    <div class="title"><a href="{{$comment->link}}">{{$comment->title}}</a></div>
                     <div class="name">{{$comment->name}}</div>
                     <div class="address">{{$comment->address}}</div>
                 </div>

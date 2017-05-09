@@ -48,7 +48,7 @@
 
                 <div class="form-group">
                     {!! Form::label('answer', 'Answer') !!}
-                    {!! Form::textarea('answer', null, ['class' => 'form-control']) !!}
+                    {!! Form::textarea('answer', null, ['class' => 'form-control ckeditor']) !!}
                 </div>
 
                 <div class="form-group">

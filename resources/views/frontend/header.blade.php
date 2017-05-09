@@ -6,24 +6,27 @@
         <h4>Đăng ký nhận tư vấn miễn phí</h4>
         <div class="box-show">
             <p>Chỉ cần đặt câu hỏi, chuyên gia sẽ gọi lại tư vấn cụ thể cho bạn</p>
-            <form id="getQues">
-                <input type="number" placeholder="Số điện thoại của bạn">
-                <textarea name="" placeholder="Tình trạng của bạn"></textarea>
-                <input type="text" placeholder="Tên/ Email của bạn">
-                <button>Gửi đi</button>
+            <form id="getQues" action="{{url('saveContact')}}" method="POST">
+                <input type="number" name="phone" id="box_phone" placeholder="Số điện thoại của bạn">
+                <input type="hidden" value="Box Trượt" name="name" />
+                <input type="hidden" name="_token" value="{{csrf_token()}}"  />
+                <textarea name="content" id="box_content" placeholder="Tình trạng của bạn"></textarea>
+                <input type="text" name="email" id="box_email" placeholder="Tên/ Email của bạn">
+                <button id="box_submit">Gửi đi</button>
             </form>
+            <p id="box_message" style="display: none"></p>
         </div>
     </div>
 </div>
 <div class="banner-ads left">
-    @foreach (\App\Site::getFrontendBanners()->where('position',6) as $banner)
+    @foreach (\App\Site::getFrontendBanners()->where('position', 3) as $banner)
     <a href="{{$banner->link}}" title="" target="_blank">
         <img src="{{url('files/images', $banner->image)}}" alt="" width="171" height="454">
     </a>
     @endforeach
 </div>
 <div class="btn-group-fix banner-ads">
-    <a href="javascript:void(0)" title="Fanpage"><img src="{{url('viemgan/images/fb-icon.png')}}" alt="Fanpage" width="63" height="63"></a>
+    <a href="https://www.facebook.com/viemgan.com.vn" title="Fanpage"><img src="{{url('viemgan/images/fb-icon.png')}}" alt="Fanpage" width="63" height="63"></a>
     <a href="tel:0912571190" title="Gọi tư vấn"><img src="{{url('viemgan/images/call-icon.png')}}" alt="Gọi tư vấn" width="63" height="63"></a>
     <a href="javascript:void(0)" title="Mua hàng"><img src="{{url('viemgan/images/cart-icon.png')}}" alt="Giỏ hàng" width="63" height="63"></a>
     <a href="{{url('phan-phoi')}}" title="Điểm bán sản phẩm"><img src="{{url('viemgan/images/location-icon.png')}}" alt="Điểm bán sản phẩm" width="63" height="63"></a>

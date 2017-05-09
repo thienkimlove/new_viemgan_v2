@@ -12,6 +12,7 @@ use App\Post;
 use App\Province;
 use App\Question;
 use App\Store;
+use App\Tag;
 use App\Video;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -178,5 +179,39 @@ class FrontendController extends Controller
         }
         $videos = Video::paginate(12);
         return view('frontend.video', compact('mainVideo', 'videos', 'page'));
+    }
+
+    public function search(Request $request)
+    {
+        $page = 'search';
+
+        $keyword = urldecode($request->input('q'));
+
+        $posts = Post::where('status', true)
+            ->latest('created_at')
+            ->where('title', 'LIKE', '%'. $keyword. '%')
+            ->paginate(10);
+
+        return view('frontend.search', compact('keyword', 'posts', 'page'));
+
+    }
+
+    public function tag($slug)
+    {
+        $page = 'tag';
+
+        $tag = Tag::findBySlug($slug);
+
+        $keyword = $tag->name;
+
+        $posts = Post::where('status', true)
+            ->latest('created_at')
+            ->whereHas('tags', function($q) use ($tag) {
+                $q->where('id', $tag->id);
+            })
+            ->paginate(10);
+
+        return view('frontend.search', compact('keyword', 'posts', 'page'));
+
     }
 }

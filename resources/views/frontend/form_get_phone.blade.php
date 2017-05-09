@@ -1,3 +1,4 @@
+<form action="{{url('saveContact')}}" method="post" id="form_get_phone">
 <div class="box-intro">
     <div class="some-intro">
         <div class="pro-img">
@@ -14,17 +15,16 @@
         </div>
     </div>
     <div class="form-get-phone">
-        <form action="{{url('saveContact')}}" method="post" id="form_get_phone">
-
             <input type="hidden" name="email" value="chiasetuelinh@gmail.com">
             <input type="hidden" name="name" value="chi co dien thoai">
             <input type="hidden" name="content" value="chi co dien thoai">
             <input type="hidden" name="_token" value="{{csrf_token()}}">
             <input type="number" id="get_phone" name="phone" placeholder="Số điện thoại" class="get-phone">
             <button id="form_get_phone_button">Gửi</button>
-        </form>
+
     </div>
 </div>
+</form>
 @if ($is_full)
 <form action="{{url('saveContact')}}" method="post" id="contact">
     <div class="form-row">

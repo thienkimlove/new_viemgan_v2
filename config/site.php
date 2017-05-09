@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'sitemap' => ['categories', 'posts', 'questions', 'videos'],
     'content' => [
 
         'posts' => [

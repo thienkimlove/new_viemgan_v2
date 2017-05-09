@@ -87,6 +87,23 @@
 <script src="{{url('viemgan/js/jquery.easing.min.js')}}" type="text/javascript"></script>
 <script src="{{url('viemgan/js/common.js')}}" type="text/javascript"></script>
 
+<script>
+    $(function(){
+        $('#box_submit').click(function(){
+            var phone = $('#box_phone').val();
+            var email = $('#box_email').val();
+            var content = $('#box_content').val();
+
+            if (!phone || !email || !content) {
+                $('#box_message').show().text('Xin hãy nhập đủ thông tin!');
+            } else {
+                $('#getQues').submit();
+            }
+            return false;
+        });
+    });
+</script>
+
 <script type="text/javascript" src="//admicro1.vcmedia.vn/cpa/admicro.js"></script>
 <script type="text/javascript">window.admicro_cpa_q = window.admicro_cpa_q || [];
     window.admicro_cpa_q.push({event: "retargeting", id: 1633});

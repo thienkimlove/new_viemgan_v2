@@ -40,6 +40,14 @@
                         ])
                     @endforeach
 
+                        <div class="ads">
+                            @foreach (\App\Site::getFrontendBanners()->where('position', 1) as $banner)
+                                <a href="{{$banner->link}}" title="Banner" target="_blank">
+                                    <img src="{{url('files/images', $banner->image)}}" alt="" class="imgFull" width="658" height="136">
+                                </a>
+                            @endforeach
+                        </div>
+
                     <div class="block-4">
                         @foreach (['index_block_3', 'index_block_4'] as $keyType)
                             @include('frontend.index_block_2', [
