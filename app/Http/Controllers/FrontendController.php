@@ -50,13 +50,17 @@ class FrontendController extends Controller
     public function category($slug)
     {
         $category = Category::findBySlug($slug);
-        $page = ($category->parent_id) ? $category->parent->slug : $category->slug;
+        if ($category) {
+            $page = ($category->parent_id) ? $category->parent->slug : $category->slug;
 
-        $subCategoryIds = Category::where('parent_id', $category->id)->pluck('id')->all();
-        $categoryIds = ($subCategoryIds) ? $subCategoryIds : [$category->id];
+            $subCategoryIds = Category::where('parent_id', $category->id)->pluck('id')->all();
+            $categoryIds = ($subCategoryIds) ? $subCategoryIds : [$category->id];
 
-        $posts = Post::where('status', true)->whereIn('category_id', $categoryIds)->paginate(10);
-        return view('frontend.category', compact('page', 'posts', 'category'));
+            $posts = Post::where('status', true)->whereIn('category_id', $categoryIds)->paginate(10);
+            return view('frontend.category', compact('page', 'posts', 'category'));
+        }  else {
+            return redirect('/');
+        }
     }
 
     public function saveContact(Request $request)
@@ -70,11 +74,13 @@ class FrontendController extends Controller
         $page = 'hoi-dap';
         if ($slug) {
             $question = Question::findBySlug($slug);
-            return view('frontend.question_detail', compact('page', 'question'));
+            if ($question) {
+                return view('frontend.question_detail', compact('page', 'question'));
+            } else {
+                return redirect('/');
+            }
         } else {
-
             $questions = Question::where('status', true)->latest('created_at')->paginate(10);
-
             return view('frontend.question', compact('page', 'questions'));
         }
     }
@@ -84,13 +90,18 @@ class FrontendController extends Controller
 
         if (preg_match('/([a-z0-9\-]+)\.html/', $slug, $matches)) {
             $post = Post::findBySlug($matches[1]);
-            $page = ($post->category->parent_id) ? $post->category->parent->slug : $post->category->slug;
-            if ($post->content_1 && $post->content_2) {
-                return view('frontend.product', compact('page', 'post'));
+            if ($post) {
+                $page = ($post->category->parent_id) ? $post->category->parent->slug : $post->category->slug;
+                if ($post->content_1 && $post->content_2) {
+                    return view('frontend.product', compact('page', 'post'));
+                } else {
+                    return view('frontend.post', compact('page', 'post'));
+                }
             } else {
-                return view('frontend.post', compact('page', 'post'));
+                return redirect('/');
             }
-
+        } else {
+            return redirect('/');
         }
     }
 
@@ -175,7 +186,11 @@ class FrontendController extends Controller
 
         if ($slug) {
             $mainVideo = Video::findBySlug($slug);
-            $mainVideo->increment('views', 1);
+            if ($mainVideo) {
+                $mainVideo->increment('views', 1);
+            } else {
+                return redirect('/');
+            }
         }
         $videos = Video::paginate(12);
         return view('frontend.video', compact('mainVideo', 'videos', 'page'));
@@ -202,16 +217,20 @@ class FrontendController extends Controller
 
         $tag = Tag::findBySlug($slug);
 
-        $keyword = $tag->name;
+        if ($tag) {
+            $keyword = $tag->name;
 
-        $posts = Post::where('status', true)
-            ->latest('created_at')
-            ->whereHas('tags', function($q) use ($tag) {
-                $q->where('id', $tag->id);
-            })
-            ->paginate(10);
+            $posts = Post::where('status', true)
+                ->latest('created_at')
+                ->whereHas('tags', function($q) use ($tag) {
+                    $q->where('id', $tag->id);
+                })
+                ->paginate(10);
 
-        return view('frontend.search', compact('keyword', 'posts', 'page'));
+            return view('frontend.search', compact('keyword', 'posts', 'page'));
+        } else {
+            return redirect('/');
+        }
 
     }
 }

@@ -6,101 +6,53 @@ use App\Category;
 use App\Post;
 use App\Question;
 use App\Video;
+use Watson\Sitemap\Facades\Sitemap;
 
 class SitemapsController extends Controller
 {
     public function index()
     {
-        $maps = [];
 
         foreach (config('site.sitemap') as $content) {
-            $maps[] = [
-                'url' => url('sitemap_'.$content.'.xml'),
-                'time' => date('Y-m-d H:i')
-            ];
+            Sitemap::addSitemap(url('sitemap_'.$content.'.xml'));
         }
 
-        return view('frontend.sitemap.index', compact('maps'));
+        return Sitemap::index();
     }
 
     public function posts()
     {
-        $posts = Post::all();
-
-        $map = [
-            [
-                'url' => url('/'),
-                'time' => '',
-                'frequency' => 'daily',
-                'priority' => '100%',
-                'images' => 0
-            ]
-        ];
-
-        foreach ($posts as $post) {
-            $map[] = [
-                'url' => url($post->slug.'.html'),
-                'time' => $post->updated_at,
-                'frequency' => 'weekly',
-                'priority' => '60%',
-                'images' => 1
-            ];
+        $contents = Post::all();
+        foreach ($contents as $content) {
+            Sitemap::addTag(url($content->slug.'.html'), $content->updated_at, 'daily', '0.8');
         }
-
-        return view('frontend.sitemap.content', compact('map'));
+        return Sitemap::render();
     }
 
     public function categories()
     {
-
-        $map = [];
-
-        $categories = Category::all();
-        foreach ($categories as $category) {
-            $map[] = [
-                'url' => url('chuyen-muc', $category->slug),
-                'time' => $category->updated_at,
-                'frequency' => 'weekly',
-                'priority' => '40%',
-                'images' => 0
-            ];
+        $contents = Category::all();
+        foreach ($contents as $content) {
+            Sitemap::addTag(url('chuyen-muc', $content->slug), $content->updated_at, 'weekly', '0.4');
         }
-        return view('frontend.sitemap.content', compact('map'));
+        return Sitemap::render();
     }
 
     public function questions()
     {
-
-        $map = [];
-
         $contents = Question::all();
         foreach ($contents as $content) {
-            $map[] = [
-                'url' => url('hoi-dap', $content->slug),
-                'time' => $content->updated_at,
-                'frequency' => 'weekly',
-                'priority' => '40%',
-                'images' => 0
-            ];
+            Sitemap::addTag(url('hoi-dap', $content->slug), $content->updated_at, 'weekly', '0.4');
         }
-        return view('frontend.sitemap.content', compact('map'));
+        return Sitemap::render();
     }
 
     public function videos()
     {
-
-        $map = [];
-
         $contents = Video::all();
         foreach ($contents as $content) {
-            $map[] = [
-                'url' => url('video', $content->slug),
-                'time' => $content->updated_at,
-                'frequency' => 'weekly',
-                'priority' => '40%',
-                'images' => 0
-            ];
+            Sitemap::addTag(url('video', $content->slug), $content->updated_at, 'weekly', '0.4');
         }
-        return view('frontend.sitemap.content', compact('map'));
+        return Sitemap::render();
     }
 }

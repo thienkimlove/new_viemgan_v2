@@ -64,7 +64,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => env('TIME_ZONE', 'Asia/Ho_Chi_Minh'),
 
     /*
     |--------------------------------------------------------------------------
@@ -185,6 +185,7 @@ return [
         Laravel\Socialite\SocialiteServiceProvider::class,
 
         Cviebrock\EloquentSluggable\ServiceProvider::class,
+        Watson\Sitemap\SitemapServiceProvider::class
 
     ],
 
@@ -240,6 +241,7 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,  
         'Excel' => Maatwebsite\Excel\Facades\Excel::class, 
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Sitemap' => Watson\Sitemap\Facades\Sitemap::class
 
     ],
 
