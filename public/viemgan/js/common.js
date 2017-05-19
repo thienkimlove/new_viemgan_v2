@@ -19,11 +19,22 @@ $(document).ready(function () {
         itemsMobile: [479, 1]
     });
 
-  /*var e = $("#sidebar").offset().top + $("#sidebar").height()+100;
-    $(window).scroll(function () {
-        var o = $(window).scrollTop();
-        e <= o ? $("#sidebar").addClass("fixed") : $("#sidebar").removeClass("fixed");
-    });*/
+    if( $('#sidebar').length )
+    {
+       var h =  $("#sidebar").height();
+       var e = $("#sidebar").offset().top + h + 100;
+       console.log('height:' + h);
+       console.log('E :' + e);
+
+
+        $(window).scroll(function () {
+            var o = $(window).scrollTop();
+            console.log('o:' + o);
+            var f = $("#experience").offset().top - h;
+            console.log('f :' + f);
+            (e <= o && o <= f) ? $("#sidebar").addClass("fixed") : $("#sidebar").removeClass("fixed");
+        });
+    }
     $(".hide-form-phone").on("click", function (n) {
         n.preventDefault(), $(".show-form-phone").show();
     }), $(".show-form-phone h4").on("click", function (n) {
