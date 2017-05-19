@@ -23,6 +23,12 @@
                         {!! Form::close() !!}
                     </div>
                 </div>
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                             <button id="export_to_excel" content-attr="{{$model}}" class="btn btn-default">Export Excel</button>
+                        </span>
+                    </div>
+                </div>
                 <div class="panel-body">
                     <div class="table-responsive">
                         <table class="table table-striped table-bordered table-hover">

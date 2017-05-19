@@ -1,7 +1,7 @@
 <div class="experience">
     <div class="fixCen">
         <h2 class="rs no-extend">KINH NGHIỆM PHÒNG VÀ CHỮA BỆNH GAN</h2>
-        <h2 class="rs extend">CHIA SẺ NGAY CÂU CHUYỆN CỦA BẠN</h2>
+        <h2 class="rs extend"><a href="http://www.viemgan.com.vn/lien-he" title="Chia sẻ ngay câu chuyện của bạn">CHIA SẺ NGAY CÂU CHUYỆN CỦA BẠN</a></h2>
         <div id="slider-2">
             @foreach (\App\Site::getCommentIndex() as $comment)
                 <div class="item">
@@ -9,12 +9,12 @@
                     <img src="{{url('files/images', $comment->image)}}" class="avatar" alt="Tên người" width="114" height="114">
                 </div>
                 <div class="right">
-                    <div class="title"><a href="{{$comment->link}}">{{$comment->title}}</a></div>
+                    <div class="title"><a href="{{$comment->link}}">{{str_limit($comment->title, 60)}}</a></div>
                     <div class="name">{{$comment->name}}</div>
                     <div class="address">{{$comment->address}}</div>
                 </div>
                 <div class="bottom">
-                    {!! $comment->comment !!}
+                    {{str_limit($comment->comment, 265)}}
                 </div>
             </div>
             @endforeach

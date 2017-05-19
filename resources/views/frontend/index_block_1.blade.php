@@ -22,13 +22,13 @@
                 @if ($firstPost = $posts->shift())
                     <div class="hot-news">
                         <div class="post">
-                            <img src="{{url('files/images', $firstPost->image)}}"
+                            <a href="{{url($firstPost->slug.'.html')}}" class="title"><img src="{{url('files/images', $firstPost->image)}}"
                                  alt="" width="301" height="183">
                             <h4><a href="{{url($firstPost->slug.'.html')}}"
                                    class="title"
                                    title="{{$firstPost->title}}">{{str_limit($firstPost->title, 50)}}</a>
                             </h4>
-                            <div class="sumary">{{str_limit($firstPost->desc, 150)}}</div>
+                            <div class="sumary">{{str_limit($firstPost->desc, 75)}}</div>
                         </div>
                     </div>
                 @endif
@@ -43,7 +43,7 @@
                                        class="title"
                                        title="{{$post->title}}">{{str_limit($post->title, 50)}}</a>
                                 </h4>
-                                <div class="sumary">{{str_limit($post->desc, 150)}}</div>
+                                <div class="sumary">{{str_limit($post->desc, 75)}}</div>
                             </div>
                         </div>
 
@@ -63,7 +63,7 @@
                                        class="title"
                                        title="{{$firstPost->title}}"> {{str_limit($firstPost->title, 50)}}</a>
                                 </h4>
-                                <div class="sumary">{{str_limit($firstPost->desc, 150)}}</div>
+                                <div class="sumary">{{str_limit($firstPost->desc, 75)}}</div>
                             </div>
                         </div>
                     @endif
@@ -78,7 +78,7 @@
                                            class="title"
                                            title="{{$post->title}}">{{str_limit($post->title, 50)}}</a>
                                     </h4>
-                                    <div class="sumary">{{str_limit($post->desc, 150)}}</div>
+                                    <div class="sumary">{{str_limit($post->desc, 75)}}</div>
                                 </div>
                             </div>
 

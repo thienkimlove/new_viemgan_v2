@@ -42,6 +42,7 @@
                                 <th>Email</th>
                                 <th>Phone</th>
                                 <th>Content</th>
+                                <th>Status</th>
                                 <th>Created</th>
                                 <th>Action</th>
                                 @foreach (config("site.content.$model.modules") as $k => $module)
@@ -57,6 +58,7 @@
                                     <td>{{$content->email}}</td>
                                     <td>{{$content->phone}}</td>
                                     <td>{{$content->content}}</td>
+                                    <td>{{config('site.contact_status.'.$content->status)}}</td>
                                     <td>{{$content->created_at->format('Y/m/d H:i:s')}}</td>
 
                                     <td>

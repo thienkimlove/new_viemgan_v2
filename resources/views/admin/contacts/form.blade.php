@@ -38,7 +38,10 @@
                     {!! Form::textarea('content', null, ['class' => 'form-control']) !!}
                 </div>
 
-
+                <div class="form-group">
+                    {!! Form::label('status', 'Status') !!}
+                    {!! Form::select('status', config('site.contact_status'), null, ['class' => 'form-control']) !!}
+                </div>
 
 
             <div class="form-group">

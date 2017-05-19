@@ -26,11 +26,11 @@
         </div>
         <div class="content">
             <div class="btn-groups">
-                <a href="{{url('phan-phoi')}}" class="diem-ban-btn">
-                    <img src="{{url('viemgan/images/tu-van-1.png')}}" alt="" class="imgFull" width="230" height="50">
+                <a  href="tel:0912571190" class="diem-ban-btn"  title="Tư vấn miễn phí">
+                    <img src="{{url('viemgan/images/tu-van-1.png')}}" alt="">
                 </a>
-                <a href="tel:0912571190" class="tu-van-btn" title="Tư vấn miễn phí">
-                    <img src="{{url('viemgan/images/diem-ban-1.png')}}" alt="" class="imgFull" width="230" height="50">
+                <a href="{{url('phan-phoi')}}" class="tu-van-btn" title="Điểm bán">
+                    <img src="{{url('viemgan/images/diem-ban-1.png')}}" alt="">
                 </a>
             </div>
             <div class="text">

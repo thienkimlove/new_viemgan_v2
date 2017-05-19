@@ -22,8 +22,8 @@
                                         {{$post->title}}
                                     </a>
                                     <div class="sumary">
-                                        {{$post->desc}}
-                                    </div>
+                                        {{str_limit($post->desc, 150)}}
+                                    </div><br />
                                     <a href="{{url($post->slug.'.html')}}" class="view-detail" title="Xem chi tiết">Xem chi tiết >></a>
                                 </div>
                             </div>

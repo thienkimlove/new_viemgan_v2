@@ -7,7 +7,7 @@
             <div class="block-1 banner-post">
                 @if ($firstPost = $indexTopPosts->shift())
                 <div class="banner-big pr">
-                    <img src="{{url('files/images', $firstPost->image)}}" alt="" width="507" height="310">
+                    <a href="{{url($firstPost->slug.'.html')}}" title="{{$firstPost->title}}" ><img src="{{url('files/images', $firstPost->image)}}" alt="" width="507" height="310"></a>
                     <div class="title">
                         <a href="{{url($firstPost->slug.'.html')}}" title="{{$firstPost->title}}">
                             {{str_limit($firstPost->title, 50)}}
@@ -20,7 +20,7 @@
                 <div class="group-banner-sm">
                     @foreach ($indexTopPosts  as $indexTopPost)
                         <div class="bn pr">
-                            <img src="{{url('files/images', $indexTopPost->image)}}" alt="" width="226" height="148">
+                            <a href="{{url($indexTopPost->slug.'.html')}}" title="{{$indexTopPost->title}}"><img src="{{url('files/images', $indexTopPost->image)}}" alt="" width="226" height="148"></a>
                             <div class="title">
                                 <a href="{{url($indexTopPost->slug.'.html')}}" title="{{$indexTopPost->title}}">
                                     {{str_limit($indexTopPost->title, 50)}}

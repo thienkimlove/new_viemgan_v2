@@ -56,7 +56,7 @@ class FrontendController extends Controller
             $subCategoryIds = Category::where('parent_id', $category->id)->pluck('id')->all();
             $categoryIds = ($subCategoryIds) ? $subCategoryIds : [$category->id];
 
-            $posts = Post::where('status', true)->whereIn('category_id', $categoryIds)->paginate(10);
+            $posts = Post::where('status', true)->latest('created_at')->whereIn('category_id', $categoryIds)->paginate(10);
             return view('frontend.category', compact('page', 'posts', 'category'));
         }  else {
             return redirect('/');
@@ -91,11 +91,12 @@ class FrontendController extends Controller
         if (preg_match('/([a-z0-9\-]+)\.html/', $slug, $matches)) {
             $post = Post::findBySlug($matches[1]);
             if ($post) {
+                $meta_title = $post->tieude ? $post->tieude : $post->title;
                 $page = ($post->category->parent_id) ? $post->category->parent->slug : $post->category->slug;
                 if ($post->content_1 && $post->content_2) {
-                    return view('frontend.product', compact('page', 'post'));
+                    return view('frontend.product', compact('page', 'post', 'title'));
                 } else {
-                    return view('frontend.post', compact('page', 'post'));
+                    return view('frontend.post', compact('page', 'post', 'meta_title'));
                 }
             } else {
                 return redirect('/');

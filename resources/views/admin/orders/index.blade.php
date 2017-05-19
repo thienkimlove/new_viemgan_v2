@@ -23,9 +23,6 @@
                         {!! Form::close() !!}
                     </div>
 
-                    <hr />
-                    <hr />
-
                     <div class="input-group">
                         <span class="input-group-btn">
                              <button id="export_to_excel" content-attr="{{$model}}" class="btn btn-default">Export Excel</button>

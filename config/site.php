@@ -1,6 +1,12 @@
 <?php
 
 return [
+    'contact_status' => [
+        0 => 'Vừa tiếp nhận',
+        1 => 'Đang xử lý',
+        2 => 'Đã hoàn thành'
+    ],
+
     'sitemap' => ['categories', 'posts', 'questions', 'videos'],
     'content' => [
 

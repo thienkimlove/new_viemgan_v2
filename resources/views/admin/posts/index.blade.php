@@ -54,16 +54,19 @@
                                     <td><img src="{{url('img/cache/small', $content->image)}}" /></td>
                                     <td>{{$content->category->name}}</td>
 
-                                    <td>
+                                  <td>
                                         <button id-attr="{{$content->id}}"
                                                 content-attr="{{$model}}"
                                                 class="btn btn-primary btn-sm edit-content"
                                                 type="button">
                                             Edit
-                                        </button>&nbsp;
+                                        </button><br /><br />
                                         {!! Form::open(['method' => 'DELETE', 'route' => [$model.'.destroy', $content->id]]) !!}
                                         <button type="submit" class="btn btn-danger btn-mini">Delete</button>
-                                        {!! Form::close() !!}
+                                        {!! Form::close() !!}<br />
+                                        <button class="btn btn-primary btn-sm" type="button">
+                                    <a target="_blank" href="{{url($content->slug.'.html')}}">View Post</a>
+                                     </button>
                                     </td>
 
                                     @foreach (config("site.content.$model.modules") as $k => $module)

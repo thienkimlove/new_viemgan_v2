@@ -20,7 +20,7 @@
                                 <h3 class="title-faq">
                                     <img src="{{url('files/images', $question->image)}}" alt="" width="58" height="58" class="faq-icon">
                                     <div class="title-ques">
-                                        <strong class="text">{{$question->title}}</strong> <br>
+                                        <strong class="text"><a href="{{url('hoi-dap', $question->slug)}}" class="text">{{$question->title}}</a></strong> <br>
                                         <i class="normal">Hỏi bởi: {{$question->person}}</i>
                                     </div>
                                 </h3>
