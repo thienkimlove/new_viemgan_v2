@@ -65,7 +65,7 @@
                                         <button type="submit" class="btn btn-danger btn-mini">Delete</button>
                                         {!! Form::close() !!}<br />
                                         <button class="btn btn-primary btn-sm" type="button">
-                                    <a target="_blank" href="{{url($content->slug.'.html')}}">View Post</a>
+                                    <a target="_blank" href="{{url($content->slug.'.html')}}" style="color:#FFFFFF">View Post</a>
                                      </button>
                                     </td>
 

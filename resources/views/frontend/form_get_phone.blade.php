@@ -5,14 +5,14 @@
             <img src="{{url('viemgan/images/bs-img.jpg')}}" alt="" width="206" height="199">
         </div>
         <div class="text">
-            Vui lòng gọi điện đến tổng đài tư vấn miễn cước 1800 1258 để được các Dược sĩ nhiều năm kinh nghiệm tư vấn trực tiếp.
+            Vui lòng gọi điện đến tổng đài tư vấn miễn cước <a href="tel: 18001190">1800 1190</a> để được các Dược sĩ nhiều năm kinh nghiệm tư vấn trực tiếp.
             <br>
-            Hoặc gửi câu hỏi cho PGS.TS Bác sĩ Nguyễn Văn Mùi để được chuyên gia trả lời các thắc mắc của bạn <br>
             Việc đọc trước những câu hỏi sẽ tiết kiệm thời gian cho bạn. <br>
-            Hoặc gửi câu hỏi cho PGS.TS Bác sĩ Nguyễn Văn Mùi để được chuyên gia trả lời các thắc mắc của bạn <br>
-            Việc đọc trước những câu hỏi sẽ tiết kiệm thời gian cho bạn. <br>
+            Hoặc gửi câu hỏi cho Thầy thuốc nhân dân, GS.TS Nguyễn Văn Mùi để được chuyên gia trả lời các thắc mắc của bạn <a href="http://www.viemgan.com.vn/lien-he" target="_blank">TẠI ĐÂY</a><br>
+            Để mua sản phẩm tại hiệu thuốc gần chỗ bạn nhất, vui lòng xem <a href="http://www.viemgan.com.vn/phan-phoi" target="_blank">TẠI ĐÂY</a>.<br>
+            Để mua hàng online – giao hàng, thu tiền tại nhà, <a href="http://www.viemgan.com.vn/phan-phoi" target="_blank">ĐẶT HÀNG NGAY TẠI ĐÂY</a>. <br>
             Ngại gọi điện? Vui lòng để lại số điện thoại, chúng tôi sẽ liên lạc lại cho bạn. <br>
-        </div>
+      </div>
     </div>
     <div class="form-get-phone">
             <input type="hidden" name="email" value="chiasetuelinh@gmail.com">

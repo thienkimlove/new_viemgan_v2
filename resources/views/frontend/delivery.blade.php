@@ -45,7 +45,7 @@
                         <div class="note2 note">
                             <div class="title">
                                 <span class="number">2</span>
-                                Gọi tới tổng đài tư vấn và chăm sóc khách hàng <a href="tel:19006482">1900 6482</a> - <a href="tel:0912571190">0912 571 190</a>
+                                Gọi tới tổng đài tư vấn và chăm sóc khách hàng <a href="tel:18001190">1800 1190</a> - <a href="tel:0912571190">0912 571 190</a>
                             </div>
                         </div>
                         <div class="note3 note">

@@ -56,16 +56,6 @@
                    src="https://www.facebook.com/tr?ev=6030780499151&amp;cd[value]=0.00&amp;cd[currency]=VND&amp;noscript=1"/>
     </noscript>
 
-    <!-- Begin Ad360, important page views tracking -->
-    <script type="text/javascript">
-        (function(d){
-            var s = d.createElement('script');s.async = true;s.type = 'text/javascript';s.src = 'http://' + 's.ad360.vn/showAds.htm?bapid=231&uid=6040';var node = d.getElementsByTagName('script')[0];node.parentNode.insertBefore(s, node);
-        })(document);
-    </script>
-    <noscript>
-        <img border="0" hspace="0" vspace="0" width="1" height="1" src="http://tracking.ad360.vn/retargeting.html?bapid=231&uid=6040" />
-    </noscript>
-    <!-- End Ad360, important page views tracking -->
 </head>
 <body>
 <div class="wrapper home pr">
@@ -155,6 +145,16 @@
     window._eclickq.push(['track', 'PixelInitialized', {}]);
 </script>
 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40782874-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 
 <!--- Script ANTS - remarketing -->
 <script type="text/javascript" async src="//e-vcdn.anthill.vn/delivery-ants/conversion.js"></script>
@@ -179,5 +179,9 @@
         <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/954780037/?guid=ON&amp;script=0"/>
     </div>
 </noscript>
+
+<!-- Google +-->
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+  <!-- Google +-->
 @yield('frontend_script')
 </html>

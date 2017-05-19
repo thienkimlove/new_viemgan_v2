@@ -1,7 +1,7 @@
 <div class="experience">
     <div class="fixCen">
         <h2 class="rs no-extend">KINH NGHIỆM PHÒNG VÀ CHỮA BỆNH GAN</h2>
-        <h2 class="rs extend"><a href="http://www.viemgan.com.vn/lien-he" title="Chia sẻ ngay câu chuyện của bạn">CHIA SẺ NGAY CÂU CHUYỆN CỦA BẠN</a></h2>
+        <h2 class="rs extend"><a href="http://www.viemgan.com.vn/chuong-trinh-chia-se-ngay-nhan-qua-hay.html" title="Chia sẻ ngay câu chuyện của bạn" target="_blank">CHIA SẺ NGAY CÂU CHUYỆN CỦA BẠN</a></h2>
         <div id="slider-2">
             @foreach (\App\Site::getCommentIndex() as $comment)
                 <div class="item">
