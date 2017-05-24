@@ -27,7 +27,7 @@
 </div>
 <div class="btn-group-fix banner-ads">
     <a href="https://www.facebook.com/viemgan.com.vn" title="Fanpage"><img src="{{url('viemgan/images/fb-icon.png')}}" alt="Fanpage" width="63" height="63"></a>
-    <a href="tel:0912571190" title="Gọi tư vấn"><img src="{{url('viemgan/images/call-icon.png')}}" alt="Gọi tư vấn" width="63" height="63"></a>
+    <a href="tel:18001190" title="Gọi tư vấn"><img src="{{url('viemgan/images/call-icon.png')}}" alt="Gọi tư vấn" width="63" height="63"></a>
     <a href="{{url('phan-phoi')}}" title="Mua hàng"><img src="{{url('viemgan/images/cart-icon.png')}}" alt="Giỏ hàng" width="63" height="63"></a>
     <a href="{{url('phan-phoi')}}" title="Điểm bán sản phẩm"><img src="{{url('viemgan/images/location-icon.png')}}" alt="Điểm bán sản phẩm" width="63" height="63"></a>
 </div>
@@ -36,7 +36,7 @@
         <a href="javascript:void(0)" class="miniMenu-btn pa open-main-nav" data-menu="#main-nav"></a>
     </div>
     <div class="fixCen head-info">
-        <h1 class="rs"><a href="{{url('/')}}" class="logo" title="Viêm gan" target="_blank">
+        <h1 class="rs"><a href="{{url('/')}}" class="logo" title="Viêm gan">
                 <img src="{{url('viemgan/images/logo.png')}}" alt="Viêm gan" width="170" height="99" class="imgFull">
             </a></h1>
         <span class="slogan">

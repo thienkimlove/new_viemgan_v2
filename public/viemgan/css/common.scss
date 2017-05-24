@@ -27,6 +27,7 @@ li.rs{
 .px{
   position: fixed;
 }
+
 h1 {
   font-size: 20px;
   font-weight: normal;
@@ -117,6 +118,7 @@ h1 {
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
+  display: flex;
 }
 .transX0{
   -webkit-transform: translateX(0) !important;
@@ -401,7 +403,6 @@ header{
     justify-content: space-between;
     img{
       width: 100%;
-      height: auto;
     }
     .banner-big{
       width: 51%;
@@ -424,9 +425,11 @@ header{
     .group-banner-sm{
       width: 47.5%;
       @extend %disFlex;
+      flex-flow: row wrap;
       -webkit-flex-flow: row wrap;
-      -webkit-flex-flow: row wrap;
+      justify-content: space-between;
       -webkit-justify-content: space-between;
+      -webkit-align-items: baseline;
       align-items: baseline;
       .bn{
         width: 48%;
@@ -444,9 +447,21 @@ header{
       .banner-big{
         width: 100%;
         margin-bottom: 20px;
+        img{
+          height: auto;
+        }
       }
       .group-banner-sm{
         width: 100%;
+      }
+    }
+    @media(max-width: 500px) {
+      .bn{
+        width: 80% !important;
+        margin: 0 auto 10px auto;
+        img{
+          height: auto;
+        }
       }
     }
   }
@@ -467,7 +482,6 @@ header{
         li{
           list-style: none;
           width: 34.5%;
-          height: 100%;
           margin-left: -9%;
           padding-left: 9%;
           box-sizing: border-box;
@@ -649,6 +663,8 @@ header{
         @extend %disFlex;
         -webkit-justify-content: space-between;
         justify-content: space-between;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
         &>div{
           width: 47.5%;
         }
@@ -657,6 +673,7 @@ header{
           display: block;
           width: 100%;
           margin: 0 0 10px 0;
+          text-transform: uppercase;
         }
         .post{
           width: 100%;
@@ -673,11 +690,12 @@ header{
           }
           img{
             width: 100%;
-            height: auto;
+            //height: auto;
           }
           .sumary{
             border-bottom: thin solid #8c8888;
             padding: 10px 0;
+            height: 81px;
           }
           .related-news{
             a{
@@ -707,6 +725,12 @@ header{
                 border: none;
               }
             }
+          }
+        }
+        @media(max-width: 570px) {
+          &>div{
+            width: 96%;
+            margin: auto;
           }
         }
       }
@@ -777,8 +801,10 @@ header{
             justify-content: space-between;
             -webkit-align-items: flex-start;
             align-items: flex-start;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
             color: #1f1a1b;
+            border-bottom: thin dashed #cccccc;
+            padding-bottom: 15px;
             .date{
               font-size: 12px;
             }
@@ -843,7 +869,12 @@ header{
         flex-flow: row wrap;
         -webkit-justify-content: space-around;
         justify-content: space-around;
-        margin-top: 20px;
+        margin: 20px 0;
+        li{
+          &:first-child{
+            margin-bottom: 20px;
+          }
+        }
         @media(max-width: 520px ) {
           li{
             min-width: 51%;
@@ -930,12 +961,17 @@ header{
         .detail-tab-content{
           article{
             width: 100%;
-            img, table, iframe{
+            img, table{
               max-width: 100%;
               height: auto;
               margin: auto;
             }
-            img, iframe{
+            iframe{
+              max-width: 100%;
+              margin: auto;
+              display: block;
+            }
+            img{
               display: block;
             }
           }
@@ -1445,7 +1481,7 @@ header{
       }
     }
     .right-content{
-      width: 31%;
+      width: 31.25%;
       h2,h3,h4{
         font-size: 14px;
       }
@@ -1455,7 +1491,7 @@ header{
         img{
           width: 100%;
           height: auto;
-          max-width: 317px;
+          max-width: 320px;
         }
       }
       .box-usual-ques{
@@ -1576,6 +1612,7 @@ header{
     background: #e2efe3;
     padding: 20px 0;
     .extend{
+
       @extend %h2Prop;
       width: 298px;
       margin: 0 0 20px 0;
@@ -1583,6 +1620,9 @@ header{
       position: absolute;
       top: 0;
       right: 36px;
+      a{
+        color: #ffffff;
+      }
     }
     .no-extend{
       width: 350px;
@@ -1841,7 +1881,7 @@ footer{
         }
       }
       &:nth-child(3){
-        width: 56%;
+        width: 70%;
         border: none;
         @extend %disFlex;
         -webkit-flex-flow: row wrap;
@@ -1886,18 +1926,28 @@ footer{
         }
       }
     }
-    @media(max-width: 900px) {
+    @media(max-width: 1000px) {
       -webkit-flex-flow: row wrap;
       flex-flow: row wrap;
+      -webkit-justify-content: center;
+      justify-content: center;
       .content{
         &:nth-child(1), &:nth-child(2){
-          width: 50%;
+          width: 45%;
+        }
+        &:nth-child(2){
+          border: none;
         }
         &:nth-child(3){
-          width: 70%;
+          width: 90%;
           margin: 10px auto;
           .btn-groups{
             width: 100%;
+            a{
+              &:nth-child(1){
+                text-align: right;
+              }
+            }
           }
           .text{
             font-size: 20px;
@@ -1914,12 +1964,24 @@ footer{
     @media(max-width: 600px) {
       .content{
         &:nth-child(3){
-          width: 90%;
+          width: 96%;
           margin: 10px auto;
           .text{
             font-size: 18px;
             span{
               width: 100%;
+            }
+          }
+        }
+        .btn-groups{
+          -webkit-flex-flow: row wrap;
+          flex-flow: row wrap;
+          a{
+            width: 100% !important;
+            text-align: center !important;
+            margin: auto;
+            &:nth-child(1){
+              margin-bottom: 10px !important;
             }
           }
         }
@@ -1944,7 +2006,7 @@ footer{
     right: 0px;
   }
   &.btn-group-fix {
-    width: 63px;
+    width: 62px;
     position: absolute;
     top: 186px;
     right: 13%;

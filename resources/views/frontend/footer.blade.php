@@ -9,9 +9,9 @@
     <div class="fixCen">
         <div class="content">
             <div class="links">
-                <a href="{{url('chuyen-muc', 'thong-tin-san-pham')}}" title="Thông tin sản phẩm">Thông tin sản phẩm</a>
-                <a href="{{url('chuyen-muc', 'san-pham')}}" title="Nghiên cứu khoa học">Nghiên cứu khoa học</a>
-                <a href="{{url('chuyen-muc', 'trai-nghiem-khach-hang')}}" title="Trải nghiệm khách hàng">Trải nghiệm khách hàng</a>
+                <a href="{{url('chuyen-muc', 'san-pham')}}" title="Thông tin sản phẩm">Thông tin sản phẩm</a>
+                <a href="{{url('chuyen-muc', 'thong-tin-khoa-hoc')}}" title="Nghiên cứu khoa học">Nghiên cứu khoa học</a>
+                <a href="{{url('chuyen-muc', 'kinh-nghiem')}}" title="Trải nghiệm khách hàng">Trải nghiệm khách hàng</a>
                 <a href="{{url('phan-phoi')}}" class="diem-ban-btn" title="Điểm bán sản phẩm">ĐIỂM BÁN</a>
             </div>
         </div>

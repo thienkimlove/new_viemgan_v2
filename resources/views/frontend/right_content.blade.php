@@ -25,7 +25,7 @@
     </div>
     @endif
     <div class="box-adv">
-        <a href="tel:0912571190">
+        <a href="tel:18001190">
             <img src="{{url('viemgan/images/tu-van-2.png')}}" alt="Tư vấn miễn phí" width="317" height="76">
         </a>
     </div>

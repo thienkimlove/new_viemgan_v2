@@ -92,11 +92,12 @@ class FrontendController extends Controller
             $post = Post::findBySlug($matches[1]);
             if ($post) {
                 $meta_title = $post->tieude ? $post->tieude : $post->title;
+                $meta_desc = $post->desc;
                 $page = ($post->category->parent_id) ? $post->category->parent->slug : $post->category->slug;
                 if ($post->content_1 && $post->content_2) {
                     return view('frontend.product', compact('page', 'post', 'title'));
                 } else {
-                    return view('frontend.post', compact('page', 'post', 'meta_title'));
+                    return view('frontend.post', compact('page', 'post', 'meta_title', 'meta_desc'));
                 }
             } else {
                 return redirect('/');
@@ -121,7 +122,15 @@ class FrontendController extends Controller
             return view('frontend.delivery_detail', compact('province', 'page'));
         } else {
             $provinces = Province::orderBy('id')->get();
-            return view('frontend.delivery', compact('provinces', 'page'));
+
+            $success_delivery_form_message = null;
+
+            if (session()->has('success_delivery_form_message')) {
+                $success_delivery_form_message = true;
+                session()->forget('success_delivery_form_message');
+            }
+
+            return view('frontend.delivery', compact('provinces', 'page', 'success_delivery_form_message'));
         }
     }
 
@@ -137,6 +146,12 @@ class FrontendController extends Controller
     public function saveOrder(Request $request)
     {
         $data = $request->all();
+        $redirectUrl = null;
+
+        if (isset($data['redirect_url'])) {
+            $redirectUrl = $data['redirect_url'];
+            unset($data['redirect_url']);
+        }
         
         if (!empty($data['name']) && !empty($data['address']) && !empty($data['product_id']) && !empty($data['quantity']) && !empty($data['phone'])) {
 
@@ -149,6 +164,12 @@ class FrontendController extends Controller
                 'note' => (isset($data['note'])) ? $data['note'] : '',
                 'status' => 0
             ]);
+        }
+
+
+        if ($redirectUrl) {
+            session()->put('success_delivery_form_message', true);
+            return redirect()->to($redirectUrl);
         }
 
         return redirect('/');

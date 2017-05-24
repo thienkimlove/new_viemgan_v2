@@ -46,7 +46,9 @@
         <textarea name="content" id="content" cols="30" rows="10"
                   placeholder="Nhập nội dung"></textarea>
     </div>
+
     <div class="errors" id="delivery_form_message" style="display: none">Điền đầy đủ các thông tin</div>
+
     <div class="contain-btn form-row">
         <button id="delivery_form_submit" type="button">Gửi</button>
         <button id="delivery_form_reset" type="reset">Nhập lại</button>

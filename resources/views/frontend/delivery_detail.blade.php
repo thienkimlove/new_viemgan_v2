@@ -20,7 +20,7 @@
                             Để mua sản phẩm tại các tỉnh thành khác, vui lòng click: <a href="{{url('phan-phoi')}}" title="Điểm bán hàng toàn quốc">ĐIỂM BÁN HÀNG TOÀN QUỐC</a>
                             <br>
                             Các nhà thuốc được in đậm là các nhà thuốc chắc chắn còn hàng. Nếu không tìm thấy điểm bán hàng thuận tiện, hãy gọi đến Hotline (miễn cước)
-                            1900 4682 để được hướng dẫn hoặc muốn mua hàng online thì xem <a href="#" title="Đặt hàng online">" TẠI ĐÂY "</a>
+                            1800 1190 để được hướng dẫn hoặc muốn mua hàng online thì xem <a href="http://www.viemgan.com.vn/phan-phoi" title="Đặt hàng online">" TẠI ĐÂY "</a>
                         </h3>
                         <div class="pp-chitiet-content">
 

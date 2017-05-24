@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    <title>Viemgan.com.vn | Landing</title>
+    <title>Cổng thông tin về bệnh viêm gan - xơ gan | Viemgan.com.vn | Landing</title>
     <link rel="stylesheet" href="{{url('landing/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{url('landing/css/owl.carousel.css')}}">
     <link rel="stylesheet" href="{{url('landing/css/common.css')}}">
@@ -26,7 +26,7 @@
                 <img src="{{url('viemgan/images/icon.png')}}" alt="" class="imgFull" width="67" height="71">
             </div>
             <span class="hotline" id="hotline">
-                    <a href="tel:19006639">
+                    <a href="tel:18001190">
                         <img src="{{url('viemgan/images/hotline.png')}}" alt="" width="166" height="56" class="imgFull">
                     </a>
                     <form action="{{url('tim-kiem')}}" method="GET" class="search-on-top">
@@ -70,12 +70,11 @@
         <div class="fixCen">
             <div class="block1 intro-video">
                 <div class="text">
-                    <p>Là một trong những quốc gia đang phải gánh chịu hậu quả nặng nề của viêm gan virus, ước tính hiện nay, tỷ lệ người nhiễm virus viêm gan ở nước ta chiếm hơn 20% dân số,
-                        trong đó có khoảng 5 triệu người trong tình trang viêm gan mạn tính, xơ gan với nhiều biến chứng nguy hiểm.</p>
+                    <p>Nước ta là một trong những quốc gia có tỷ lệ mắc viêm gan virus B và C cao trên thế giới, khoảng 20% dân số, trong đó có gần 5 triệu người mắc viêm gan mạn tính, xơ gan với nhiều biến chứng nguy hiểm.
+                        Trong khi việc điều trị còn gặp nhiều khó khăn bởi thuốc đặc trị đắt tiền, khả năng kháng thuốc cao và có thể gặp tác dụng phụ. Theo ước tính, chi phí điều trị cho mỗi bệnh nhân viêm gan virus B lến đến 2.5 - 3,5 triệu đồng/tháng, viêm gan virus C là 5 - 15 triệu đồng/tháng. Nhiều người phải bỏ dở liệu trình điều trị khiến bệnh khó kiểm soát, dễ bùng phát, ảnh hưởng nghiêm trọng tới sức khỏe.</p>
                     <p>
-                        Tromg khi đó việc điều trị căn bệnh này lại gặp nhiều khó khăn bởi thuốc đặc trị rất đắt tiền, khả năng kháng thuốc và tái phát sau khi ngừng thuốc cao, lại tiềm ẩn nguy cơ tác dụng phụ khi sử dụng lâu dài.
-                        Theo ước tính, chi phí điều trị cho mỗi bệnh nhân viêm gan virus B lến đến 2.5 - 3,5 triệu đồng một tháng, còn bệnh nhân viêm gan virus C là 5 - 15 triệu đồng một tháng. Đây thực sự là một trở ngại lớn đối với
-                        người bệnh, đặc biệt là những bệnh nhân nghèo - họ thường phải bỏ dở liệu trình điều trị khiến bệnh khó kiểm soát, dễ bùng phát, ảnh hưởng nghiêm trọng tới sức khỏe.
+                        Trước thực trạng đó, các nhà khoc học dược đã dày công nghiên cứu, cho ra đời TPBVSK Giải độc gan Tuệ Linh không chỉ giúp người bệnh giảm triệu chứng lâm sàng, hạ men gan, giảm nồng độ virus trong máu mà còn ngăn ngừa được biến chứng xơ gan. 
+                        Có thể nói đây chính là giải pháp hỗ trợ điều trị hiệu quả với chi phí hợp lý.
                     </p>
                 </div>
                 <div class="video">
@@ -101,22 +100,21 @@
         </div>
         <div class="block3">
             <div class="fixCen">
-                <h2>vì sao nên chọn giải độc gan tuệ linh?</h2>
+                <h2>GIẢI PHÁP HỖ TRỢ ĐIỀU TRỊ VIÊM GAN VIRUS VÀ XƠ GAN HIỆU QUẢ TỪ THẢO DƯỢC</h2>
                 <div class="boxHot">
                     <div class="item">
                         <a href="#" class="thumb">
                             <img src="{{url('landing/images/thumb-img.jpg')}}" alt="hot" width="127" height="127">
                         </a>
-                        <h4>
-                            Giải độc gan Tuệ Linh tiên phong sử dụng cà gai leo và mật nhân. Trong đó Cà gai leo là thảo dược số 1 hiện này giúp Khống chế bệnh viêm gan virus và xơ gan
-                        </h4>
+                      <h4>
+                            Giải độc gan Tuệ Linh tiên phong kết hợp cà gai leo và mật nhân. Trong đó Cà gai leo là thảo dược đã được khoa học chứng minh hỗ trợ điều trị viêm gan virus và xơ gan hiệu quả. <i>Xem chi tiết <a href="http://www.viemgan.com.vn/3-thap-ky-chiet-xuat-duoc-lieu-viet-tri-benh-gan.html" target="_blank" style="color:#ffffff">tại đây</a></i>.                        </h4>
                     </div>
                     <div class="item">
                         <a href="#" class="thumb">
-                            <img src="{{url('landing/images/thumb-img2.jpg')}}" alt="hot" width="127" height="127">
+                            <img src="{{url('landing/images/thumb-img7.jpg')}}" alt="hot" width="127" height="127">
                         </a>
                         <h4>
-                            Giải độc gan Tuệ Linh đã được nghiên cứu lâm sàng tại bệnh viện Trung Ương Quân đội 108, chứng minh hiệu quả trong hỗ trợ điều trị viêm gan virus và phòng ngừa sự tiến triển của xơ gan
+                            Giải độc gan Tuệ Linh đã được kiểm chứng lâm sàng tại bệnh viện Trung Ương Quân đội 108, chứng minh hiệu quả trong hỗ trợ điều trị viêm gan virus và phòng ngừa sự tiến triển của xơ gan. <i>Xem nghiên cứu <a href="http://www.viemgan.com.vn/nghien-cuu-danh-gia-ket-qua-buoc-dau-cua-vien-giai-doc-gan-tue-linh-trong-ho-tro-dieu-tri-viem-gan-virus-b-man-tinh.html" target="_blank" style="color:#ffffff">tại đây</a>.</i>
                         </h4>
                     </div>
                     <div class="item">
@@ -124,12 +122,12 @@
                             <img src="{{url('landing/images/thumb-img3.jpg')}}" alt="hot" width="127" height="127">
                         </a>
                         <h4>
-                            Sản phẩm đã được thử dược tính, dược lý tại bộ môn Dược lý, Đại học Y Hà Nội chứng minh an toàn, không tác dụng phụ, dùng được lâu dài
+                            Sản phẩm đã được nghiên cứu dược tính, dược lý tại bộ môn Dược lý, Đại học Y Hà Nội và chứng minh an toàn, không tác dụng phụ, dùng được lâu dài.<i> Xem nghiên cứu <a href="http://www.viemgan.com.vn/dai-hoc-y-ha-noi-cong-bo-nghien-cuu-ve-tac-dung-cua-livganic-giai-doc-gan-tue-linh-tren-benh-nhan-lao-phoi.html" target="_blank" style="color:#ffffff">tại đây</a></i>.
                         </h4>
                     </div>
                     <div class="item">
                         <a href="#" class="thumb">
-                            <img src="{{url('landing/images/thumb-img4.jpg')}}" alt="hot" width="127" height="127">
+                            <img src="{{url('landing/images/thumb-img2.jpg')}}" alt="hot" width="127" height="127">
                         </a>
                         <h4>
                             Nguồn nguyên liệu sạch, chuẩn hóa theo tiêu chuẩn của Tổ chức Y Tế Thế Giới tại Triệu Sơn, Thanh Hóa và Nghĩa Hành, Quảng Ngãi.
@@ -137,7 +135,7 @@
                     </div>
                     <div class="item">
                         <a href="#" class="thumb">
-                            <img src="{{url('landing/images/thumb-img5.jpg')}}" alt="hot" width="127" height="127">
+                            <img src="{{url('landing/images/thumb-img4.jpg')}}" alt="hot" width="127" height="127">
                         </a>
                         <h4>
                             Được sản xuất trên dây chuyền hiện đại đạt tiêu chuẩn quốc tế GMP-WHO
@@ -148,7 +146,7 @@
                             <img src="{{url('landing/images/thumb-img6.jpg')}}" alt="hot" width="127" height="127">
                         </a>
                         <h4>
-                            10 năm có mặt trên thị trường, sản phẩm được hàng triệu người tiêu dùng uy tín trao tặng giải thưởng cao quý (hình ảnh các cup giải thưởng)
+                            10 năm có mặt trên thị trường, sản phẩm được hàng triệu người tin dùng và đã vinh dự đạt giải thưởng cao quý: Huy chương Vàng vì Sức khỏe người Việt 2015, Top 10 thương hiệu chất lượng nhất 2016…
                         </h4>
                     </div>
                 </div>
@@ -157,48 +155,42 @@
         <div class="block4">
             <div class="fixCen">
                 <div class="center">
-                    <h2>giải pháp hỗ trợ điều trị viêm gan virus và xo gan đến từ thảo dược</h2>
+                    <h2>CHUNG TAY ĐẨY LÙI VIÊM GAN VIRUS VÀ XƠ GAN</h2>
                 </div>
                 <div class="text">
                     <p>
-                        Hưởng ứng ngày Toàn thế giới phòng chống viêm gan virus và kỷ niệm 10 năm GĐG TL có mặt trên thị trường, TPBVSK Giải độc gan Tuệ Linh
-                        hân hạnh tổ chức chương trình Chung tay đẩy lùi viêm gan virus và xơ gan. Với chương trình này, Giải độc gan Tuệ Linh mong muốn
-                        nâng cao nhận thức của cộng đồng cũng như các giải pháp điều trị hiệu quả nhằm ổn định sức khỏe, khống chế bệnh và giảm bớt chi phí điều
-                        trị cho những bệnh nhân mắc viêm gan virus và xơ gan.
+                        Hưởng ứng ngày Toàn thế giới phòng chống viêm gan virus (28/7/2017) và kỷ niệm 10 năm đồng hành và chăm sóc lá gan người Việt,
+                        sản phẩm Giải độc gan Tuệ Linh phối hợp cùng với Hội gan mật Việt Nam tổ chức cuộc thi “Chung tay đẩy lùi viêm gan virus và xơ gan”.
+                        Với chương trình này, chúng tôi mong muốn nâng cao nhận thức của cộng đồng cũng như các giải pháp phòng và điều trị bệnh hiệu quả nhằm ổn định sức khỏe và giảm bớt chi phí điều trị cho những bệnh nhân mắc viêm gan virus và xơ gan.
                     </p>
                 </div>
                 <div class="center">
-                    <h2>thể lệ chương trình</h2>
+                    <h2>Thể lệ chương trình</h2>
                 </div>
                 <div class="program">
-                    <strong>Thời gian: </strong> Từ 01/06/2017 đến hết 13/07/2017 <br>
-                    <strong>Lễ tổng kết trao giải: </strong> 28/7/2017 <br>
-                    Các cá nhân đặt giải sẽ được thông báo trên website <a href="http://www.viemgan.com.vn">www.viemgan.com.vn</a>
+                    <strong>Thời gian: </strong> Từ 01/06/2017 đến hết 31/07/2017 <br>
+                    <strong>Lễ tổng kết trao giải: </strong> 18/8/2017 <br>
+                    Các cá nhân đạt giải sẽ được thông báo trên website <a href="http://www.viemgan.com.vn">www.viemgan.com.vn</a> và trên fanpage <a href="https://www.facebook.com/viemgan.com.vn" target="_blank">Phòng bệnh gan</a>.
                     <br>
                     <h3>GIẢI THƯỞNG</h3>
                     <p>
-                    <h4><red>5.1 GIẢI THƯỞNG THEO TUẦN</red></h4>
-                    Mỗi tuần 05 giải sẽ được trao cho 5 bài dự thi hay nhất, mỗi giải được 3 hộp Giải độc gan Tuệ Linh.
-                    </p>
-                    <h4><red>5.2 GIẢI THƯỞNG CHUNG CUỘC</red></h4>
-                    <p>
-                        <span>01 giải nhất: </span> Điện thoại 7,000,000 VNĐ + 1 năm sử dụng miễn phí Giải độc gan Tuệ Linh (<i>trị giá 6,912,000 VNĐ</i>)
-                        + 1 phiếu khám VIP tầm soát bệnh gan với GS. TS Nguyễn Văn Mùi tại mòng khám Medelab - Giám đốc chuyên môn phòng Khám Medelab, nguyên Phó Gám đốc
-                        Học viện Quân Y 103, chuyên gia đầu ngành gan mật.
+                    <strong><red>Vòng 1: Giải thưởng tuần</red></strong> 
+                    <li>Mỗi tuần Giải độc gan Tuệ Linh sẽ tổ chức 01 cuộc thi trắc nghiệm. Ban tổ chức (BTC) sẽ chọn ra 50 người trả lời đúng và làm đúng các bước trên để trao giải.</li>
+                    <li>Mỗi người <red><i>02 hộp Giải độc gan Tuệ Linh </i></red>tương đương <red>384.000 VNĐ</red></li>
                     </p>
                     <p>
-                        <span>02 Giải Nhì:</span> Mỗi giải cây nước nóng lạnh trị giá 4,000,000 VNĐ + 1 năm sử dụng miễn phí Giải độc gan Tuệ Linh (<i>trị giá 6,912,000 VNĐ</i>)
-                        + 1 phiếu khám VIP tầm soát bệnh gan với GS. TS Nguyễn Văn Mùi tại mòng khám Medelab
+                    <strong><red>Vòng 2: Chia sẻ cảm nhận khi sử dụng Giải độc gan Tuệ Linh</red></strong>
+                    <li>Những khách hàng làm đúng các bước như thể lệ phía dưới sẽ được nhận ngay <red> 01 hộp Giải độc gan Tuệ Linh và 01 phiếu bốc thăm trúng thưởng </red> một trong các phần quà giá trị của chương trình trong vòng 3 - bốc thăm may mắn</li>
+                    </p>
+                    <strong><red>Vòng 3: Bốc thăm trúng thưởng</red></strong><br><br>
+                    <p>
+                        <span>01 giải nhất: </span>Điện thoại di động OPPO F3 trị giá <red><i>7.500.000 VNĐ</i></red>
                     </p>
                     <p>
-                        <span>03 Giải Ba: </span> Mỗi giải một lò vi sóng thương hiệu Sharp (2 triệu VNĐ) + 1 năm sử dụng miễn phí Giải độc gan Tuệ Linh (<i>trị giá 6,912,000 VNĐ</i>)
+                        <span>02 Giải Nhì:</span> Mỗi giải cây nước nóng lạnh trị giá <red><i>4.000.000 VNĐ </i></red>
                     </p>
                     <p>
-                        <span>10 giải khuyến khích: </span> Mỗi giải 6 tháng sử dụng miễn phí Giải độc gan Tuệ Linh (<i>trị giá 3,456,000 VNĐ</i>)
-                    </p>
-                    <p>
-                    <h4><red>5.3. GIẢI HỖ TRỢ</red></h4>
-                    <span>10 Giải hỗ trợ: </span>Mỗi giải 01 năm sử dụng miễn phí Giải độc gan Tuệ Linh trị giá <strong>6,912,000 VNĐ</strong>
+                        <span>03 Giải Ba: </span> Mỗi giải được nhận <red><i>03 tháng </i></red>sử dụng Giải độc gan Tuệ Linh miễn phí.
                     </p>
                 </div>
             </div>
@@ -206,33 +198,65 @@
         <div class="block5">
             <div class="fixCen">
                 <div class="center">
-                    <h2>tham gia chương trình chọn một trong những hình thức sau</h2>
+                    <h2>Cách thức tham dự chương trình</h2>
                 </div>
                 <div class="text">
+                  <p>
+                          <strong>
+                          <red>Vòng 1: Tham gia thi trắc nghiệm trên fanpage chương trình ( thời gian từ 09/06/2017 – 30/6/2017)</red>
+                          </strong>.<br> Mỗi tuần Giải độc gan Tuệ Linh sẽ tổ chức 01 cuộc thi trắc nghiệm. Người  tham dự làm theo  các bước dưới đây<br>
+                        <span>Bước 1: </span>Tham gia trả lời câu hỏi trắc nghiệm <a href="#" title="Tham gia trắc nghiệm trên fanpage">TẠI ĐÂY</a>
+                      <br>
+                          <span>Bước 2: </span>Like và share cuộc thi ở chế độ công khai<br>
+                        <span>Bước 3: Tag 05 người bạn vào câu trả lời.</span>
+                  <p>- Hàng tuần, Ban tổ chức (BTC) sẽ chọn ra 50 người trả lời đúng và làm đúng các bước trên để trao giải. <br>
+                        - Giải thưởng: Mỗi người <red>02 hộp Giải độc gan Tuệ Linh </red> tương đương <red> 384.000 VNĐ.</red><br>
+                        - Lưu ý: Trong mỗi hộp Giải độc gan Tuệ Linh sẽ có 01 mã số trúng thưởng. Khách hàng giữ lại để tham gia vòng 2 và 3.</p></p>
                     <p>
-                        <strong><red>Cách 1: Tham gia trắc nghiệm trên fanpage tại đây</red></strong> <br>
-                        <span>Bước 1: </span> Tham gia trắc nghiệm trên Fanpage <a href="#" title="Tham gia trắc nghiệm trên fanpage">TẠI ĐÂY</a>
+                        <strong><red>Vòng 2: Gửi bài chia sẻ cảm nhận khi sử dụng Giải độc gan Tuệ Linh với Công ty TNHH Tuệ Linh</red></strong>
+                        <br>Những khách hàng được tặng Giải độc gan Tuệ Linh trong vòng 01  sẽ  nhận được 01 mã trúng thưởng (đính kèm trong hộp sản phẩm). Khách hàng giữ lại mã và thực hiện đúng các bước bên dưới sẽ được nhận ngay 01 hộp Giải độc gan Tuệ Linh và 01 phiếu bốc thăm trúng thưởng một trong các phần quà giá trị
                         <br>
-                        <span>Bước 2: </span> Dự đoán có bao nhiêu người tham gia cuộc thi này? <br>
-                        <span>Bước 3: Like, share chương trình lên tường của bạn và tag ít nhất 5 người bạn.</span>
+                  <p><strong><red>Các bước tham dự:</red> </strong></p>
+                        <span><strong><red>Bước 1: </red></strong>Điền thông tin chia sẻ (tối thiểu 500 chữ) về quá trình sử dụng Giải độc gan Tuệ Linh về các nội dung:</span>
+                        <br>- Trước khi sử dụng Giải độc gan Tuệ Linh, tình trạng bệnh, tình trạng sức khỏe như thế nào? 
+                        <br>- Tác dụng sau khi sử dụng Giải độc gan Tuệ Linh? 
+                        <br>- Chia sẻ về Giải độc gan Tuệ Linh với mọi người
+                      <br><br>
+                          <span><strong><red>Bước 2:</red></strong>Gửi hình ảnh người dùng chụp cùng sản phẩm Giải độc gan Tuệ Linh kèm theo chia sẻ  và ảnh của mã trúng thưởng bằng cách inbox trên fanpage <a href="https://www.facebook.com/viemgan.com.vn" target="_blank">TẠI ĐÂY</a></span><br>
+                          <br>
+                        <span><strong><red>Bước 3:</red></strong> : BTC sẽ đăng chia sẻ của bạn và tag tên bạn. Bạn vào ảnh của mình like, share công khai trên tường nhà bạn, comment ghi rõ tên, tuổi, địa chỉ nhận quà và tag 5 người bạn.</span>
+                        <p>- Ngay khi làm đủ các bước trên, BTC sẽ gửi quà là 01 hộp Giải độc gan Tuệ Linh về địa chỉ bạn cung cấp. Với mỗi mã trúng thưởng bạn sẽ được nhận 01 phiếu bốc thăm trúng thưởng gửi cùng quà tặng <br>
+                        - Thời gian nhận Chia sẻ hay: Chậm nhất ngày 31/07/2017<br></p>
+                    <p>
+                    <strong><red>Vòng 3: Bốc thăm trúng thưởng</red></strong><br><br>
+                    <p>
+                        <span>01 giải nhất: </span>Điện thoại di động trị giá <red><i>7.000.000 VNĐ</i></red>
                     </p>
                     <p>
-                        <strong><red>Cách 2: Gửi bài chia sẻ quá trình chữa bệnh viêm gan virus hoặc xơ gan của bản thân trực tiếp với Công ty TNHH Tuệ Linh</red></strong>
-                        <br>
-                        <span>Gửi bài dự thi, dự đoán số người tham dự cuộc thi này kèm 01 ảnh người dự thi về địa chỉ: </span>
-                        <i class="center" style="font-style: normal;display: block;">Công ty Tuệ Linh - tầng 5, tòa nhà 29 T1 Hoàng Đạo Thúy, Cầu Giấy, Hà Nội.</i>
-                        <span>Ngoài bì thư ghi rõ: </span> Tham gia cuộc thi "Chung tay đẩy lùi viêm gan virus và xơ gan"
+                        <span>02 Giải Nhì:</span> Mỗi giải cây nước nóng lạnh trị giá <red><i>4.000.000 VNĐ </i></red>
                     </p>
                     <p>
-                        <strong><red>Cách 3: Gửi bài dự thi về địa chỉ email: <a href="mailto:giaidocgan@tuelinh.com">giaidocgan@tuelinh.com</a></red></strong>
-                        <br>
-                        <span>Phần Subject (Chủ đề): </span> Tham gia cuộc thi "Chung tay đẩy lùi bệnh viêm gan virus và xơ gan".
-                        <br>
-                        <span>Gửi bài dự thi, dự đoán số người tham dự cuộc thi này kèm 01 ảnh người dự thi</span>
-                    </p>
-                    <p>
-                        <strong><red>Cách 4: Gửi bài chia sẻ quá trình chữa bệnh viêm gan virus hoặc xơ gan của bản thân ngay dưới box này</red></strong>
-                    </p>
+                        <span>03 Giải Ba: </span> Mỗi giải được nhận 03 tháng sử dụng Giải độc gan Tuệ Linh miễn phí.
+                    </p>Đối tượng áp dụng: Khách hàng mua Giải độc gan Tuệ Linh gửi mã bốc thăm trúng thưởng về địa chỉ công ty hoặc những khách hàng tham gia đầy đủ vòng 02 trong chương trình Chung tay đẩy lùi viêm gan virus và xơ gan của Giải độc gan Tuệ Linh.<br/>
+                    - Ngày bốc thăm trúng thưởng: 17/08/2017<br/>
+                    - Công bố kết quả Bốc thăm trúng thưởng: 18/08/2017 trên fanpage Phòng bệnh gan, Giải độc gan và website viemgan.com.vn. <br/>
+                    - Kết luận cuối cùng là do BTC</p>
+        <div class="block5">
+            <div class="fixCen">
+                <div class="center">
+                    <h2>KIẾN THỨC CẦN BIẾT ĐỂ PHÒNG VÀ ĐIỀU TRỊ VIÊM GAN VIRUS & XƠ GAN HIỆU QUẢ</h2></div>
+                        <span><red><a href="http://www.viemgan.com.vn/viem-gan-b-nguyen-nhan-trieu-chung-va-cach-dieu-tri.html" target="_blank">1. Nguyên nhân, triệu chứng và cách điều trị bệnh viêm gan B</a></red>
+                        </span><br><br>
+                        <span><red><a href="http://www.viemgan.com.vn/cap-nhat-phac-do-dieu-tri-viem-gan-b-man-tinh-hieu-qua-nhat-hien-nay.html" target="_blank">2. Cập nhật phác đồ điều trị viêm gan B hiệu quả nhất hiện nay</a></red>
+                        </span><br><br>
+                        <span><red><a href="http://www.viemgan.com.vn/giai-phap-moi-ho-tro-dieu-tri-viem-gan-b.html" target="_blank">3. Giải pháp mới hỗ trợ điều trị viêm gan virus B hiệu quả</a></red>
+                        </span><br><br>
+                        <span><red><a href="http://www.viemgan.com.vn/benh-xo-gan-la-gi-xo-gan-nguy-hiem-nhu-the-nao.html" target="_blank">4. Những điều cần biết về bệnh xơ gan </a></red>
+                        </span><br><br>
+                        <p>Bạn có thắc mắc về bệnh gan hãy gọi ngay  <strong><a href="tel:18001190"><red>18001190</red></a></strong> (miễn cước) để nhận được sự tư vấn của các Chuyên gia, bác sỹ và dược sỹ.
+                        Hoặc gửi câu hỏi của bạn cho Thầy thuốc nhân dân, GS.TS <red> Nguyễn Văn Mùi </red> theo biểu mẫu dưới đây.</p>
+                        </span>
+                    </p></div>
                     <div class="form_question">
                         <p><strong>GỬI CÂU HỎI</strong></p>
                         <form id="landing_form" action="{{url('saveLand')}}" method="POST" id="form1">
@@ -257,7 +281,7 @@
                                 <input type="text" name="address" required placeholder="Địa chỉ">
                             </div>
                             <div class="el fullWidth">
-                                <label for="content">Nội dung chia sẻ <red>(*)</red></label>
+                                <label for="content">Câu hỏi - Nội dung chia sẻ <red>(*)</red></label>
                                 <textarea name="content" required cols="30" rows="10" placeholder="Nhập nội dung chia sẻ tại đây"></textarea>
                                 <input type="hidden" name="_token" value="{{csrf_token()}}" />
                             </div>
@@ -268,12 +292,12 @@
                             </div>
                         </form>
                     </div>
-                </div>
+              </div>
             </div>
         </div>
         <div class="block6 experience">
             <div class="fixCen">
-                <h2 class="rs extend">CHIA SẺ NGAY CÂU CHUYỆN CỦA BẠN</h2>
+                <h2 class="rs extend"><a href="http://www.viemgan.com.vn/chuong-trinh-chia-se-ngay-nhan-qua-hay.html" title="Chia sẻ" target="_blank" style="color:#FFFFFF">CHIA SẺ NGAY CÂU CHUYỆN CỦA BẠN</a></h2>
                 <div id="slider-2">
                     @foreach (\App\Site::getCommentIndex() as $comment)
                         <div class="item">
@@ -281,9 +305,9 @@
                             <img src="{{url('files/images', $comment->image)}}" class="avatar" alt="Tên người" width="114" height="114">
                         </div>
                         <div class="right">
-                            <div class="title">{{$comment->title}}</div>
+                            <div class="title">{{str_limit($comment->title, 60)}}</div>
                             <div class="name">{{$comment->name}}</div>
-                            <div class="address">{{$comment->address}}</div>
+                            <div class="address">{{str_limit($comment->address, 30)}}</div>
                         </div>
                         <div class="bottom">
                             {!! $comment->comment !!}
@@ -298,7 +322,7 @@
             <div class="fixCen">
                 @foreach (\App\Site::getLatestQuestions(6) as $question)
                     <div class="share">
-                    <h4 class="rs title">{{$question->title}}</h4>
+                    <h4 class="rs title"><a href="{{url('hoi-dap', $question->slug)}}"title="Câu hỏi" target="_blank">{{$question->title}}</a></h4>
                     <div class="ques-detail">
                        {!! $question->question !!}
                     </div>
