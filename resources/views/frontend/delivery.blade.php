@@ -42,7 +42,7 @@
                                 </div>
 
                                 @if (isset($success_delivery_form_message) && $success_delivery_form_message)
-                                    <div class="error" id="delivery_form_message">Chúng tôi sẽ liên hệ lại với bạn</div>
+                                    <div class="error" id="delivery_form_message">Bạn đã đặt hàng thành công. Chúng tôi sẽ liên hệ lại với bạn để xác nhận.</div>
                                 @else
                                     <div class="error" id="delivery_form_message" style="display: none"></div>
                                 @endif
@@ -98,7 +98,7 @@
                 var quantity = $('#quantity').val();
 
                 if (!name || !address || !phone || !product_id || !quantity) {
-                    $('#delivery_form_message').html('Điền đầy đủ các thông tin').show();
+                    $('#delivery_form_message').html('Bạn vui lòng điền đầy đủ các thông tin').show();
                 } else {
                     $('#order_online').submit();
                 }

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta content='CSVN' name='generator'/>
     <meta property="fb:app_id" content="1569708656596422"/>
-    <title>{{!empty($meta_title)? $meta_title : 'Cổng thông tin bệnh viêm gan - xơ gan - viêm gan virus b - viemgan.com.vn '}}</title>
+    <title>{{!empty($meta_title)? $meta_title : 'Cổng thông tin về bệnh Viêm gan - Xơ gan - Viêm gan virus B - Men gan cao - Giải độc gan'}}</title>
     <link href="https://plus.google.com/107515763736347546999" rel="publisher"/>
     <link rel="stylesheet" href="{{url('viemgan/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{url('viemgan/css/owl.carousel.css')}}">
@@ -55,7 +55,6 @@
     <noscript><img height="1" width="1" alt="" style="display:none"
                    src="https://www.facebook.com/tr?ev=6030780499151&amp;cd[value]=0.00&amp;cd[currency]=VND&amp;noscript=1"/>
     </noscript>
-
 </head>
 <body>
 <div class="wrapper home pr">

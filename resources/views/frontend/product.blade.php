@@ -58,10 +58,10 @@
                                     <a href="#"> TIN LIÊN QUAN</a>
                                 </h3>
                                 <div class="box-bd">
-                                    @foreach ($post->related_posts as $post)
+                                    @foreach ($post->related_posts as $rPost)
                                         <div class="item cf item-r">
                                             <h3>
-                                                <a href="{{url($post->slug.'.html')}}">{{$post->title}}</a>
+                                                <a href="{{url($rPost->slug.'.html')}}">{{$rPost->title}}</a>
                                             </h3>
                                         </div>
                                     @endforeach
@@ -72,10 +72,10 @@
                                     <a href="#">TIN MỚI</a>
                                 </h3>
                                 <div class="box-bd">
-                                    @foreach (\App\Site::getLatestNormalPosts() as $post)
+                                    @foreach (\App\Site::getLatestNormalPosts() as $normalPost)
                                         <div class="item cf item-r">
                                             <h3>
-                                                <a href="{{url($post->slug.'.html')}}">{{$post->title}}</a>
+                                                <a href="{{url($normalPost->slug.'.html')}}">{{$normalPost->title}}</a>
                                             </h3>
                                         </div>
                                     @endforeach
@@ -83,10 +83,11 @@
                             </div>
                         </div>
                         <div class="social-bt">
-                            <div class='fb-like' data-action='like' data-href='{{url('hoi-dap', $post->slug)}}' data-layout='button_count' data-share='true' data-show-faces='false' data-width='520'></div>
+                            <div class='fb-like' data-action='like' data-href='{{url( $post->slug.'.html')}}' data-layout='button_count' data-share='true' data-show-faces='false' data-width='520'></div>
+                        <g:plusone size="tall"></g:plusone>
                         </div>
                         <div class="comment-post">
-                            <div class="fb-comments" data-href="{{url('hoi-dap', $post->slug)}}" data-numposts="2" data-width="100%"></div>
+                            <div class="fb-comments" data-href="{{url( $post->slug.'.html')}}" data-numposts="2" data-width="100%"></div>
                         </div>
                     </div>
                 </div>
