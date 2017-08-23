@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta content='CSVN' name='generator'/>
     <meta property="fb:app_id" content="1569708656596422"/>
+    <meta name="google-site-verification" content="UeDPFDj8wb-lUKJB4mbzIdJb-93eWttF33RSYJhoZjw" />
     <title>{{!empty($meta_title)? $meta_title : 'Cổng thông tin về bệnh Viêm gan - Xơ gan - Viêm gan virus B - Men gan cao - Giải độc gan'}}</title>
     <link href="https://plus.google.com/107515763736347546999" rel="publisher"/>
     <link rel="stylesheet" href="{{url('viemgan/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{url('viemgan/css/owl.carousel.css')}}">
     <link rel="stylesheet" href="{{url('viemgan/css/common.css')}}">
-
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
     <meta name="description" content="{{!empty($meta_desc)? $meta_desc : 'Điều trị hiệu quả bệnh viêm gan, viêm gan virus, xơ gan, ung thư gan, giải độc gan, men gan cao'}}"/>
@@ -35,8 +35,6 @@
         <img height="1" width="1" alt="" style="display:none"
              src="https://www.facebook.com/tr?id=1607876032783308&amp;ev=PixelInitialized"/>
     </noscript>
-
-
     <!-- Facebook Conversion Code -->
     <script>(function () {
             var _fbq = window._fbq || (window._fbq = []);
@@ -55,6 +53,46 @@
     <noscript><img height="1" width="1" alt="" style="display:none"
                    src="https://www.facebook.com/tr?ev=6030780499151&amp;cd[value]=0.00&amp;cd[currency]=VND&amp;noscript=1"/>
     </noscript>
+    <!-- Eclick -->
+<script type="text/javascript">
+(function () {
+var _eclickq = window._eclickq || (window._eclickq = []);
+if (!_eclickq.loaded) {
+var eclickTracking = document.createElement('script');
+            eclickTracking.async = true;
+            eclickTracking.src = ('https:'==document.location.protocol?'https:':'http:')+'//s.eclick.vn/delivery/retargeting.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(eclickTracking, s);
+            _eclickq.loaded = true;
+                                                                                                            
+}
+_eclickq.push(['addPixelId', 11651
+]);
+})();
+window._eclickq = window._eclickq || [];
+window._eclickq.push(['track', 'PixelInitialized', {}]); 
+</script>
+    <!-- Native -->
+<script type="text/javascript">
+(function () {
+var _eclickq = window._eclickq || (window._eclickq = []);
+if (!_eclickq.loaded) {
+var eclickTracking = document.createElement('script');
+            eclickTracking.async = true;
+            eclickTracking.src = ('https:'==document.location.protocol?'https:':'http:')+'//s.eclick.vn/delivery/retargeting.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(eclickTracking, s);
+            _eclickq.loaded = true;
+                                                                                                            
+}
+_eclickq.push(['addPixelId', 13209
+]);
+})();
+window._eclickq = window._eclickq || [];
+window._eclickq.push(['track', 'PixelInitialized', {}]); 
+</script>
+
+
 </head>
 <body>
 <div class="wrapper home pr">

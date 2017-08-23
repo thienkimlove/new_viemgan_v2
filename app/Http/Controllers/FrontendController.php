@@ -53,11 +53,14 @@ class FrontendController extends Controller
         if ($category) {
             $page = ($category->parent_id) ? $category->parent->slug : $category->slug;
 
+            $meta_title = $category->seo_name ? $category->seo_name : $category->name;
+            $meta_desc = $category->desc;
+
             $subCategoryIds = Category::where('parent_id', $category->id)->pluck('id')->all();
             $categoryIds = ($subCategoryIds) ? $subCategoryIds : [$category->id];
 
             $posts = Post::where('status', true)->latest('created_at')->whereIn('category_id', $categoryIds)->paginate(10);
-            return view('frontend.category', compact('page', 'posts', 'category'));
+            return view('frontend.category', compact('page', 'posts', 'category', 'meta_title', 'meta_desc'));
         }  else {
             return redirect('/');
         }
@@ -75,7 +78,10 @@ class FrontendController extends Controller
         if ($slug) {
             $question = Question::findBySlug($slug);
             if ($question) {
-                return view('frontend.question_detail', compact('page', 'question'));
+                $meta_title = $question->seo_name ? $question->seo_name : $question->title;
+                $meta_desc = $question->seo_desc ? $question->seo_desc : $question->short_answer;
+
+                return view('frontend.question_detail', compact('page', 'question', 'meta_title', 'meta_desc'));
             } else {
                 return redirect('/');
             }
@@ -95,7 +101,7 @@ class FrontendController extends Controller
                 $meta_desc = $post->desc;
                 $page = ($post->category->parent_id) ? $post->category->parent->slug : $post->category->slug;
                 if ($post->content_1 && $post->content_2) {
-                    return view('frontend.product', compact('page', 'post', 'title'));
+                    return view('frontend.product', compact('page', 'post',  'meta_title', 'meta_desc'));
                 } else {
                     return view('frontend.post', compact('page', 'post', 'meta_title', 'meta_desc'));
                 }
@@ -209,13 +215,20 @@ class FrontendController extends Controller
         if ($slug) {
             $mainVideo = Video::findBySlug($slug);
             if ($mainVideo) {
+                $meta_title = $mainVideo->seo_name ? $mainVideo->seo_name : $mainVideo->title;
+                $meta_desc =  $mainVideo->seo_desc ? $mainVideo->seo_desc : $mainVideo->desc;
+
                 $mainVideo->increment('views', 1);
+                $videos = Video::paginate(12);
+                return view('frontend.video', compact('mainVideo', 'videos', 'page', 'meta_title', 'meta_desc'));
             } else {
                 return redirect('/');
             }
+        } else {
+            $videos = Video::paginate(12);
+            return view('frontend.video', compact('mainVideo', 'videos', 'page'));
         }
-        $videos = Video::paginate(12);
-        return view('frontend.video', compact('mainVideo', 'videos', 'page'));
+
     }
 
     public function search(Request $request)

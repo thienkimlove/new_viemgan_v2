@@ -7,7 +7,8 @@
             <div class="block-1 banner-post">
                 @if ($firstPost = $indexTopPosts->shift())
                 <div class="banner-big pr">
-                    <a href="{{url($firstPost->slug.'.html')}}" title="{{$firstPost->title}}" ><img src="{{url('files/images', $firstPost->image)}}" alt="" width="507" height="310"></a>
+                    <a href="{{url($firstPost->slug.'.html')}}" title="{{$firstPost->title}}" class="thumbs" style="background-image: url({{url('files/images', $firstPost->image)}})">
+                        <img src="{{url('files/images', $firstPost->image)}}" alt="" width="507" height="310"></a>
                     <div class="title">
                         <a href="{{url($firstPost->slug.'.html')}}" title="{{$firstPost->title}}">
                             {{str_limit($firstPost->title, 50)}}
@@ -20,7 +21,8 @@
                 <div class="group-banner-sm">
                     @foreach ($indexTopPosts  as $indexTopPost)
                         <div class="bn pr">
-                            <a href="{{url($indexTopPost->slug.'.html')}}" title="{{$indexTopPost->title}}"><img src="{{url('files/images', $indexTopPost->image)}}" alt="" width="226" height="148"></a>
+                            <a href="{{url($indexTopPost->slug.'.html')}}" title="{{$indexTopPost->title}}" class="thumbs" style="background-image: url({{url('files/images', $indexTopPost->image)}})">
+                                <img src="{{url('files/images', $indexTopPost->image)}}" alt="" width="226" height="148"></a>
                             <div class="title">
                                 <a href="{{url($indexTopPost->slug.'.html')}}" title="{{$indexTopPost->title}}">
                                     {{str_limit($indexTopPost->title, 50)}}

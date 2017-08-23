@@ -38,6 +38,39 @@
                                 </div>
                             </div>
                         </article>
+                    <div class="delivery">
+                        <h3 class="note-pp">
+                            Để mua đúng sản phẩm chính hãng, Quý khách điền vào form mua hàng dưới đây:
+                        </h3>
+                        <div class="note1 note">
+                            <form action="{{url('saveOrder')}}" id="order_online" method="POST">
+                                <div class="row1">
+                                    <input type="text" id="name" name="name" placeholder="Họ tên">
+                                    <input type="text" id="address" name="address" placeholder="Địa chỉ">
+                                    <input type="hidden" name="_token" value="{{csrf_token()}}" />
+                                </div>
+                                <div class="row2">
+                                    <input type="number" id="phone" name="phone" placeholder="Điện thoại">
+                                    <select name="product_id" id="product_id">
+                                        <option>Chọn sản phẩm</option>
+                                        @foreach (\App\Site::getListOfProducts() as $id => $product)
+<option value="{{$id}}">{{$product}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="row3">
+                                    <input type="hidden" name="redirect_url" value="{{request()->fullUrl()}}" />
+                                    <input type="text" id="note" name="note" placeholder="Ghi chú">
+                                    <input type="number" id="quantity" name="quantity" placeholder="Số lượng" class="sl-onl"> <label for="">hộp</label>
+                                    <button id="delivery_form_submit" class="btn-order-onl">ĐẶT MUA HÀNG</button>
+                                </div>
+                                @if (isset($success_delivery_form_message) && $success_delivery_form_message)
+                                    <div class="error" id="delivery_form_message">Bạn đã đặt hàng thành công. Chúng tôi sẽ gọi lại cho bạn để xác nhận đơn hàng. Cảm ơn bạn.</div>
+                                @else
+                                    <div class="error" id="delivery_form_message" style="display: none"></div>
+                                @endif
+                            </form>
+                        </div></div>
                         @include('frontend.list_button')
                         <div class="ads">
                             @foreach (\App\Site::getFrontendBanners()->where('position', 2) as $banner)

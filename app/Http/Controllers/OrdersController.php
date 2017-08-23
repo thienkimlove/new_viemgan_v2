@@ -22,6 +22,8 @@ class OrdersController extends AdminController
     {
 
         $searchContent = '';
+        $searchFromDate = '';
+        $searchToDate = '';
         $modelClass = $this->init();
 
         $contents = $modelClass::latest('created_at');
@@ -30,9 +32,19 @@ class OrdersController extends AdminController
             $contents = $contents->where('name', 'LIKE', '%'. $searchContent. '%');
         }
 
+        if ($request->input('from_date')) {
+            $searchFromDate = urldecode($request->input('from_date'));
+            $contents = $contents->where('created_at', '>', $searchFromDate.' 00:00:00');
+        }
+
+        if ($request->input('to_date')) {
+            $searchToDate = urldecode($request->input('to_date'));
+            $contents = $contents->where('created_at', '<', $searchToDate.' 23:59:59');
+        }
+
         $contents = $contents->paginate(10);
 
-        return view('admin.'.$this->model.'.index', compact('contents', 'searchContent'))->with('model', $this->model);
+        return view('admin.'.$this->model.'.index', compact('contents', 'searchContent', 'searchFromDate', 'searchToDate'))->with('model', $this->model);
     }
 
     public function create()

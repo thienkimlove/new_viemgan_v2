@@ -14,7 +14,7 @@
                         <div class="news">
                             @foreach ($posts as $post)
                                 <div class="post post-news">
-                                <a href="{{url($post->slug.'.html')}}" title="{{$post->title}}" class="img-title">
+                                <a href="{{url($post->slug.'.html')}}" title="{{$post->title}}" class="img-title thumbs" style="background-image: url({{url('files/images', $post->image)}})">
                                     <img src="{{url('files/images', $post->image)}}" alt="" width="276" height="157">
                                 </a>
                                 <div class="right">

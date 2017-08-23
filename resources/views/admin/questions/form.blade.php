@@ -23,6 +23,16 @@
                 </div>
 
                 <div class="form-group">
+                    {!! Form::label('seo_name', 'Seo Name') !!}
+                    {!! Form::text('seo_name', null, ['class' => 'form-control']) !!}
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label('seo_desc', 'Seo Description') !!}
+                    {!! Form::textarea('seo_desc', null, ['class' => 'form-control']) !!}
+                </div>
+
+                <div class="form-group">
                     {!! Form::label('person', 'Ask Person') !!}
                     {!! Form::text('person', null, ['class' => 'form-control']) !!}
                 </div>

@@ -23,6 +23,6 @@ class Video extends Model {
         ];
     }
 
-	protected $fillable = ['code', 'title', 'slug', 'desc', 'image', 'views'];
+	protected $fillable = ['code', 'title', 'slug', 'desc', 'image', 'views', 'seo_name', 'seo_desc'];
 
 }

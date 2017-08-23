@@ -42,7 +42,7 @@
                                 </div>
 
                                 @if (isset($success_delivery_form_message) && $success_delivery_form_message)
-                                    <div class="error" id="delivery_form_message">Bạn đã đặt hàng thành công. Chúng tôi sẽ liên hệ lại với bạn để xác nhận.</div>
+                                    <div class="error" id="delivery_form_message">Bạn đã đặt hàng thành công. Chúng tôi sẽ gọi lại cho bạn để xác nhận đơn hàng. Cảm ơn bạn.</div>
                                 @else
                                     <div class="error" id="delivery_form_message" style="display: none"></div>
                                 @endif

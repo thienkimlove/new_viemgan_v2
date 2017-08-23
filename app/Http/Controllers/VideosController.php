@@ -12,7 +12,7 @@ class VideosController extends AdminController
     public $model = 'videos';
 
     public $validator = [
-        'name' => 'required',
+        'title' => 'required',
     ];
     private function init()
     {

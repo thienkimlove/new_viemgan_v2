@@ -169,20 +169,20 @@
                 </div>
               <div class="program">
                     <strong>Thời gian: </strong> Từ 01/06/2017 đến hết 31/07/2017 <br>
-                    <strong>Lễ tổng kết trao giải: </strong> 18/8/2017 <br>
+                    <br>
                     Các cá nhân đạt giải sẽ được thông báo trên website <a href="http://www.viemgan.com.vn">www.viemgan.com.vn</a> và trên fanpage <a href="https://www.facebook.com/viemgan.com.vn" target="_blank">Phòng bệnh gan</a>.
                     <br>
                     <h3>GIẢI THƯỞNG</h3>
                   <p>
                     <strong><red>Vòng 1: Thi  trắc nghiệm</red></strong> 
-                    <li>Mỗi  tuần Giải độc gan Tuệ Linh sẽ tổ chức 01 cuộc thi trắc nghiệm và chọn ra 50 người  làm theo đúng thể lệ để trao giải.</li>
+                <li>Mỗi  tuần Giải độc gan Tuệ Linh sẽ tổ chức 01 cuộc thi trắc nghiệm và chọn ra 50 người  làm theo đúng thể lệ để trao giải.</li>
                     <li>Giải thưởng: Mỗi người <red><i>02 hộp Giải độc gan Tuệ Linh </i></red>tương đương <red>384.000 VNĐ</red></li>
                     </p>
                     <p>
                     <strong><red>Vòng 2: Chia sẻ cảm nhận khi sử dụng Giải độc gan Tuệ Linh</red></strong>
                 <li>Những khách hàng làm đúng các bước như thể lệ phía dưới sẽ được nhận ngay <red> 01 hộp Giải độc gan Tuệ Linh </red>
-                  </li>
-                </div>
+                  trị giá 192.000 VNĐ </li>
+              </div>
             </div>
         </div>
         <div class="block5">
@@ -193,33 +193,27 @@
                 <div class="text">
                   <p>
                           <strong>
-                          <red>Vòng 1: Thi  trắc nghiệm ( thời gian từ 01/06/2017 – 06/7/2017)</red>
+                          <red>Vòng 1: Thi  trắc nghiệm ( thời gian từ 01/06/2017 – 10/7/2017)</red>
                           </strong>.<br>
-                          Từ  ngày 01/06/2017 – 06/07/2017, mỗi tuần Giải độc gan Tuệ Linh sẽ tổ chức 01 cuộc thi trắc nghiệm. Người  tham dự làm theo  các bước dưới đây<br>
-                        <span>Bước 1: </span>Tham gia trả lời câu hỏi trắc nghiệm <a href="#" title="Tham gia trắc nghiệm trên fanpage">TẠI ĐÂY</a>
-                      <br>
-                          <span>Bước 2: </span>Like và share cuộc thi ở chế độ công khai<br>
-                        <span>Bước 3: Tag 05 người bạn vào câu trả lời.</span>
-                  <p>- Hàng tuần, Ban tổ chức (BTC) sẽ chọn ra 50 người trả lời đúng và làm đúng các bước trên để trao giải. <br>
+                          Từ  ngày 01/06/2017 – 10/07/2017, mỗi tuần Giải độc gan Tuệ Linh sẽ tổ chức 01 cuộc thi trắc nghiệm. Người  tham dự làm theo  các bước dưới đây<br>
+                        <span>Bước 1: </span>Thả tim và share cuộc thi ở chế độ công khai. <br>
+                          <span>Bước 2: </span>Tag 03 người bạn vào câu trả lời<br>
+                        <span>Bước 3: </span>Tham gia trả lời câu hỏi trắc nghiệm <a href="https://www.facebook.com/viemgan.com.vn/posts/1938099579769052" title="Tham gia trắc nghiệm trên fanpage" target="_blank">TẠI ĐÂY</a>
+                  <p>- Hàng tuần, Ban tổ chức (BTC) sẽ chọn ra tối đa 50 người trả lời đúng và làm đúng các bước trên để trao giải. <br>
                         - Giải thưởng: Mỗi người <red>02 hộp Giải độc gan Tuệ Linh </red> tương đương <red> 384.000 VNĐ.</red>
                   </p>
                   <p>
-                        <strong><red>Vòng 2: Gửi bài chia sẻ cảm nhận khi sử dụng Giải độc gan Tuệ Linh với Công ty TNHH Tuệ Linh</red></strong>
+                        <strong>
+                        <red>Vòng 2: Chia sẻ cảm nhận khi sử dụng Giải độc gan Tuệ Linh</red>
+                        </strong>
                         <br>
-                        Những khách hàng được tặng Giải độc gan Tuệ Linh trong vòng 01 khi làm theo các bước sau sẽ được nhận ngay 01 hộp Giải độc gan Tuệ Linh: <br>
+                        Tặng ngay 01 Giải độc gan Tuệ Linh cho những khách hàng trúng thưởng ở vòng 1 và làm đầy đủ các bước sau:
                   <p><strong><red>Các bước tham dự:</red> </strong></p>
-                        <p><span><strong>
-                        <red>Bước 1: </red>
-                        </strong>BTC  tạo một post Chia sẻ cảm nghĩ khi sử dụng Giải độc gan Tuệ Linh trên fanpage  Phòng Bệnh Gan. Khách hàng comment bao gồm: Ảnh chụp của người dùng cùng Giải độc  gan Tuệ Linh + chia sẻ về quá trình sử dụng Giải độc gan Tuệ Linh về các nội  dung:</span></p>
-                        <p>- Trước khi sử dụng Giải độc gan Tuệ Linh, tình trạng bệnh, tình trạng sức khỏe như thế nào? </p>
-                        <p>- Tác dụng sau khi sử dụng Giải độc gan Tuệ Linh? </p>
-                        <p>- Chia sẻ về Giải độc gan Tuệ Linh với mọi người</p>
-                          <p><span><strong>
-                          <red>Bước 2:</red>
-                          </strong> Like  và tag 5 người bạn vào comment của mình</span></p>
-                        <p>- Ngay  khi làm đủ các bước trên, BTC sẽ gửi quà là 01 hộp Giải độc gan Tuệ Linh về địa  chỉ bạn đã cung cấp.</p>
-                        <p>- Giải  thưởng chỉ áp dụng cho khách hàng đã được tặng thưởng từ vòng 1.</p>
-                        <p>- Thời  gian: Các comment chia sẻ gửi muộn nhất ngày 31/07/2017</p>
+                  Chia sẻ cảm nghĩ khi sử dụng Giải độc gan Tuệ Linh trên fanpage  Phòng Bệnh Gan tại đây. Khách hàng comment bao gồm:
+                        <li>Ảnh chụp của người dùng cùng Giải độc  gan Tuệ Linh </li>
+                        <li>Chia sẻ về quá trình sử dụng Giải độc gan Tuệ Linh về các nội  dung:</li>
+                        <p>- Trước khi sử dụng Giải độc gan Tuệ Linh, tình trạng bệnh, tình trạng sức khỏe thế nào ? </p>
+                        <p>- Tác dụng sau khi sử dụng Giải độc gan Tuệ Linh ? Và chia sẻ về Giải độc gan Tuệ Linh với mọi người.</p>
                         <div class="block5">
             <div class="fixCen">
               <div class="center"></div>

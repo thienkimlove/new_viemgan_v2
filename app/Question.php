@@ -31,7 +31,9 @@ class Question extends Model {
         'person',
         'short_answer',
         'status',
-        'slug'
+        'slug',
+        'seo_name',
+        'seo_desc'
     ];
 
     public function tags()

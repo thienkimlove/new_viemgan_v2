@@ -22,11 +22,22 @@
                 {!! Form::text('name', null, ['class' => 'form-control']) !!}
             </div>
 
+                <div class="form-group">
+                    {!! Form::label('seo_name', 'SEO Name') !!}
+                    {!! Form::text('seo_name', null, ['class' => 'form-control']) !!}
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label('seo_desc', 'SEO Description') !!}
+                    {!! Form::textarea('seo_desc', null, ['class' => 'form-control']) !!}
+                </div>
+
+
 
 
                 <div class="form-group">
                     {!! Form::label('Parent', 'Parent') !!}
-                    {!! Form::select('parent_id', \App\Site::getParentCategories(), null, ['class' => 'form-control']) !!}
+                    {!! Form::select('parent_id', array('' => 'Chọn chuyên mục') + \App\Site::getParentCategories(), null, ['class' => 'form-control']) !!}
                 </div>
 
 

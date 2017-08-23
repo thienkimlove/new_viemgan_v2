@@ -21,7 +21,7 @@
                                 </p>
                                 <div class="answer">Trả lời</div>
                                 <div class="answer-faq">
-                                   {{$question->answer}}
+                                   {!! $question->answer !!}
                                 </div>
                             </div>
                         </article>
@@ -38,6 +38,12 @@
                             @foreach ($question->tags as $tag)
                                 <a href="{{url('tu-khoa', $tag->slug)}}" title="">{{$tag->name}}</a>
                             @endforeach
+                        <div class="social-bt">
+                            <div class='fb-like' data-action='like' data-href='{{url('hoi-dap', $question->slug)}}' data-layout='button_count' data-share='true' data-show-faces='false' data-width='520'></div>
+                        </div>
+                        <div class="comment-post">
+                            <div class="fb-comments" data-href="{{url('hoi-dap', $question->slug)}}" data-numposts="2" data-width="100%"></div>
+                        </div>
                         </div>
                         <div class="news-bt">
                             <div class="box-usual-ques">
@@ -68,12 +74,6 @@
                                     @endforeach
                                 </div>
                             </div>
-                        </div>
-                        <div class="social-bt">
-                            <div class='fb-like' data-action='like' data-href='{{url('hoi-dap', $question->slug)}}' data-layout='button_count' data-share='true' data-show-faces='false' data-width='520'></div>
-                        </div>
-                        <div class="comment-post">
-                            <div class="fb-comments" data-href="{{url('hoi-dap', $question->slug)}}" data-numposts="2" data-width="100%"></div>
                         </div>
                     </div>
                 </div>

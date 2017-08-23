@@ -57,6 +57,10 @@ class CategoriesController extends AdminController
         } else {
             unset($data['image']);
         }
+
+        if (!$data['parent_id']) {
+            $data['parent_id'] = null;
+        }
         $modelClass = $this->init();
         $modelClass::create($data);
         flash()->success('Success created!');
@@ -84,6 +88,9 @@ class CategoriesController extends AdminController
             $data['image'] = $this->saveImage($request->file('image'), $content->image);
         } else {
             unset($data['image']);
+        }
+        if (!$data['parent_id']) {
+            $data['parent_id'] = null;
         }
         $content->update($data);
         flash()->success('Success edited!');

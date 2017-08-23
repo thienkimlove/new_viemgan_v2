@@ -14,9 +14,19 @@
                     <div class="input-group custom-search-form">
                         {!! Form::open(['method' => 'GET', 'route' =>  [$model.'.index'] ]) !!}
                         <span class="input-group-btn">
-                            <input type="text" value="{{$searchContent}}" name="q" class="form-control" placeholder="Search ..">
+                            <input type="text" value="{{$searchContent}}" name="q" class="form-control" placeholder="Search ..">&nbsp;&nbsp;
+                        </span>
 
-                            <button class="btn btn-default" type="submit">
+                        <span class="input-group-btn">
+                             <input type="text" id="from_date" value="{{$searchFromDate}}" name="from_date" class="form-control" placeholder="From Date ..">&nbsp;&nbsp;
+                        </span>
+
+                        <span class="input-group-btn">
+                             <input type="text" id="to_date" value="{{$searchToDate}}" name="to_date" class="form-control" placeholder="To Date ..">&nbsp;&nbsp;
+                        </span>
+
+                        <span class="input-group-btn">
+                             <button class="btn btn-default" type="submit">
                                 <i class="fa fa-search"></i>
                             </button>
                         </span>
@@ -106,7 +116,38 @@
             });
 
             $('#export_to_excel').click(function(){
-                window.location.href = window.baseUrl + '/admin/export/'+$(this).attr('content-attr');
+
+                var from_date = $('#from_date').val();
+                var to_date = $('#to_date').val();
+                var toUrl = window.baseUrl + '/admin/export/'+$(this).attr('content-attr')+'?export=1';
+                if (from_date) {
+                    toUrl +=  '&from_date=' + from_date;
+                }
+
+                if (to_date) {
+                    toUrl += '&to_date=' + to_date;
+                }
+                window.location.href = toUrl;
+
+            });
+
+            $('#from_date').datetimepicker({
+                timepicker:false,
+                format:'Y-m-d',
+                onShow:function(ct){
+                    this.setOptions({
+                        maxDate: $('#to_date').val() ? $('#to_date').val() : false
+                    })
+                },
+            });
+            $('#to_date').datetimepicker({
+                timepicker:false,
+                format:'Y-m-d',
+                onShow:function( ct ){
+                    this.setOptions({
+                        minDate:$('#from_date').val()?$('#from_date').val():false
+                    })
+                },
             });
         });
     </script>

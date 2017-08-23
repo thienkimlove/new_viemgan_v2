@@ -33,7 +33,9 @@ class Category extends Model  {
         'display_homepage_0',
         'display_homepage_1',
         'display_homepage_2',
-        'display_homepage_3'
+        'display_homepage_3',
+        'seo_name',
+        'seo_desc'
     ];
 
 

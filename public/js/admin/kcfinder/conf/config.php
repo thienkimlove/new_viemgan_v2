@@ -22,7 +22,7 @@ return array(
 // GENERAL SETTINGS
 
     'disabled' => false,
-    'uploadURL' => "/js/libs/kcfinder/upload",
+    'uploadURL' => "/files",
     'uploadDir' => "",
     'theme' => "default",
 

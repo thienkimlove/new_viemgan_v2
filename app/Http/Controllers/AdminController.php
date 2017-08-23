@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Intervention\Image\Facades\Image;
 use Laravel\Socialite\Facades\Socialite;
 use Maatwebsite\Excel\Facades\Excel;
@@ -40,7 +41,7 @@ class AdminController extends Controller
         Image::make($file->getRealPath())->save(public_path('files/images/'. $filename));
 
         if ($old) {
-            @unlink(public_path('files/images/' .$old));
+           // @unlink(public_path('files/images/' .$old));
         }
         return $filename;
     }
@@ -99,7 +100,18 @@ class AdminController extends Controller
     {
 
         $modelClass = '\\App\\' . ucfirst(str_singular($content));
-        $contents = $modelClass::latest('created_at')->get();
+        $contents = $modelClass::latest('created_at');
+
+        if (request()->input('from_date')) {
+            $contents = $contents->where('created_at', '>', urldecode(request()->input('from_date')).' 00:00:00');
+        }
+
+        if (request()->input('to_date')) {
+            $contents = $contents->where('created_at', '<', urldecode(request()->input('to_date')).' 23:59:59');
+        }
+
+        $contents = $contents->get();
+
         $filename = storage_path('logs/'. $content.'_'.uniqid(time()).'xls');
 
         Excel::create($filename, function($excel) use($contents) {
