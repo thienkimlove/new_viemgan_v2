@@ -18,7 +18,7 @@
         "laravelcollective/html": "^5.4",
         "maatwebsite/excel": "^2.1",
         "predis/predis": "^1.1",
-        "watson/sitemap": "^2.0"
+        "roumen/sitemap": "^2.6"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

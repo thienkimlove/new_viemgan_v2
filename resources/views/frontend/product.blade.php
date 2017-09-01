@@ -130,3 +130,26 @@
         @include('frontend.exp')
     </section>
 @endsection
+@section('frontend_script')
+    <script>
+        $(function(){
+            $('#delivery_form_submit').click(function(e){
+                e.preventDefault();
+
+                var name = $('#name').val();
+                var address = $('#address').val();
+                var phone = $('#phone').val();
+                var product_id = $('#product_id').val();
+                var quantity = $('#quantity').val();
+
+                if (!name || !address || !phone || !product_id || !quantity) {
+                    $('#delivery_form_message').html('Bạn vui lòng điền đầy đủ các thông tin').show();
+                } else {
+                    $('#order_online').submit();
+                }
+
+                return false;
+            });
+        });
+    </script>
+@endsection
