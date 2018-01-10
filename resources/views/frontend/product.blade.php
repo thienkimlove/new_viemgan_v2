@@ -40,9 +40,25 @@
                         </article>
                     <div class="delivery">
                         <h3 class="note-pp">
-                            Để mua đúng sản phẩm chính hãng, Quý khách điền vào form mua hàng dưới đây:
+                            Để mua đúng sản phẩm chính hãng, Quý khách vui lòng thực hiện một trong các bước dưới đây:
                         </h3>
+                        <div class="note3 note">
+                            <div class="title">
+                                <span class="number">1</span>
+                                 Hỏi mua sản phẩm tại các nhà thuốc trên toàn quốc theo danh sách <b><a href="{{url('phan-phoi')}}" title="Phân phối" style="color:#FF0000">tại đây</a></b>:
+                            </div>
+                        </div>
+                        <div class="note2 note">
+                            <div class="title">
+                                <span class="number">2</span>
+                                Gọi tới tổng đài tư vấn và chăm sóc KH: <a href="tel: 18001190">1800 1190 </a>(miễn phí cước gọi) - <a href="tel: 0912571190">0912 571 190</a>
+                            </div>
+                        </div>
                         <div class="note1 note">
+                            <div class="title">
+                                <span class="number">3</span>
+                                Điền vào form thông tin đặt hàng online - giao hàng và thu tiền tại nhà dưới đây .
+                            </div>
                             <form action="{{url('saveOrder')}}" id="order_online" method="POST">
                                 <div class="row1">
                                     <input type="text" id="name" name="name" placeholder="Họ tên">
@@ -64,11 +80,13 @@
                                     <input type="number" id="quantity" name="quantity" placeholder="Số lượng" class="sl-onl"> <label for="">hộp</label>
                                     <button id="delivery_form_submit" class="btn-order-onl">ĐẶT MUA HÀNG</button>
                                 </div>
+
                                 @if (isset($success_delivery_form_message) && $success_delivery_form_message)
                                     <div class="error" id="delivery_form_message">Bạn đã đặt hàng thành công. Chúng tôi sẽ gọi lại cho bạn để xác nhận đơn hàng. Cảm ơn bạn.</div>
                                 @else
                                     <div class="error" id="delivery_form_message" style="display: none"></div>
                                 @endif
+
                             </form>
                         </div></div>
                         @include('frontend.list_button')

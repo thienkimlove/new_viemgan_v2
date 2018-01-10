@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <meta property="fb:app_id" content="1569708656596422"/>
     <meta name="google-site-verification" content="UeDPFDj8wb-lUKJB4mbzIdJb-93eWttF33RSYJhoZjw" />
     <title>{{!empty($meta_title)? $meta_title : 'Cổng thông tin về bệnh Viêm gan - Xơ gan - Viêm gan virus B - Men gan cao - Giải độc gan'}}</title>
-    <link href="https://plus.google.com/107515763736347546999" rel="publisher"/>
+    <link href="" rel="publisher"/>
     <link rel="stylesheet" href="{{url('viemgan/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{url('viemgan/css/owl.carousel.css')}}">
     <link rel="stylesheet" href="{{url('viemgan/css/common.css')}}">
@@ -16,6 +16,13 @@
     <meta name="description" content="{{!empty($meta_desc)? $meta_desc : 'Điều trị hiệu quả bệnh viêm gan, viêm gan virus, xơ gan, ung thư gan, giải độc gan, men gan cao'}}"/>
     <meta name="keyword" content="{{!empty($meta_keywords)? $meta_keywords : 'viêm gan, viem gan, viem gan virus, xơ gan, ung thư gan, giải độc gan, men gan cao'}}"/>
     <meta property="fb:app_id" content="1569708656596422"/>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P3CVRJB');</script>
+<!-- End Google Tag Manager -->
     <script>(function () {
             var _fbq = window._fbq || (window._fbq = []);
             if (!_fbq.loaded) {
@@ -31,6 +38,25 @@
         window._fbq = window._fbq || [];
         window._fbq.push(['track', 'PixelInitialized', {}]);
     </script>
+<script type="text/javascript">
+(function () {
+var _eclickq = window._eclickq || (window._eclickq = []);
+if (!_eclickq.loaded) {
+var eclickTracking = document.createElement('script');
+            eclickTracking.async = true;
+            eclickTracking.src = ('https:'==document.location.protocol?'https:':'http:')+'//s.eclick.vn/delivery/retargeting.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(eclickTracking, s);
+            _eclickq.loaded = true;
+                                                                                                            
+}
+_eclickq.push(['addPixelId', 14372
+]);
+})();
+window._eclickq = window._eclickq || [];
+window._eclickq.push(['track', 'PixelInitialized', {}]); 
+</script>
+
     <noscript>
         <img height="1" width="1" alt="" style="display:none"
              src="https://www.facebook.com/tr?id=1607876032783308&amp;ev=PixelInitialized"/>
@@ -92,9 +118,32 @@ window._eclickq = window._eclickq || [];
 window._eclickq.push(['track', 'PixelInitialized', {}]); 
 </script>
 
+<?php 
+if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+$ip=$_SERVER['HTTP_CLIENT_IP'];}
+elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+$ip=$_SERVER['HTTP_X_FORWARDED_FOR'];} else {
+$ip=$_SERVER['REMOTE_ADDR'];}
+?>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40782874-1', 'auto');
+  ga('set', 'dimension1', '<?=$ip;?>');
+  ga('send', 'pageview',  { 'dimension1': '<?=$ip;?>' });
+
+</script>
+
 
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P3CVRJB"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <div class="wrapper home pr">
     @include('frontend.header')
      @yield('content')
@@ -180,25 +229,6 @@ window._eclickq.push(['track', 'PixelInitialized', {}]);
     })();
     window._eclickq = window._eclickq || [];
     window._eclickq.push(['track', 'PixelInitialized', {}]);
-</script>
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-40782874-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-<!--- Script ANTS - remarketing -->
-<script type="text/javascript" async src="//e-vcdn.anthill.vn/delivery-ants/conversion.js"></script>
-<!--- end ANTS - remarketing -->
-<script type="text/javascript">
-    var ants_analytic = ants_analytic || [];
-    ants_analytic.push({conversionId : "cd56d85f"});
 </script>
 
 <!-- Google Code dành cho Thẻ tiếp thị lại -->

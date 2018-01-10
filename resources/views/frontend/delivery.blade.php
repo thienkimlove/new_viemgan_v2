@@ -52,13 +52,13 @@
                         <div class="note2 note">
                             <div class="title">
                                 <span class="number">2</span>
-                                Gọi tới tổng đài tư vấn và chăm sóc KH: <a href="tel:18001190">1800 1190 </a> (miễn phí cước gọi) - <a href="tel:0912571190">0912 571 190</a>
+                                Gọi tới tổng đài tư vấn và chăm sóc KH: <a href="tel: 18001190">1800 1190 </a>(miễn phí cước gọi) - <a href="tel: 0912571190">0912 571 190</a>
                             </div>
                         </div>
                         <div class="note3 note">
                             <div class="title">
                                 <span class="number">3</span>
-                                Hoặc mua tại các nhà thuốc trên toàn quốc
+                                 Hoặc mua tại các nhà thuốc trên toàn quốc theo danh sách dưới đây:
                             </div>
                         </div>
                         <div class="places">

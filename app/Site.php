@@ -59,18 +59,18 @@ class Site
 
     public static function getYoutubeEmbedUrl($code)
     {
-        $youtube_id = null;
-        $shortUrlRegex = '/youtu.be\/([a-zA-Z0-9_]+)\??/i';
-        $longUrlRegex = '/youtube.com\/((?:embed)|(?:watch))((?:\?v\=)|(?:\/))(\w+)/i';
+        // Extract video url from embed code
+        $youtubeVideoId = preg_replace_callback('/<iframe\s+.*?\s+src=(".*?").*?<\/iframe>/', function ($matches) {
+            // Remove quotes
+            $youtubeUrl = $matches[1];
+            $youtubeUrl = trim($youtubeUrl, '"');
+            $youtubeUrl = trim($youtubeUrl, "'");
+            // Extract id
+            preg_match("/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/))([^\?&\"'>]+)/", $youtubeUrl, $videoId);
+            return $youtubeVideoId = isset($videoId[1]) ? $videoId[1] : "";
+        }, $code);
 
-        if (preg_match($longUrlRegex, $code, $matches)) {
-            $youtube_id = $matches[count($matches) - 1];
-        }
-
-        if (preg_match($shortUrlRegex, $code, $matches)) {
-            $youtube_id = $matches[count($matches) - 1];
-        }
-        return 'https://www.youtube.com/embed/' . $youtube_id ;
+        return 'https://www.youtube.com/embed/' . $youtubeVideoId ;
     }
 
 

@@ -52,7 +52,7 @@
                                     <td>{{$content->tieude}}</td>
                                     <td>{{$content->desc}}</td>
                                     <td><img src="{{url('img/cache/small', $content->image)}}" /></td>
-                                    <td>{{$content->category->name}}</td>
+                                    <td>{{ isset($content->category) ? $content->category->name : 'Category da bi xoa id='.$content->category_id}}</td>
 
                                   <td>
                                         <button id-attr="{{$content->id}}"
