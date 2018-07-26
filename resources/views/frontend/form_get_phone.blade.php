@@ -6,11 +6,11 @@
         </div>
         <div class="text">
             <b>BẠN HỎI GIẢO SƯ TRẢ LỜI: </b><br>
-            Ban bảo trợ chuyên môn do GS.TS Nguyễn Văn Mùi làm trưởng ban cùng PGS.TS Trịnh Thị Xuân Hòa, Ts.Bs Đinh Quý Lan sẽ giải đáp giúp bạn những thắc mắc về vấn đề gan mật nói chung cũng như bệnh viêm gan virus nói riêng, từ đó cho bạn cái nhìn chuẩn xác nhất về bệnh cũng như phương pháp điều trị hiệu quả. <br>
-            Làm sao để đặt câu hỏi với ban chuyên môn và được giải đáp ? <br>
-            <b>Cách 1</b>: Gọi đến tổng đài tư vấn miễn cước: <a href="tel: 18001190" style="color:#FF0000"><b>1800 1190</b></a><br>
-            <b>Cách 2</b>: Gửi câu hỏi cho Thầy thuốc nhân dân, GS.TS Nguyễn Văn Mùi để được chuyên gia trả lời các thắc mắc của bạn <a href="http://www.viemgan.com.vn/lien-he" target="_blank"><b>TẠI ĐÂY</b></a><br>
-            <b>Cách 3</b>: Để lại số điện thoại, đội ngũ cố vấn sẽ liên hệ lại cho bạn! <br>
+Vui lòng để lại lời nhắn để được đội ngữ tư vấn giàu kinh nghiệm tư vấn trực tiếp.<br/>
+Việc đọc trước những câu hỏi sẽ tiết kiệm thời gian cho bạn.<br/>
+Để mua sản phẩm tại hiệu thuốc gần chỗ bạn nhất, vui lòng xem TẠI ĐÂY.<br/>
+Để mua hàng online – giao hàng, thu tiền tại nhà, ĐẶT HÀNG NGAY TẠI ĐÂY. <br/>
+Ngại gọi điện? Vui lòng để lại số điện thoại, chúng tôi sẽ liên lạc lại cho bạn. <br/>
       </div>
     </div>
     <div class="form-get-phone">

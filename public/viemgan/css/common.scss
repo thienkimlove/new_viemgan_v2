@@ -12,7 +12,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Roboto, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: #ffffff;
 }
 li.rs{
@@ -50,6 +50,9 @@ h1 {
   width: 1024px;
   position: relative;
   margin: 0 auto;
+  @media(max-width: 1024px) {
+    width: 96%;
+  }
 }
 #sidebar{
   &.fixed {
@@ -240,7 +243,7 @@ h1 {
   margin-bottom: 30px;
 }
 header{
-  z-index: 1;
+  z-index: 2;
   .head-info{
     display: -webkit-box;
     display: -moz-box;
@@ -395,17 +398,31 @@ header{
     }
   }
 }
+.thumbs{
+  display: block;
+  -webkit-background-size:cover;
+  background-size:cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  img{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+}
 .body{
+  z-index: 1;
   .block-1{
     margin: 5px auto 10px auto;
     @extend %disFlex;
     -webkit-justify-content: space-between;
     justify-content: space-between;
-    img{
-      width: 100%;
-    }
     .banner-big{
       width: 51%;
+      height: 310px;
+      a{
+        height: 100%;
+      }
     }
     .title{
       width: 100%;
@@ -433,6 +450,10 @@ header{
       align-items: baseline;
       .bn{
         width: 48%;
+        height: 148px;
+        .thumbs{
+          height: 100%;
+        }
         &:nth-child(1),&:nth-child(2){
           margin-bottom: 10px;
         }
@@ -457,8 +478,9 @@ header{
     }
     @media(max-width: 500px) {
       .bn{
-        width: 80% !important;
+        width: 90% !important;
         margin: 0 auto 10px auto;
+        height: auto !important;
         img{
           height: auto;
         }
@@ -567,9 +589,12 @@ header{
               -webkit-justify-content: space-between;
               justify-content: space-between;
               margin-bottom: 10px;
-              img{
+              .thumbs{
                 width: 38%;
-                height: 100%;
+                height: 90px;
+                @media(max-width: 768px) {
+                  height: auto;
+                }
               }
               .news-info{
                 width: 60%;
@@ -646,7 +671,7 @@ header{
               -webkit-align-items: center;
               align-items: center;
               .hot-news, .news{
-                width: 90% !important;
+                width: 100% !important;
               }
               .hot-news{
                 img{
@@ -678,8 +703,14 @@ header{
         .post{
           width: 100%;
           color: #070606;
+          @extend %disFlex;
+          -webkit-justify-content: flex-end;
+          justify-content: flex-end;
+          -webkit-flex-flow: row wrap;
+          flex-flow: row wrap;
           h4{
             font-size: 14px;
+            width: 100%;
             a{
               color: #12491d;
               @extend %overFlowA;
@@ -688,9 +719,15 @@ header{
               }
             }
           }
+          .thumbs{
+            width: 100%;
+            height: 200px;
+          }
           img{
             width: 100%;
-            //height: auto;
+            @media(max-width: 570px) {
+              height: auto;
+            }
           }
           .sumary{
             border-bottom: thin solid #8c8888;
@@ -698,11 +735,13 @@ header{
             height: 81px;
           }
           .related-news{
+            width: 100%;
             a{
               color: #070606;
               border-bottom: thin solid #8c8888;
               padding: 10px 0;
               display: block;
+              min-height: 61px;
               &:hover{
                 color: #40a629;
                 text-decoration: none;
@@ -731,6 +770,9 @@ header{
           &>div{
             width: 96%;
             margin: auto;
+            .thumbs{
+              height: auto !important;
+            }
           }
         }
       }
@@ -777,6 +819,10 @@ header{
             font-size: 15px;
             color: #1f1a1b;
             font-weight: bold;
+            iframe{
+              width: 100%;
+              height: 200px;
+            }
             .view-count{
               display: block;
               color: #878383;
@@ -787,6 +833,12 @@ header{
             .title{
               margin: 20px 0;
               display: block;
+            }
+            @media(max-width: 500px) {
+              width: 100%;
+              iframe{
+                height: 250px;
+              }
             }
           }
         }
@@ -823,7 +875,7 @@ header{
               font-family: secondFont, sans-serif;
             }
             .img-title{
-              height: auto;
+              height: 190px;
               img{
                 width: 100%;
                 height: auto;
@@ -854,6 +906,7 @@ header{
               .img-title{
                 width: 100%;
                 margin-bottom: 10px;
+                height: auto;
               }
               .right{
                 width: 100%;
@@ -949,12 +1002,42 @@ header{
         }
         .detail-tabs{
           width: 100%;
+          height: auto;
+          -webkit-justify-content: center;
+          justify-content: center;
+          -webkit-flex-flow: row wrap;
+          flex-flow: row wrap;
           li{
-            width: 37.3%;
-            margin-left: -4%;
+            width: 33.3333%;
+            margin-left: 0%;
             padding-left: 0;
+            border-top-right-radius: 26px;
+            border-top-left-radius: 26px;
             &:nth-child(1){
               margin-left: 0;
+            }
+          }
+          @media(max-width: 900px) {
+            li{
+              h3{
+                font-size: 14px;
+              }
+            }
+          }
+          @media(max-width: 768px) {
+            li{
+              border-radius:0px;
+              width: 51%;
+            }
+          }
+          @media(max-width: 500px) {
+            li{
+              width: 60%;
+            }
+          }
+          @media(max-width: 400px) {
+            li{
+              width: 100%;
             }
           }
         }
@@ -1993,7 +2076,7 @@ footer{
   position: absolute;
   width: 171px;
   height: 454px;
-  top: 186px;
+  top: 210px;
   z-index: 9;
   img{
     width: 100%;
@@ -2008,7 +2091,7 @@ footer{
   &.btn-group-fix {
     width: 62px;
     position: absolute;
-    top: 186px;
+    top: 210px;
     right: 13%;
     height: 283px;
     z-index: 2;
@@ -2031,7 +2114,7 @@ footer{
 }
 .widget-wrap{
   position: relative;
-  z-index: 1;
+  z-index: 10;
   .hide-form-phone {
     position: fixed;
     bottom: 0;
@@ -2226,9 +2309,6 @@ footer{
 }
 
 @media (max-width: 1024px) {
-  .fixCen {
-    width: 100%;
-  }
   .miniMenu-btn{
     width: 40px;
     height: 40px;

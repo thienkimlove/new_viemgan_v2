@@ -185,6 +185,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     window.admicro_cpa_q.push({event: "retargeting", id: 1633});
 </script>
 
+<!--- Script ANTS - remarketing -->
+<script type="text/javascript" async src="//e-vcdn.anthill.vn/delivery-ants/conversion.js"></script>
+<!--- end ANTS - remarketing -->
+<script type="text/javascript">
+  var ants_analytic = ants_analytic || [];
+  ants_analytic.push({conversionId : "cd56d85f"});
+</script>
+<!--- Script ANTS - remarketing -->
+
 <!-- Facebook Code Comment-->
 <script>
     window.fbAsyncInit = function() {
@@ -230,6 +239,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     window._eclickq = window._eclickq || [];
     window._eclickq.push(['track', 'PixelInitialized', {}]);
 </script>
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=setup_tool
+  page_id="1590189101226770"
+  theme_color="#0084ff"
+  logged_in_greeting="Bạn cần chuyên gia tư vấn về bệnh gan ?"
+  logged_out_greeting="Bạn cần chuyên gia tư vấn về bệnh gan ?">
+</div>
 
 <!-- Google Code dành cho Thẻ tiếp thị lại -->
 <script type="text/javascript">

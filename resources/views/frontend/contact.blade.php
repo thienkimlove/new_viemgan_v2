@@ -14,17 +14,17 @@
                         @include('frontend.form_get_phone', ['is_full' => true])
                         <div class="address-group">
                             <strong>Tại Hà Nội</strong><br>
-                            Tầng 5, tòa nhà 29T1, phố Hoàng Đạo Thúy, Trung Hòa, Cầu Giấy, Hà Nội. <br>
-                            Điện thoại: (04) 62824263 <br>
-                            Fax: 0426824263 <br> <br>
+                            Trung Hòa, Cầu Giấy, Hà Nội. <br>
+                            Điện thoại: (04) <br>
+                            Fax: 042 <br> <br>
                             <strong>Chi nhánh Hồ Chí Mình</strong> <br>
                             156/17 Tô Hiến Thành - P15 - Quận 10, TP.HCM <br>
-                            Điện thoại: (083) 9797779 <br>
-                            Fax: 0862648632 <br>
-                            Đường dây nóng: 0912571190
+                            Điện thoại: (083)  <br>
+                            Fax: 08 <br>
+                            Đường dây nóng: 
                         </div>
                         <div class="embed-ggmap">
-                            <img src="{{url('viemgan/images/gg-map.jpg')}}" alt="" class="imgFull" width="728" height="425">
+                            <img src="{{url('viemgan/images/ggmap.jpg')}}" alt="" class="imgFull" width="728" height="425">
                         </div>
                     </div>
                     @include('frontend.list_button')

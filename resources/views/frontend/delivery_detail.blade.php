@@ -26,7 +26,7 @@
 
                             <div class="title">
                                 <a href="{{url('phan-phoi')}}" title="Điểm bán hàng">ĐIỂM BÁN HÀNG</a> <br>
-                                <span>Mời Quý khách chọn Quận/ Huyện để xem điểm bán Giải Độc Gan</span>
+                                <span></span>
                             </div>
                             <div class="choose-dis">
                                 <select name="district_id" id="district_id">

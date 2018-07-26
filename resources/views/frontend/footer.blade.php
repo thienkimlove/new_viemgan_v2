@@ -1,7 +1,7 @@
 <footer>
     <div class="fixCen">
         <div class="copyright">
-            CỔNG THÔNG TIN VỀ BỆNH VIÊM GAN, XƠ GAN BẢO TRỢ BỚI HỘI GAN MẬT VIỆT NAM
+            Trang cộng đồng chia sẻ kinh nghiệm đầy lùi viêm gan virus, xơ gan.
         </div>
     </div>
 </footer>
@@ -35,13 +35,9 @@
             </div>
             <div class="text">
                     <span>
-                        <i>
-                            CỔNG THÔNG TIN VỀ BỆNH GAN - XƠ GAN
-                        </i>
-                    <brown>BẢO TRỢ BỚI HỘI GAN MẬT VIỆT NAM</brown>
-                    </span>
-                <i class="icon">
-                    <img src="{{url('viemgan/images/icon.png')}}" alt="" class="imgFull" width="67" height="71">
+                    <i>
+                        <brown>Website đang trong giai đoạn thử nghiệm và hoàn thiện hệ thống kỹ thuật</brown>
+                    </i></span>
                 </i>
             </div>
         </div>

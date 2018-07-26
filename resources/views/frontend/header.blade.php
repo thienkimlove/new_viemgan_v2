@@ -1,24 +1,4 @@
-﻿<div class="widget-wrap">
-    <div class="hide-form-phone">
-        <p>Đăng ký nhận tư vấn miễn phí</p>
-    </div>
-    <div class="show-form-phone">
-        <h4>Đăng ký nhận tư vấn miễn phí</h4>
-        <div class="box-show">
-            <p>Chỉ cần đặt câu hỏi, chuyên gia sẽ gọi lại tư vấn cụ thể cho bạn</p>
-            <form id="getQues" action="{{url('saveContact')}}" method="POST">
-                <input type="number" name="phone" id="box_phone" placeholder="Số điện thoại của bạn">
-                <input type="hidden" value="Box Trượt" name="name" />
-                <input type="hidden" name="_token" value="{{csrf_token()}}"  />
-                <textarea name="content" id="box_content" placeholder="Tình trạng của bạn"></textarea>
-                <input type="text" name="email" id="box_email" placeholder="Tên/ Email của bạn">
-                <button id="box_submit">Gửi đi</button>
-            </form>
-            <p id="box_message" style="display: none"></p>
-        </div>
-    </div>
-</div>
-<div class="banner-ads left">
+﻿<div class="banner-ads left">
     @foreach (\App\Site::getFrontendBanners()->where('position', 3) as $banner)
     <a href="{{$banner->link}}" title="" target="_blank">
         <img src="{{url('files/images', $banner->image)}}" alt="" width="171" height="454">
@@ -27,7 +7,7 @@
 </div>
 <div class="btn-group-fix banner-ads">
     <a href="https://www.facebook.com/viemgan.com.vn" title="Fanpage"><img src="{{url('viemgan/images/fb-icon.png')}}" alt="Fanpage" width="63" height="63"></a>
-    <a href="tel: 18001190" title="Gọi tư vấn"><img src="{{url('viemgan/images/call-icon.png')}}" alt="Gọi tư vấn" width="63" height="63"></a>
+    <a href="tel: 18001190 " title="Gọi tư vấn"><img src="{{url('viemgan/images/call-icon.png')}}" alt="Gọi tư vấn" width="63" height="63"></a>
     <a href="{{url('phan-phoi')}}" title="Mua hàng"><img src="{{url('viemgan/images/cart-icon.png')}}" alt="Giỏ hàng" width="63" height="63"></a>
     <a href="{{url('phan-phoi')}}" title="Điểm bán sản phẩm"><img src="{{url('viemgan/images/location-icon.png')}}" alt="Điểm bán sản phẩm" width="63" height="63"></a>
 </div>
@@ -40,14 +20,14 @@
                 <img src="{{url('viemgan/images/logo.png')}}" alt="Viêm gan" width="170" height="99" class="imgFull">
             </a></h1>
         <span class="slogan">
-                    CỔNG THÔNG TIN VỀ BỆNH VIÊM GAN - XƠ GAN
-                    <i class="small">BẢO TRỢ BỞI HỘI GAN MẬT VIỆT NAM</i>
+                    Trang cộng đồng chia sẻ kinh nghiệm đẩy lùi viêm gan virus, xơ gan.
+                    <i class="small"></i>
                 </span>
         <div class="icon-header">
-            <img src="{{url('viemgan/images/icon.png')}}" alt="" class="imgFull" width="67" height="71">
+            <img src="{{url('viemgan/images/professor.png')}}" alt="" class="imgFull" width="67" height="71">
         </div>
         <span class="hotline" id="hotline">
-                    <a href="tel:18001190">
+                    <a href="tel:">
                         <img src="{{url('viemgan/images/hotline.png')}}" alt="" width="166" height="56" class="imgFull">
                     </a>
                     <form action="{{url('tim-kiem')}}" method="GET" class="search-on-top">

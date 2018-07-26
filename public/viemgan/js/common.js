@@ -21,17 +21,11 @@ $(document).ready(function () {
 
     if( $('#sidebar').length )
     {
-       var h =  $("#sidebar").height();
-       var e = $("#sidebar").offset().top + h + 100;
-       console.log('height:' + h);
-       console.log('E :' + e);
-
-
+        var h =  $("#sidebar").height();
+        var e = $("#sidebar").offset().top + h + 100;
         $(window).scroll(function () {
             var o = $(window).scrollTop();
-            console.log('o:' + o);
             var f = $("#experience").offset().top - h;
-            console.log('f :' + f);
             (e <= o && o <= f) ? $("#sidebar").addClass("fixed") : $("#sidebar").removeClass("fixed");
         });
     }
@@ -49,8 +43,12 @@ function bannerAdsSide() {
     var $banner = $('.banner-ads'), $window = $(window);
     var $topDefault = parseFloat($banner.css('top'), 10);
     $window.on('scroll', function () {
+        var $docHeight = $('html, body').innerHeight();
         var $top = $(this).scrollTop();
         $banner.stop().animate({top: $top + $topDefault}, 100, 'easeOutCirc');
+        if($top >= ($docHeight - 800)){
+            $banner.stop().animate({top: $top }, 0);
+        }
     });
 }
 function clickChangeVideo(btnClick, posShowvideo) {

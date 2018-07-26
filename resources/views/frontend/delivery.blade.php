@@ -52,7 +52,7 @@
                         <div class="note2 note">
                             <div class="title">
                                 <span class="number">2</span>
-                                Gọi tới tổng đài tư vấn và chăm sóc KH: <a href="tel: 18001190">1800 1190 </a>(miễn phí cước gọi) - <a href="tel: 0912571190">0912 571 190</a>
+                                Sản phẩm có bán tại các hiệu thuốc trên toàn quốc
                             </div>
                         </div>
                         <div class="note3 note">
