@@ -33,6 +33,7 @@
                                 <th>#</th>
                                 <th>Title</th>
                                 <th>Tiêu Đề</th>
+                                <th>Author</th>
                                 <th>Desc</th>
                                 <th>Image</th>
                                 <th>Category</th>
@@ -50,6 +51,7 @@
                                     <td>{{$content->id}}</td>
                                     <td>{{$content->title}}</td>
                                     <td>{{$content->tieude}}</td>
+                                    <td>{{$content->author}}</td>
                                     <td>{{$content->desc}}</td>
                                     <td><img src="{{url('img/cache/small', $content->image)}}" /></td>
                                     <td>{{ isset($content->category) ? $content->category->name : 'Category da bi xoa id='.$content->category_id}}</td>

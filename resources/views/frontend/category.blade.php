@@ -21,6 +21,12 @@
                                     <a href="{{url($post->slug.'.html')}}" class="title" title="{{$post->title}}">
                                         {{$post->title}}
                                     </a>
+                                    <div class="infos">
+                                        <span class="adPost">{{ $post->author or 'Admin' }}</span> -
+                                        <span class="datePost">{{ isset($post->created_at) ? $post->created_at->format('d/m/Y'): ""  }}</span>
+                                        <span class="view">{{ $post->views }} views</span>
+                                    </div>
+
                                     <div class="sumary">
                                         {{str_limit($post->desc, 150)}}
                                     </div><br />

@@ -10,10 +10,16 @@
                         <span>|</span>
                         <h3 class="rs"><a href="{{url('chuyen-muc', $post->category->slug)}}" title="{{$post->category->name}}">{{$post->category->name}}</a></h3>
                         <span>|</span>
+                        <h4>{{$post->title}}</h4>
                     </div>
                     <div class="detail-content">
                         <article class="detail">
-                            <h1 class="detail-title">{{$post->title}}</h1>
+                            <span class="detail-title">{{$post->title}}</span>
+                            <div class="infos">
+                                <span class="adPost"><i><strong>Người đăng: </strong>{{ $post->author or 'Admin' }}</i></span> |
+                                <span class="datePost"><i><strong>Ngày đăng: </strong>{{ isset($post->created_at) ? $post->created_at->format('d/m/Y'): "" }}</i></span> |
+                                <span class="view"><i><strong>Lượt xem: </strong>{{ $post->views }} views</i></span>
+                            </div>
                             <div class="detail-tab-content">
                                 <div class="content">
                                     <article>

@@ -22,6 +22,7 @@ Route::resource('admin/comments', 'CommentsController');
 Route::resource('admin/stores', 'StoresController');
 Route::resource('admin/orders', 'OrdersController');
 Route::resource('admin/lands', 'LandsController');
+Route::resource('admin/registers', 'RegistersController');
 
 
 
@@ -36,6 +37,7 @@ foreach (config('site.sitemap') as $content) {
 
 
 Route::get('/landingpage', 'FrontendController@landing');
+Route::get('/dang-bai-viet', 'FrontendController@write');
 Route::get('/ajax_store', 'FrontendController@ajax_store');
 Route::get('/chuyen-muc/{slug}', 'FrontendController@category');
 Route::get('/lien-he', 'FrontendController@contact');
@@ -47,4 +49,5 @@ Route::get('/tim-kiem', 'FrontendController@search');
 Route::post('/saveContact', 'FrontendController@saveContact');
 Route::post('/saveOrder', 'FrontendController@saveOrder');
 Route::post('/saveLand', 'FrontendController@saveLand');
+Route::post('/saveRegister', 'FrontendController@saveRegister');
 Route::get('/{slug}', 'FrontendController@post');

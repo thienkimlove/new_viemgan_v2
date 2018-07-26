@@ -7,39 +7,27 @@
 </footer>
 <div class="others">
     <div class="fixCen">
-        <div class="content">
-            <div class="links">
-                <a href="{{url('chuyen-muc', 'san-pham')}}" title="Thông tin sản phẩm">Thông tin sản phẩm</a>
-                <a href="{{url('chuyen-muc', 'thong-tin-khoa-hoc')}}" title="Nghiên cứu khoa học">Nghiên cứu khoa học</a>
-                <a href="{{url('chuyen-muc', 'kinh-nghiem')}}" title="Trải nghiệm khách hàng">Trải nghiệm khách hàng</a>
-                <a href="{{url('phan-phoi')}}" class="diem-ban-btn" title="Điểm bán sản phẩm">ĐIỂM BÁN</a>
-            </div>
+        <i>Viemgan.com.vn là diễn đàn chia sẻ, trao đổi và tương tác thông tin về sinh lực nam</i>
+        <div class="top">
+            <strong>Cơ quan chủ quản: Công ty TNHH Tuệ Linh</strong>
+            Trụ sở chính: Tầng 5, Tòa nhà 29T1 đường Hoàng Đạo Thúy, phường Trung Hòa, quận Cầu Giấy, thành phố Hà Nội.
         </div>
-        <div class="content">
-            <div class="links">
-                <a href="{{url('chuyen-muc', 'cac-benh-ve-gan')}}" title="Các bệnh về gan">Các bệnh về gan</a>
-                <a href="{{url('chuyen-muc', 'xo-gan')}}" title="Xơ gan">Xơ gan</a>
-                <a href="{{url('chuyen-muc', 'viem-gan-virus')}}" title="Viêm gan virus">Viêm gan virus</a>
-                <a href="{{url('chuyen-muc', 'ung-thu-gan')}}" title="Ung thư gan">Ung thu gan</a>
-                <a href="{{url('chuyen-muc', 'benh-gan-khac')}}" title="Bệnh gan khác">Bệnh gan khác</a>
+        <div class="left">
+            <div class="info">
+                <strong>Cố vấn chuyên môn:</strong> PGS. TS Bác sĩ Nguyễn Thị Ngọc Dinh. <br>
+                <strong>Chức vụ:</strong> Nguyên giám đốc bệnh viện Tai mũi họng Trung Ương. <br>
+                <strong>Hotline:</strong> <a href="tel:18001258">1800 1258</a> <br>
+                <strong>Email:</strong> <a href="mailto:tuvansinhlucnam@gmail.com">tuvansinhlucnam@gmail.com</a>
             </div>
+            * Các thông tin trên website dùng để tham khảo, khi áp dụng nên hỏi ý kiến Bác sĩ chuyên khoa. Chúng tôi không chịu bất cứ trách nhiệm nào do việc
+            tự ý áp dụng các thông tin trên website gây ra.
         </div>
-        <div class="content">
-            <div class="btn-groups">
-                <a  href="tel:0912571190" class="diem-ban-btn"  title="Tư vấn miễn phí">
-                    <img src="{{url('viemgan/images/tu-van-1.png')}}" alt="">
-                </a>
-                <a href="{{url('phan-phoi')}}" class="tu-van-btn" title="Điểm bán">
-                    <img src="{{url('viemgan/images/diem-ban-1.png')}}" alt="">
-                </a>
-            </div>
-            <div class="text">
-                    <span>
-                    <i>
-                        <brown>Website đang trong giai đoạn thử nghiệm và hoàn thiện hệ thống kỹ thuật</brown>
-                    </i></span>
-                </i>
-            </div>
+        <div class="right">
+            <strong>Chịu trách nhiệm nội dung: </strong> Ông Nguyễn Duy Như <br>
+            <strong>Chức vụ: </strong> Giám đốc <br>
+            <strong>Hotline:</strong> <a href="tel:18001190">1800 1190</a> <br>
+            <strong>Email:</strong> <a href="mailto:namlink.co@gmail.com">tuvansinhlucnam@gmail.com</a> <br>
+            GP MXH: 179/GP-BTTTT do Bộ TTTH cấp ngày 26 tháng 4 năm 2018
         </div>
     </div>
 </div>

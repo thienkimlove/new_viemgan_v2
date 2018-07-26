@@ -42,7 +42,8 @@ class Post extends Model {
         'tieude',
         'related',
         'content_1',
-        'content_2'
+        'content_2',
+        'author',
     ];
 
 

@@ -27,6 +27,12 @@
                     {!! Form::text('tieude', null, ['class' => 'form-control']) !!}
                 </div>
 
+
+                <div class="form-group">
+                    {!! Form::label('author', 'Tác giả') !!}
+                    {!! Form::text('author', null, ['class' => 'form-control']) !!}
+                </div>
+
                 <div class="form-group">
                     {!! Form::label('image', 'Image') !!}
                     @if ($content->image)

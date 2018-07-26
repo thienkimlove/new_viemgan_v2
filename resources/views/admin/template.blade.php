@@ -183,6 +183,16 @@
                     </li>
 
                     <li>
+                        <a><i class="fa fa-folder-o fa-fw"></i>Registers<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+
+                            <li>
+                                <a href="{{url('admin', 'registers')}}">List</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
                         <a><i class="fa fa-folder-o fa-fw"></i>Phân Phối<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
 

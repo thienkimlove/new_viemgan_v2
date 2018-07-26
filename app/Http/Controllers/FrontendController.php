@@ -11,6 +11,7 @@ use App\Order;
 use App\Post;
 use App\Province;
 use App\Question;
+use App\Register;
 use App\Store;
 use App\Tag;
 use App\Video;
@@ -47,6 +48,15 @@ class FrontendController extends Controller
         return view('frontend.index', compact('page', 'indexTopPosts', 'indexCategories'));
     }
 
+    public function write()
+    {
+        $page = 'index';
+        $meta_title = 'Đăng bài viết';
+        $meta_desc = 'Đăng bài viết';
+
+        return view('frontend.write', compact('page', 'meta_title', 'meta_desc'));
+    }
+
     public function category($slug)
     {
         $category = Category::findBySlug($slug);
@@ -64,6 +74,12 @@ class FrontendController extends Controller
         }  else {
             return redirect('/');
         }
+    }
+
+    public function saveRegister(Request $request)
+    {
+        Register::create($request->all());
+        return redirect('/');
     }
 
     public function saveContact(Request $request)
@@ -99,6 +115,7 @@ class FrontendController extends Controller
             if ($post) {
                 $meta_title = $post->tieude ? $post->tieude : $post->title;
                 $meta_desc = $post->desc;
+                $post->increment('views', 1);
                 $page = ($post->category->parent_id) ? $post->category->parent->slug : $post->category->slug;
                 if ($post->content_1 && $post->content_2) {
                     return view('frontend.product', compact('page', 'post',  'meta_title', 'meta_desc'));

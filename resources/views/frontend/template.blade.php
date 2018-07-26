@@ -149,6 +149,94 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      @yield('content')
    @include('frontend.footer')
 </div>
+
+<div class="popup popup-regis px">
+    <div class="popup-content pa">
+        <a href="javascript:void(0)" class="close-popup pa" title="Đóng lại">X</a>
+        <div class="content">
+            <div class="title">
+                <strong>Tạo tài khoản</strong>
+                Bạn hãy tạo tài khoản mà bạn muốn
+            </div>
+            <form id="register_form" action="{{ url('saveRegister') }}" method="POST">
+                <div class="rows">
+                    <label>Tên đăng nhập <orange>*</orange></label>
+                    <input name="login" type="text" placeholder="Tên đăng nhập">
+                    {{ csrf_field() }}
+                </div>
+                <div class="rows">
+                    <label>Email <orange>*</orange></label>
+                    <input name="email" type="text" placeholder="Email">
+                </div>
+                <div class="rows">
+                    <label>Số điện thoại <orange>*</orange></label>
+                    <input name="phone" type="text" placeholder="Số điện thoại">
+                </div>
+                <div class="rows">
+                    <label>Mật khẩu <orange>*</orange></label>
+                    <input name="password" type="text" placeholder="Mật khẩu">
+                    <input type="checkbox" checked /> Hiển thị mật khẩu
+                </div>
+                <div class="rows">
+                    <label>Họ tên <orange>*</orange></label>
+                    <input name="name" type="text" placeholder="Họ và tên">
+                </div>
+                <div class="rows">
+                    <label>Tỉnh/ Thành phố sinh sống <orange>*</orange></label>
+                    <input name="province" type="text" placeholder="Tỉnh/ Thành phố">
+                </div>
+                <div class="rows">
+                    <label>Ngày/tháng/năm sinh <orange>*</orange></label>
+                    <input name="dob" type="text" placeholder="DD/MM/YYYY">
+                </div>
+                <div class="rows">
+                    <label>CMND/ Căn cước công dân/ Hộ chiếu <orange>*</orange></label>
+                    <input name="ssn" type="text" placeholder="CMDN/ Căn cước công dân/ Hộ chiếu">
+                </div>
+                <div class="rows theLast">
+                    <label>Địa chỉ cụ thể <orange>*</orange></label>
+                    <textarea name="address" id="" cols="30" rows="4" placeholder="Địa chỉ cụ thể"></textarea>
+                </div>
+                <div class="note">
+                    Khi bạn nhấn nút "Tạo tài khoản" dưới đây thì có nghĩa là bạn đã đồng ý với các <br>
+                    <a href="javascript:void(0)" title="Điều khoản quy định" target="_blank">Điều khoản quy định</a>
+                    của viemgan.com.vn
+                </div>
+                <a href="javascript:void(0)" id="click_register" class="btn-create" title="Tạo tài khoản">Tạo tài khoản</a>
+                <div class="txt">Vui lòng xác nhận qua email</div>
+                <div id="errors" class="errors">Vui lòng nhập đầy đủ các thông tin trên</div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="popup popup-login px">
+    <div class="popup-content pa">
+        <a href="javascript:void(0)" class="close-popup pa" title="Đóng lại">X</a>
+        <div class="content">
+            <div class="title">
+                <strong>Đăng nhập</strong>
+                Chào bạn ! Hãy đăng nhập để gửi bài viết
+            </div>
+            <form action="">
+                <div class="rows">
+                    <label>Tên đăng nhập</label>
+                    <input type="text" placeholder="Tên đăng nhập">
+                </div>
+                <div class="rows">
+                    <label>Mật khẩu</label>
+                    <input type="text" placeholder="Mật khẩu">
+                    <input type="checkbox" checked /> Ghi nhớ
+                </div>
+                <a href="{{ url('/') }}" class="btn-loginF" title="Tạo tài khoản">Đăng nhập</a>
+                <div class="rows">
+                    <a href="javascript:void(0)" class="forgot-pass" title="Quên mật khẩu">Quên mật khẩu</a>
+                </div>
+                <div class="errors">Vui lòng nhập đầy đủ các thông tin trên</div>
+            </form>
+        </div>
+    </div>
+</div>
+
 </body>
 <script>
     var Config = {};
@@ -176,6 +264,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 $('#getQues').submit();
             }
             return false;
+        });
+        $('#click_register').click(function(e){
+            e.preventDefault();
+            var phone = $('#register_form input[name=phone]').val();
+            var email = $('#register_form input[name=email]').val();
+            var address = $('#register_form textarea[name=address]').val();
+            var name = $('#register_form input[name=name]').val();
+            var dob = $('#register_form input[name=dob]').val();
+            var ssn = $('#register_form input[name=ssn]').val();
+            var province = $('#register_form input[name=province]').val();
+
+            if (!phone || !email || !address || !name || !dob || !ssn || !province) {
+                $('#errors').show();
+            } else {
+                $('#errors').hide();
+                $('#register_form').submit();
+            }
         });
     });
 </script>
